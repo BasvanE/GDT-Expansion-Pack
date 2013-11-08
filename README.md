@@ -16,3 +16,6 @@ Contributors:
 
   ~ DzjengisKhan (Founder of the expansion pack)
   ~ LineLiar (Event concepts)
+
+
+Check the wiki on this page for further information about the expansion pack.
