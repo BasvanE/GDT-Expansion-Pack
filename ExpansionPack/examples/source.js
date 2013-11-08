@@ -134,7 +134,7 @@ var ExpPack = {};
 		}, /* S */ {
 			id: "Samurais",
 			name: "Samurais".localize("game topic"),
-			genreWeightings: [1, 0.7, 0.9, 0.7, 0.9, 0.6],
+			genreWeightings: [1, 0.9, 1, 0.7, 0.9, 0.6],
 			audienceWeightings: [0.7, 0.9, 1]
 		}, {
 			id: "Science",
@@ -271,7 +271,7 @@ var ExpPack = {};
 				}
 				if (decision === 1) {
 					var n = new Notification({
-						header: "No party".localize(),//keep the header consistent with the prior part of the story
+						header: "No party".localize(),
 						text: "Looks like things will be quite tonight."
 					});
 					return;
@@ -367,7 +367,7 @@ var ExpPack = {};
 						header: "The Vacuum Cleaner".localize(),
 						text: "You buy the vacuum cleaner. After doing a garage clenup you win the prize for most clean gaming industry garage! This will most likely increase the hype for your game!"
 					});
-					n.adjustHype(5 + 10 * company.getRandom());//increase hype between 5 and 15.
+					n.adjustHype(5 + 10 * company.getRandom());
 					
 					company.activeNotifications.addRange(n.split());
 					return;
