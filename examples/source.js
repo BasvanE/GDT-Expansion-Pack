@@ -341,7 +341,7 @@ var ExpPack = {};
 			
 		var vacuumCleaner = {
 			id: eventId,
-			isRandom: false,
+			isRandom: true,
 			maxTriggers: 1,
 			trigger: function (company) {
 				
