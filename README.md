@@ -1,13 +1,18 @@
-###Official Game Dev Tycoon Modding API mod
+###Expansion Pack for Game Dev Tycoon
 
-This is the official Modding API mod that ships with Game Dev Tycoon version 1.4.5+
+This is the official expansion pack made by DzjengisKhan!
 
-It is a set of [add-on methods and documentation](https://github.com/greenheartgames/gdt-modAPI/wiki "Wiki") to make the implementation of other mods easier.
+This expansion pack will include:
+  - 30 New topics
+  - 2  New platforms
+  - 3  New events
 
-Pull requests are more than welcome.
+I'm working an a method that will allow people to add custom researches to the game so be on the lookout for that!!
 
-##Wiki
+Want your name in the list below?? Send me a private message on http://forum.greenheartgames.com/
+with your addtion for the expansion pack and I will judge if it's good enough to be added to the pack!
 
-Please check the official documentation at:
+Contributors:
 
-[https://github.com/greenheartgames/gdt-modAPI/wiki](https://github.com/greenheartgames/gdt-modAPI/wiki)
+  ~ DzjengisKhan (Founder of the expansion pack)
+  ~ LineLiar (Event concepts)
