@@ -5,6 +5,7 @@
 		ExpPack.addPlatform();
 		ExpPack.addEventCelebration();
 		ExpPack.addEventCuriosity();
+		ExpPack.addEventVac();
 	};
 
 	requireLoad(['mods/gdt-modAPI/helpers/checks.js',

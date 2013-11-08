@@ -221,7 +221,7 @@ var ExpPack = {};
 						getNotification: function (company) {
 							return new Notification({
 								header: "Industry News".localize(),
-								text: "Grapple, developer of the very succesful Grapintosh, has announced a new platform called the grMac. Grapple implemented all the hardware in the screen and named it a 'All-In-One' computer.{n} The fact that the hardware is very compact, doens't effect any of the power we know from Grapple.".localize().format(General.getETADescription('16/5/4', '16/8/1')),
+								text: "Grapple, developer of the very successful Grapintosh, has announced a new platform called the grMac. Grapple implemented all the hardware in the screen and named it a 'All-In-One' computer.{n} The fact that the hardware is very compact, doesn't effect any of the power we know from Grapple.".localize().format(General.getETADescription('16/5/4', '16/8/1')),
 								image: icon
 							});
 						}
@@ -334,6 +334,65 @@ var ExpPack = {};
 			}
 		};
 		GDT.addEvent(fanCuriosity);
+	};
+	
+	ExpPack.addEventVac = function () {
+		var eventId = "12111996-0000-1111-0010-DZJENGISKHAN";
+			
+		var vacuumCleaner = {
+			id: eventId,
+			isRandom: false,
+			maxTriggers: 1,
+			trigger: function (company) {
+				
+				return company.currentLevel == 1 && company.isGameProgressBetween(0.2, 0.9);
+			},
+		getNotification: function (company) {
+				var game = company.currentGame;
+	
+				var msg = "While you were working on your game someone knocked on the door of the garage. It was a man who wanted to sell you a vacuum cleaner. Do you want to buy the vacuum cleaner for 4K?"
+					.localize().format(game.title);
+				return new Notification({
+					sourceId: eventId,
+					header: "The Vacuum Cleaner".localize(),
+					text: msg,
+					options: ["Buy it!", "Ask to leave", "Denounce him"]
+				});
+			},
+			complete: function (decision) {
+				var company = GameManager.company;
+	
+				if (decision === 0) {
+					var n = new Notification({
+						header: "The Vacuum Cleaner".localize(),
+						text: "You buy the vacuum cleaner. After doing a garage clenup you win the prize for most clean gaming industry garage! This will most likely increase the hype for your game!"
+					});
+					n.adjustHype(5 + 10 * company.getRandom());//increase hype between 5 and 15.
+					
+					company.activeNotifications.addRange(n.split());
+					return;
+				}
+				if (decision === 1) {
+					var n = new Notification({
+						header: "It's me again!".localize(),
+						text: "'Hey! I'm back!' is what the guy said. This time he convinces you to buy a vacuum cleaner. Bye bye, 4000 dollars."
+					});
+					n.adjustCash(-4000, "Vacuum Cleaner");
+					company.notifications.push(n);
+					return;
+				}
+				if (decision === 2) {
+					var n = new Notification({
+						header: "The Vacuum Cleaner".localize(),
+						text: "'After you denounced me I thought it was a good idea to give you a bad reputation with the media! This didn't work out well for me, though... You even got more hype for it!' was the last thing he said before walking away in an angry mood."
+					});
+					n.adjustHype(15 + 25 * company.getRandom());
+					company.activeNotifications.addRange(n.split());
+					return;
+				}
+			}
+		};
+		GDT.addEvent(vacuumCleaner);
 	};
 	/*  */		       
 })();

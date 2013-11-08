@@ -1,8 +1,13 @@
-###Massive Expansion Pack for Game Dev Tycoon
+###Official Game Dev Tycoon Modding API mod
 
-This is the official expansion pack for Game Dev Tycoon made by DzjengisKhan
+This is the official Modding API mod that ships with Game Dev Tycoon version 1.4.5+
 
-Feel free to leave suggestions for things I can add to the mod, but keep in mind that it has to be possible with the API.
-The Official API for Game Dev Tycoon can be found here: https://github.com/greenheartgames/gdt-modAPI
+It is a set of [add-on methods and documentation](https://github.com/greenheartgames/gdt-modAPI/wiki "Wiki") to make the implementation of other mods easier.
 
-~~~ DzjengisKhan ~~~
+Pull requests are more than welcome.
+
+##Wiki
+
+Please check the official documentation at:
+
+[https://github.com/greenheartgames/gdt-modAPI/wiki](https://github.com/greenheartgames/gdt-modAPI/wiki)
