@@ -218,12 +218,12 @@ var ExpPack = {};
 		    name: "Mummies".localize("game topic"),
 		    genreWeightings: [1, 1, 0.7, 0.7, 0.7, 1],
 		    audienceWeightings: [0.7, 1, 0.8]
-		}, /* P */ /*{
+		}, /* P */ {
 	    	id: "Parkour",
 	    	name: "Parkour".localize("game topic"),
 	    	genreWeightings: [1, 1, 0.7, 1, 0.9, 0.6],
 	    	audienceWeightings: [0.7, 0.9, 1]
-		}, */{
+		}, {
 	    	id: "Police",
 	    	name: "Police".localize("game topic"),
 	    	genreWeightings: [1, 0.9, 0.7, 0.9, 0.7, 0.6],
