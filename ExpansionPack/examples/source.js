@@ -297,6 +297,11 @@ var ExpPack = {};
 		    genreWeightings: [1, 0.9, 0.9, 0.8, 1, 0.8],
 		    audienceWeightings: [0.8, 1, 0.7]
 		}, {
+		    id: "Survival",
+		    name: "Survival".localize("game topic"),
+		    genreWeightings: [0.9, 1, 1, 0.8, 1, 0.6],
+		    audienceWeightings: [0.8, 1, 0.9]
+		}, {
 		    id: "Swimming",
 		    name: "Swimming".localize("game topic"),
 		    genreWeightings: [0.8, 0.9, 1, 0.7, 1, 1],
