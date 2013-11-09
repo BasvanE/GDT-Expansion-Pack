@@ -401,7 +401,7 @@ var ExpPack = {};
 				name: 'grMac',
 				company: 'Grapple',
 				startAmount: 2.6,
-				unitsSold: 32.2,
+				unitsSold: 6.434,
 				licencePrize: 40000,
 				published: '16/8/1',
 				platformRetireDate: '260/12/4',
@@ -448,7 +448,7 @@ var ExpPack = {};
 				events: [
 					{
 						id: '12111996-1111-0001-0000-DZJENGISKHAN',
-						date: '1/1/4',
+						date: '21/5/1',
 						getNotification: function (company) {
 							return new Notification({
 								header: "Industry News".localize(),
@@ -469,7 +469,7 @@ var ExpPack = {};
 				name: '2GS',
 				company: 'Ninvento',
 				startAmount: 2.125,
-				unitsSold: 15.527,
+				unitsSold: 3.634,
 				licencePrize: 250000,
 				published: '21/4/2',
 				platformRetireDate: '29/2/1',
@@ -506,7 +506,7 @@ var ExpPack = {};
 				startAmount: 4.635,
 				unitsSold: 5.430,
 				licencePrize: 750000,
-				published: '1/6/2',
+				published: '22/6/2',
 				platformRetireDate: '29/2/1',
 				developmentCosts: 300000,
 				genreWeightings: [0.7, 0.8, 0.9, 1, 0.6, 1],
@@ -516,11 +516,11 @@ var ExpPack = {};
 				events: [
 					{
 						id: '12111996-1111-0010-0001-DZJENGISKHAN',
-						date: '1/1/4',
+						date: '22/3/4',
 						getNotification: function (company) {
 							return new Notification({
 								header: "Industry News".localize(),
-								text: "Vony developer of the PPS platform has been spreading rumors that they are working on a new platform called 'Viva Playsystem' or 'VPS' in short.{n} They haven't released much info about the VPS but they claim that the new handheld console will be released {0}".localize().format(General.getETADescription('1/1/4', '1/6/2')), /*'22/3/4', '22/6/2'*/
+								text: "Vony developer of the PPS platform has been spreading rumors that they are working on a new platform called 'Viva Playsystem' or 'VPS' in short.{n} They haven't released much info about the VPS but they claim that the new handheld console will be released {0}".localize().format(General.getETADescription('22/3/4', '22/6/2')), /*'22/3/4', '22/6/2'*/
 								image: icon
 							});
 						}
