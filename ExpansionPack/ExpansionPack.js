@@ -10,6 +10,7 @@
 		ExpPack.addPlatformGrMac();
 		ExpPack.addPlatform3GS();
 		ExpPack.addPlatform2GS();
+		ExpPack.addPlatformGamelingColor();
 		ExpPack.addPlatformViva();
 	/*									*/
 		
@@ -18,6 +19,12 @@
 		ExpPack.addEventCuriosity();
 		ExpPack.addEventVac();
 		ExpPack.addEventBilly();
+		ExpPack.addEventMovieGame();
+		ExpPack.addEventFire();		
+	/*									*/
+	
+	/* Adds researches to the game		*/
+		ExpPack.addResearch();
 	/*									*/
 	};
 
@@ -27,6 +34,8 @@
 	'mods/gdt-modAPI/api/platforms.js',
 	'mods/gdt-modAPI/api/topics.js',
 	'mods/gdt-modAPI/examples/examples.js',
-	'mods/ExpansionPack/examples/source.js'
+	'mods/ExpansionPack/api/researches.js',
+	'mods/ExpansionPack/api/checkResearches.js',
+	'mods/ExpansionPack/source/source.js'
 	], ready);
 })();
