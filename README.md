@@ -15,10 +15,10 @@ with your addtion for the expansion pack and I will judge if it's good enough to
 
 Contributors (all the names are from the greenheart games forum):
 
-  ~ DzjengisKhan (Founder of the expansion pack)
-  ~ LineLiar (Lead contributer)
-  ~ Drakiren (Event concepts)
-  ~ Glampkoo (Texture Design)
+  - DzjengisKhan (Founder of the expansion pack)
+  - LineLiar (Lead contributer)
+  - Drakiren (Event concepts)
+  - Glampkoo (Texture Design)
 
 
 ###Wiki
