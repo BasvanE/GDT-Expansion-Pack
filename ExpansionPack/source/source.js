@@ -1069,7 +1069,7 @@ var ExpPack = {};
 			name: "Language settings".localize(),
 			v: 4,
 			canResearch: function () {
-				return LevelCalculator.getMissionLevel('World Design') > 4
+				return LevelCalculator.getMissionLevel('Dialogs') > 4
 			},
 			category: "Dialogs",
 			categoryDisplayName: "Dialogues",
