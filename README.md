@@ -4,8 +4,9 @@ This is the official expansion pack made by DzjengisKhan!
 
 This expansion pack will include:
   - 70+ New topics
-  - 5  New platforms
-  - 4  New events
+  - 6 New platforms
+  - 6 New events
+  - New custom Researches 
 
 I'm working an a method that will allow people to add custom researches to the game so be on the lookout for that!!
 
