@@ -23,4 +23,6 @@ Contributors (all the names are from the greenheart games forum):
 
 ###Wiki
 
-Check the wiki on this page for further information about the expansion pack.
+Check the wiki on this page for further information about the expansion pack. Find out what topics there are added,
+the platforms which are added, the researches that are added, the events that are added and definitely check
+it out when you have problems with it.
