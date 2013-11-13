@@ -995,7 +995,7 @@ var ExpPack = {};
 			canResearch: function () {
 				return LevelCalculator.getMissionLevel('AI') > 7
 			},
-			category: "A.I.",
+			category: "AI",
 			categoryDisplayName: "A.I."
 		});
 		GDT.addResearch(
@@ -1006,7 +1006,7 @@ var ExpPack = {};
 			canResearch: function () {
 				return LevelCalculator.getMissionLevel('AI') > 4
 			},
-			category: "A.I.",
+			category: "AI",
 			categoryDisplayName: "A.I."
 		});
 		/*  */
