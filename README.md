@@ -3,7 +3,7 @@
 This is the official expansion pack made by DzjengisKhan!
 
 This expansion pack will include:
-  - 70+ New topics
+  - 79 New topics
   - 6 New platforms
   - 6 New events
   - 19 custom Researches 
