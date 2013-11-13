@@ -1091,7 +1091,7 @@ var ExpPack = {};
 		GDT.addResearch(
 		{
 			id: "Realistic Plant Life",
-			name: "Realstic plant life".localize(),
+			name: "Realistic plant life".localize(),
 			v: 6,
 			canResearch: function () {
 				return LevelCalculator.getMissionLevel('World Design') > 6
