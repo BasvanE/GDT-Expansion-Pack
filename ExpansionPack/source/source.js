@@ -436,7 +436,7 @@ var ExpPack = {};
 				name: '3GS',
 				company: 'Ninvento',
 				startAmount: 1.5,
-				unitsSold: 3.583,
+				unitsSold: 3.582,
 				licencePrize: 100000,
 				published: '21/9/3',
 				platformRetireDate: '24/5/1',
