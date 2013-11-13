@@ -2,9 +2,9 @@
 	"id" : "MasExpPack",
 	"name" : "Massive Expansion Pack",
 	"version" : "0.2.1",
-	"author":"DzjengisKhan",
+	"author":"LineLiar & DzjengisKhan",
 	"url":"https://github.com/DzjengisKhan/GDT-Expansion-Pack",
-	"description" : "The official Massive Expansion Pack Mod made by DzjengisKhan.",
+	"description" : "The official Massive Expansion Pack Mod made by LineLiar & DzjengisKhan.",
 	"main" : "./ExpansionPack"
 	"dependencies" : {
 		"gdt-modAPI":"0.1.x"
