@@ -12,6 +12,7 @@
 		ExpPack.addPlatform2GS();
 		ExpPack.addPlatformGamelingColor();
 		ExpPack.addPlatformViva();
+		ExpPack.addPlatformItaraBackflash();
 	/*									*/
 		
 	/* Adds events to the game 			*/	
@@ -28,14 +29,16 @@
 	/*									*/
 	};
 
-	requireLoad(['mods/gdt-modAPI/helpers/checks.js',
+	var error = function () {
+	};
+
+	GDT.loadJs(['mods/gdt-modAPI/helpers/checks.js',
 	'mods/gdt-modAPI/api/persistence.js',
 	'mods/gdt-modAPI/api/events.js',
 	'mods/gdt-modAPI/api/platforms.js',
 	'mods/gdt-modAPI/api/topics.js',
+	'mods/gdt-modAPI/api/research.js',
 	'mods/gdt-modAPI/examples/examples.js',
-	'mods/ExpansionPack/api/researches.js',
-	'mods/ExpansionPack/api/checkResearches.js',
 	'mods/ExpansionPack/source/source.js'
-	], ready);
+	], ready, error);
 })();

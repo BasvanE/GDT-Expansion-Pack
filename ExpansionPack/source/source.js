@@ -883,7 +883,7 @@ var ExpPack = {};
 	ExpPack.addEventFire = function () {
 		var eventId = "12111996-0001-0000-0101-DZJENGISKHAN";
 
-		var movieGame = {
+		var fire = {
 			id: eventId,
 			isRandom: true,
 			maxTriggers: 1,
@@ -919,14 +919,14 @@ var ExpPack = {};
 			}
 		};
 
-		GDT.addEvent(movieGame);
+		GDT.addEvent(fire);
 	};
 	/*  */
 	
 	/* Researches */
 	ExpPack.addResearch = function () {
 		/* Graphic items */
-		GDT.addResearch(
+		GDT.addResearchItem(
 		{
 			id: "Realistic Particles",
 			name: "Realistic particles".localize(),
@@ -937,7 +937,7 @@ var ExpPack = {};
 			category: "Graphic",
 			categoryDisplayName: "Graphic"
 		});
-		GDT.addResearch(
+		GDT.addResearchItem(
 		{
 			id: "Advanced Shaders",
 			name: "Advanced shaders".localize(),
@@ -948,7 +948,7 @@ var ExpPack = {};
 			category: "Graphic",
 			categoryDisplayName: "Graphic"
 		});
-		GDT.addResearch(
+		(
 		{
 			id: "Animated Textures",
 			name: "Animated Textures".localize(),
@@ -962,7 +962,7 @@ var ExpPack = {};
 		/*  */
 		
 		/* Sound items */
-		GDT.addResearch(
+		GDT.addResearchItem(
 		{
 			id: "Realistic Sound",
 			name: "Realistic sound".localize(),
@@ -973,7 +973,7 @@ var ExpPack = {};
 			category: "Sound",
 			categoryDisplayName: "Sound"
 		});
-		GDT.addResearch(
+		GDT.addResearchItem(
 		{
 			id: "Copywriten Music",
 			name: "Copywriten sound".localize(),
@@ -987,7 +987,7 @@ var ExpPack = {};
 		/*  */
 		
 		/* A.I. items */
-		GDT.addResearch(
+		GDT.addResearchItem(
 		{
 			id: "Superior AI",
 			name: "Superior A.I.".localize(),
@@ -998,7 +998,7 @@ var ExpPack = {};
 			category: "AI",
 			categoryDisplayName: "A.I."
 		});
-		GDT.addResearch(
+		GDT.addResearchItem(
 		{
 			id: "AI Difficulty",
 			name: "A.I. difficulty".localize(),
@@ -1012,7 +1012,7 @@ var ExpPack = {};
 		/*  */
 		
 		/* Gameplay */
-		GDT.addResearch(
+		GDT.addResearchItem(
 		{
 			id: "Cheat Codes",
 			name: "Cheat Codes".localize(),
@@ -1023,7 +1023,7 @@ var ExpPack = {};
 			category: "Gameplay",
 			categoryDisplayName: "Gameplay"
 		});
-		GDT.addResearch(
+		GDT.addResearchItem(
 		{
 			id: "Premium Content",
 			name: "Premium content".localize(),
@@ -1037,7 +1037,7 @@ var ExpPack = {};
 		/*  */
 		
 		/* Engine items */
-		GDT.addResearch(
+		GDT.addResearchItem(
 		{
 			id: "Quick Saving",
 			name: "Quick Saving".localize(),
@@ -1048,7 +1048,7 @@ var ExpPack = {};
 			category: "Engine",
 			categoryDisplayName: "Engine".localize()
 		});
-		GDT.addResearch(
+		GDT.addResearchItem(
 		{
 			id: "Seasons",
 			name: "Seasons".localize(),
@@ -1062,7 +1062,7 @@ var ExpPack = {};
 		/*  */
 		
 		/* Story/Quests */
-		GDT.addResearch(
+		GDT.addResearchItem(
 		{
 			id: "Collectables",
 			name: "Collectables".localize(),
@@ -1073,7 +1073,7 @@ var ExpPack = {};
 			category: "Story/Quests",
 			categoryDisplayName: "Story/Quests"
 		});
-		GDT.addResearch(
+		GDT.addResearchItem(
 		{
 			id: "Simple quests",
 			name: "Simple quests".localize(),
@@ -1084,7 +1084,7 @@ var ExpPack = {};
 			category: "Story/Quests",
 			categoryDisplayName: "Story/Quests"
 		});
-		GDT.addResearch(
+		GDT.addResearchItem(
 		{
 			id: "Advanced quests",
 			name: "Advanced quests".localize(),
@@ -1098,7 +1098,7 @@ var ExpPack = {};
 		/*  */
 		
 		/* Dialogues items */
-		GDT.addResearch(
+		GDT.addResearchItem(
 		{
 			id: "Language Settings",
 			name: "Language settings".localize(),
@@ -1112,7 +1112,7 @@ var ExpPack = {};
 		/*  */
 		
 		/* World Design items */
-		GDT.addResearch(
+		GDT.addResearchItem(
 		{
 			id: "Realistic Water",
 			name: "Realstic water".localize(),
@@ -1123,7 +1123,7 @@ var ExpPack = {};
 			category: "World Design",
 			categoryDisplayName: "World Design"
 		});
-		GDT.addResearch(
+		GDT.addResearchItem(
 		{
 			id: "Realistic Plant Life",
 			name: "Realistic plant life".localize(),
@@ -1137,7 +1137,7 @@ var ExpPack = {};
 		/*  */
 		
 		/* Level Design items */
-		GDT.addResearch(
+		GDT.addResearchItem(
 		{
 			id: "Bosses",
 			name: "Bosses".localize(),
@@ -1148,7 +1148,7 @@ var ExpPack = {};
 			category: "Level Design",
 			categoryDisplayName: "Level Design"
 		});
-		GDT.addResearch(
+		GDT.addResearchItem(
 		{
 			id: "Swift Loading",
 			name: "Swift loading".localize(),
