@@ -10,7 +10,7 @@
   - Now you have to beta version of Game Dev Tycoon go to you steam folder
   - Go into /steamapps/common/Game Dev Tycoon/mods
   - Paste the ExpansionPack folder in the mods folder
-  
-  - Open modConfig.js
-  - Add '{ script: "ExpansionPack/ExpansionPack.js" }' (make sure the line above ends with a comma
-  - Save the file and enjoy the mod!
+  - Start GDT and go to the main menu
+  - Select mods
+  - Click on 'Expansion Pack' so it becomes blue
+  - Restart GDT and enjoy the mod!
