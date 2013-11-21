@@ -224,6 +224,11 @@ var ExpPack = {};
 	    	genreWeightings: [1, 1, 0.7, 1, 0.9, 0.6],
 	    	audienceWeightings: [0.7, 0.9, 1]
 		}, {
+	    	id: "Point & Click",
+	    	name: "Point & Click".localize("game topic"),
+	    	genreWeightings: [0.7, 1, 0.7, 1, 0.9, 1],
+	    	audienceWeightings: [0.9, 1, 0.7]
+		}, {
 	    	id: "Police",
 	    	name: "Police".localize("game topic"),
 	    	genreWeightings: [1, 0.9, 0.7, 0.9, 0.7, 0.6],
