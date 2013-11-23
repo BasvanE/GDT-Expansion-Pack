@@ -4,12 +4,6 @@
 	"version":"0.3.0",
 	"author":"DzjengisKhan (Founder & Leader) & LineLiar (Co-Leader)",
 	"url":"https://github.com/DzjengisKhan/GDT-Expansion-Pack",
-<<<<<<< HEAD
-	"description" : "The unofficial expansion pack for Game Dev Tycoon.",
-	"main" : "./ExpansionPack.js"
-}
-=======
 	"description" : "The one and only 'Expansion Pack Mod' for Game Dev Tycoon.",
 	"main" : "./ExpansionPack.js"
 }
->>>>>>> Custom prices + 2 new events
