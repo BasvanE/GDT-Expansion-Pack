@@ -21,7 +21,9 @@
 		ExpPack.addEventVac();
 		ExpPack.addEventBilly();
 		ExpPack.addEventMovieGame();
-		ExpPack.addEventFire();		
+		ExpPack.addEventFire();
+		ExpPack.addEventFirstMagazine();
+		ExpPack.addEventSecMagazine();	
 	/*									*/
 	
 	/* Adds researches to the game		*/

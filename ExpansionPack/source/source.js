@@ -623,8 +623,7 @@ var ExpPack = {};
 			getNotification: function (company) {
 				var game = company.currentGame;
 
-				var msg = "You have almost finished {0}! Maybe you should give a party for the neighborhood to celebrate it? But it will cost some money ofcourse."
-					.localize().format(game.title);
+				var msg = "You have almost finished {0}! Maybe you should give a party for the neighborhood to celebrate it? But it will cost some money ofcourse.".localize().format(game.title);
 				return new Notification({
 					sourceId: eventId,
 					header: "Celebration party?".localize(),
@@ -672,8 +671,7 @@ var ExpPack = {};
 			getNotification: function (company) {
 				var game = company.currentGame;
 
-				var msg = "Boss, the fans have discovered that were're developing {0}, and wondering what it's about. We could tell them, and get much needed hype. But we could go all out in telling them the details, or vaguely give them out. We could just ignore them, hoping this doesn't hurt the fan base too much."
-					.localize().format(game.title);
+				var msg = "Boss, the fans have discovered that were're developing {0}, and wondering what it's about. We could tell them, and get much needed hype. But we could go all out in telling them the details, or vaguely give them out. We could just ignore them, hoping this doesn't hurt the fan base too much.".localize().format(game.title);
 				return new Notification({
 					sourceId: eventId,
 					header: "Give information?".localize(),
@@ -722,13 +720,12 @@ var ExpPack = {};
 			maxTriggers: 1,
 			trigger: function (company) {
 				
-				return company.currentLevel == 1 && company.isGameProgressBetween(0.6, 0.9);
+				return company.currentLevel == 1 && company.isGameProgressBetween(0.6, 0.9) && company.gameLog.length > 4;
 			},
 		getNotification: function (company) {
 				var game = company.currentGame;
 	
-				var msg = "While you were working on your game someone knocked on the door of the garage. It was a man who wanted to sell you a vacuum cleaner. Do you want to buy the vacuum cleaner for 4K?"
-					.localize().format(game.title);
+				var msg = "While you were working on your game someone knocked on the door of the garage. It was a man who wanted to sell you a vacuum cleaner. Do you want to buy the vacuum cleaner for 4K?".localize().format(game.title);
 				return new Notification({
 					sourceId: eventId,
 					header: "The Vacuum Cleaner".localize(),
@@ -843,13 +840,12 @@ var ExpPack = {};
 			isRandom: true,
 			maxTriggers: 1,
 			trigger: function (company) {
-				return (company.currenLevel == 3 || company.currentLevel == 4) && company.isGameProgressBetween(0.5, 0.9);
+				return company.currenLevel == 3 && company.isGameProgressBetween(0.5, 0.9);
 			},
 			getNotification: function (company) {
 				var game = company.currentGame;
 
-				var msg = "Boss, a movie director approached us with the option of making a movie from {0}. If we agree with this, it will generate a lot of hype for us. But it will cost some money to set everything up and make the final deals."
-					.localize().format(game.title);
+				var msg = "Boss, a movie director approached us with the option of making a movie from {0}. If we agree with this, it will generate a lot of hype for us. But it will cost some money to set everything up and make the final deals.".localize().format(game.title);
 
 				return new Notification({
 					sourceId: eventId,
@@ -875,7 +871,7 @@ var ExpPack = {};
 				if (decision === 1) {
 					var n = new Notification({
 						header: "No movie".localize(),
-						text: "You refused the offer and everything went back to normal.",
+						text: "You refused the offer and everything went back to normal."
 					});
 					return;
 				}
@@ -898,8 +894,7 @@ var ExpPack = {};
 			getNotification: function (company) {
 				var game = company.currentGame;
 
-				var msg = "Oh my god! A fire just broke out we all need to leave now!{n} .... After the fire has been extinguished you take a look inside and sees that there is alot of damage."
-					.localize().format(game.title);
+				var msg = "Oh my god! A fire just broke out we all need to leave now!{n} .... After the fire has been extinguished you take a look inside and sees that there is alot of damage.".localize().format(game.title);
 
 				return new Notification({
 					sourceId: eventId,
@@ -925,6 +920,141 @@ var ExpPack = {};
 		};
 
 		GDT.addEvent(fire);
+	};
+	
+	ExpPack.addEventFirstMagazine = function () {
+		var eventId = "12111996-0001-0000-0110-DZJENGISKHAN";
+		
+		var WelcomeToIndustry = {
+			id: eventId,
+			isRandom: false,
+			date: '4/8/3',
+			ignoreGameLengthModifier: false,
+			getNotification: function (company) {
+            	var msg = "Gamer Pride magazine would like you to give an interview as a part of  'New Stars in the Game Industry' action to promote the game industry and upcoming game developers.{n}This is a big part of their project to promote gaming and help developers to get better attention.\n\n Do you accept this offer? If yes, decide what topic you would like to discuss.".localize();
+				return new Notification({
+					sourceId: eventId,
+					header: "Magazine Interview".localize(),
+					text: msg,
+					options: ["No, thank You.", "Current game industry", "My dreams"]
+				});
+			},
+                       
+			complete: function (decision) {
+                       
+				var company = GameManager.company;
+                               
+				if (decision === 0) {
+					var n = new Notification({
+						header: "Magazine Interview".localize(),
+						text: "You resigned, Gamer Pride magazine is disappointed."
+					});    
+					company.activeNotifications.addRange(n.split());
+					return;                                                                                        
+				}
+				if (decision === 1) {
+                	var n = new Notification({
+                    header: "Magazine Interview".localize(),
+                    text: "You tell the magazine that nowadays game industry is relatively small and it is a great opportunity for people like you to find their place and grow.{n} The interviewer asked if you can predict the future of game industry.\n\n You answered that a dynamic progress in electornic industry will probably catalyze the production of new platforms and that will give a great chance for game industry to progress in many ways."
+               	});
+                   	n.adjustFans(200);
+                    company.notifications.push(n);
+                                       
+                    var m = new Notification ({
+                    	header: "Sponsorship".localize(),
+                    	text: "Some electronic companies appreciated that you mentioned them in your recent interview. A company called RBM contacted to you and gave you some money as a gift for your current project. They hope that cooperation between them and game developers will boost both industries."
+                    });
+                	if(company.isGameProgressBetween(0.2, 0.9)) {
+                    	m.adjustCash(40000, "RBM Sponsorship");
+                    	m.adjustHype(5 + 15 * company.getRandom());
+                    	company.notifications.push(m);
+                    }
+                    return;                        
+                }
+                if (decision === 2) {
+                	var n = new Notification({
+                    	header: "Magazine Interview".localize(),
+                        text: "Your dream is to find a 'golden solution' that will push your company and maybe the whole gaming industry into next level. \nYou say that right now this is a great time to grow since the game business is relatively new. You hope that in 4, 5 years the company will grow and you will be able to work on more ambitious projects.{n} The interviewer asked if you can predict the future of game industry.\n\n You answered that only god knows what future might bring."
+                    });
+                	n.adjustFans(100);
+                	if (company.isGameProgressBetween(0.2, 0.9)) {
+                    	n.adjustHype(5 + 15 * company.getRandom());
+                    }
+                    company.notifications.push(n);
+                    return;             
+               	}
+			}
+        };
+        
+        GDT.addEvent(WelcomeToIndustry);
+	};
+	
+	ExpPack.addEventSecMagazine = function () {
+		var eventId = "12111996-0001-0000-0111-DZJENGISKHAN";
+		
+		var LateThoughts = {	                       
+	        id: eventId,
+	        isRandom: false,
+	        maxTriggers: 1,
+	        trigger: function (company) {
+	        	return company.fans >= 1500000;
+	        },
+	        getNotification: function (company) {
+		    	var msg = "Gamer Pride magazine contacted you for an interview. Recently you reached 1.5 mln fans, they want to know what the secret is behind this success.".localize();
+	            return new Notification({
+	            	sourceId: eventId,
+	                header: "Magazine Interview".localize(),
+	            	text: msg,
+	            	options: ["Providing the best games", "The fans", "We are pro"]
+	             });
+	        },
+	        complete: function (decision) {            
+	        	var company = GameManager.company;
+	            if (decision === 0) {
+	            	var n = new Notification({
+	                	header: "Magazine Interview".localize(),
+	                	text: "You said that only by providing the best games possible you were able to build such big fan base. You learned by this time that gamers only seek for great games and if some game developers are not able to produce some innovative and great games, it is unlikely that they will reach such fan base and most likely they will go bankrupt sooner or later."
+	                });
+	                n.adjustFans(5000);
+	                if(company.isGameProgressBetween(0.2, 0.9)) {
+	                	n.adjustHype(20 + 40 * company.getRandom());
+	                }
+	                company.notifications.push(n);
+	                return;
+	            }
+	            if (decision === 1) {
+	            	var n = new Notification({
+	                	header: "Magazine Interview".localize(),
+	                	text: "In your opinion, based on the years of experience your recipe for success is to build good relationship between a game developer and customer. It does mean that gamers need to see that it is a good idea to invest their money in your products. \n They can see it when a company provides good value for the money that gamers spent on the game.{n} You say that customers need to be treated properly. For instance, they can't be punished with DRM, because it is not fair. \nPirates have no problem with breaking DRM. It is broken the next day the game is released.\n That way pirates can experience games without any problems, when honest customers have to deal with DRM policy.{n}Instead of punishing customers, companies should reward them with additional content for free, great customer service and so on.\n Third and the most important thing is to treat gamers same as you would like to be treated, because at the end of the day, we are all gamers!"
+	                });
+	                company.notifications.push(n);
+	                var m = new Notification({
+	                	header: "Magazine Interview".localize(),
+	                	text: "Your words warmed people. The company's e-mail was swarmed by tons of supportive messages from your fans! Isn't that a great feeling?"
+	                });
+					m.adjustFans(20000);
+					if(company.isGameProgressBetween(0.2, 0.9)) {
+	               		m.adjustHype(50 + 60 * company.getRandom());
+	           		}
+	            	company.notifications.push(m);
+	           		return;
+				}
+	            if (decision === 2) {
+	            	var n = new Notification({
+	                	header: "Magazine Interview".localize(),
+	                	text: "What can you say? You and your company are just pro developers and gamers love pro!"
+	                });
+	                 n.adjustFans(1000);
+	                 if(company.isGameProgressBetween(0.2, 0.9)) {
+	                 	n.adjustHype(10 + 20 * company.getRandom());
+	                 }
+	                 company.notifications.push(n);
+	                               
+				}
+			}
+	 	};
+	    
+	    GDT.addEvent(LateThoughts);
 	};
 	/*  */
 	
@@ -1166,5 +1296,179 @@ var ExpPack = {};
 		});
 		/*  */
 	};
+	/*  */
+	
+	/* Custom prices for games */
+	var company = GameManager.company;
+	var gamePrice;
+	var newPrice;
+	
+	UI.selectPriceClick = function (a) {
+	Sound.click();
+		switch (a.id) {
+			case "applyPrice":
+			applyPrice();
+				break;
+			default:
+				return;
+		}
+	};
+	
+	var div = $("body");
+	div.append('<div id="PriceContainer" class="windowBorder tallWindow" style="overflow:auto;display:none;"> <div id="priceSelector" class="windowTitle smallerWindowTitle">Custom Price</div>');
+	div = $("#PriceContainer");
+	
+	div.append('<div id="exppack_price" style="text-align:center;margin-left:50px;width: 450px"></div>');
+	div.append('<div id="exppack_current_price" style="text-align:center;margin-left:50px;width: 450px"></div>');
+	div.append('<div id="exppack_select_price" style="text-align:center;margin-left:50px;width: 450px"></div>');
+	div.append('<div class="priceSlider"></div>');
+	div.append('<div id="applyPrice" class="selectorButton whiteButton" onclick="UI.selectPriceClick(this)" style="margin-left:50px;width: 450px">Set Price</div>');
+	
+	function applyPrice() {
+		game = GameManager.company.currentGame;
+		
+		if (game.gameSize === "medium") {
+			Sales.mediumUnitPrice = newPrice;
+		}
+		else if (game.gameSize === "large") {
+			Sales.largeUnitPrice = newPrice;
+		}
+		else if (game.gameSize === "aaa") {
+			Sales.aaaUnitPrice = newPrice;
+		}
+		else {
+			Sales.smallUnitPrice = newPrice;
+		}
+		
+		gamePrice = newPrice;
+		div.find("#exppack_current_price").html("Current price: " + gamePrice);
+	};
+	
+	function setPrice(e) {
+		var game = GameManager.company.currentGame;
+		newPrice = e
+		
+		var div = $("#PriceContainer");
+		
+		if(newPrice == 7 && game.gameSize === "small")
+			div.find("#exppack_price").html(newPrice + " Cr. (Default)");
+		else if(newPrice == 11 && game.gameSize === "medium")
+			div.find("#exppack_price").html(newPrice + " Cr. (Default)");
+		else if(newPrice == 14 && game.gameSize === "large")
+			div.find("#exppack_price").html(newPrice + " Cr. (Default)");
+		else if(newPrice == 18 && game.gameSize === "aaa")
+			div.find("#exppack_price").html(newPrice + " Cr. (Default)");
+		else
+			div.find("#exppack_price").html(newPrice + " Cr.");
+	};
+	
+	/* calculateSales algorithm */
+	var salesCalculated = function (company, game, gamePrice) {
+		var price = gamePrice;
+		
+		if(GameManager.company.isCurrentlyDevelopingGame())
+		{
+			var priceRatio = function (price) {
+				var a;
+				var game = GameManager.company.currentGame;
+				
+				if(game.gameSize === "small")
+					a = price / 10;
+				else if(game.gameSize === "medium")
+					a = price / 20;
+				else if(game.gameSize === "large")
+					a = price / 40;
+				else if(game.gameSize === "aaa")
+					a = price / 60;
+				
+				return a;
+			}
+			
+			var sRatio = function (price, score) {
+				var b;
+				
+				if(score >= 9)
+					b = 1;
+				else if (score >= 7)
+					b = 0.8;
+				else if (score >= 5)
+					b = 0.6;
+				else if (score >= 3)
+					b = 0.4;
+				else
+					b = 0.2;
+					
+				return b;
+			}
+			
+			if(priceRatio - sRatio > 0)
+				saleReach -= priceRatio + sRatio;
+			else
+				saleReach += priceRatio + sRatio;
+			
+			saleReach = [saleReach, saleReach, saleReach];
+			
+			reach[i] += saleReach[i];
+		}
+	};
+	
+	GDT.on(GDT.eventKeys.gameplay.salesCalculated, salesCalculated);
+	/*  */
+	
+	var original_showContextMenu = UI._showContextMenu;
+	var new_showContextMenu = function (b, c, d, h) {
+		GameManager.company.isCurrentlyDevelopingGame() && c.push({
+				label: "Game Price...",
+				action: function () {
+					Sound.click();
+					GameManager.resume(true);
+					
+					var div = $("#PriceContainer");
+						 
+					div.scrollTop()
+						 
+					div.gdDialog({
+						popout: !0,
+						close: !0
+					})
+				}
+			})
+			
+		var game = GameManager.company.currentGame;
+		var max_price;
+		
+		if (GameManager.company.isCurrentlyDevelopingGame() && game.gameSize === "medium") {
+			max_price = 20;
+			gamePrice = Sales.mediumUnitPrice;
+		}
+		else if (GameManager.company.isCurrentlyDevelopingGame() && game.gameSize === "large") {
+			max_price = 40;
+			gamePrice = Sales.largeUnitPrice;
+		}
+		else if (GameManager.company.isCurrentlyDevelopingGame() && game.gameSize === "aaa") {
+			max_price = 60;
+			gamePrice = Sales.aaaUnitPrice;
+		}
+		else if (GameManager.company.isCurrentlyDevelopingGame()) {
+			max_price = 10;
+			gamePrice = Sales.smallUnitPrice;
+		}
+		
+		div.find(".priceSlider").slider({
+			min: 1,
+			max: max_price,
+			range: "min",
+			value: Math.floor(gamePrice),
+			animate: !1,
+			slide: function (a, b) {
+				var c = b.value;
+				setPrice(c);
+			}
+		});
+		setPrice(gamePrice);
+	
+		original_showContextMenu(b, c, d, h);
+	};
+	UI._showContextMenu = new_showContextMenu;
 	/*  */
 })();
