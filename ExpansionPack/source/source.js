@@ -742,6 +742,7 @@ var ExpPack = {};
 						text: "You buy the vacuum cleaner. After doing a garage clenup you win the prize for most clean gaming industry garage! This will most likely increase the hype for your game!"
 					});
 					n.adjustHype(5 + 10 * company.getRandom());
+					n.adjestCash(-4000, "Vacuum cleaner");
 					
 					company.activeNotifications.addRange(n.split());
 					return;
