@@ -1346,7 +1346,10 @@ var ExpPack = {};
 	};
 	
 	function setPrice(e) {
-		var game = GameManager.company.currentGame;
+		if(GameManager.company.isCurrentlyDevelopingGame())
+		{
+			var game = GameManager.company.currentGame;
+		}
 		newPrice = e
 		
 		var div = $("#PriceContainer");
