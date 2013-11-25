@@ -1084,7 +1084,7 @@ var ExpPack = {};
 			category: "Graphic",
 			categoryDisplayName: "Graphic"
 		});
-		(
+		GDT.addResearchItem(
 		{
 			id: "Animated Textures",
 			name: "Animated Textures".localize(),
@@ -1095,6 +1095,39 @@ var ExpPack = {};
 			category: "Graphic",
 			categoryDisplayName: "Graphic"
 		});
+		GDT.addResearchItem(
+		{
+			id: "Basic Holograms",
+                        name: "Basic Hologram".localize(),
+                        v: 4,
+                        canResearch: function (company) {
+                                return LevelCalculator.getMissionLevel('Graphic') > 4
+			},
+                        category: "Graphic",
+                        categoryDisplayName: "Graphic"
+		});
+		GDT.addResearchItem(
+		{
+                        id: "Advanced Holograms",
+                        name: "Advanced Holograms".localize(),
+                        v: 8,
+                        canResearch: function (company) {
+                                return LevelCalculator.getMissionLevel('Graphic') > 6
+                        },
+                        category: "Graphic",
+                        categoryDisplayName: "Graphic"
+                });
+		GDT.addResearchItem(
+                {
+                        id: "Interactive Holograms",
+                        name: "Interactive Holograms".localize(),
+                        v: 10,
+                        canResearch: function (company) {
+                                return LevelCalculator.getMissionLevel('Graphic') > 8
+                        },
+                        category: "Graphic",
+                        categoryDisplayName: "Graphic"
+                });
 		/*  */
 		
 		/* Sound items */
@@ -1111,7 +1144,7 @@ var ExpPack = {};
 		});
 		GDT.addResearchItem(
 		{
-			id: "Copywriten Music",
+			id: "Copywritten Music",
 			name: "Copywriten sound".localize(),
 			v: 8,
 			canResearch: function () {
