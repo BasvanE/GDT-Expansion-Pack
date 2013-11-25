@@ -3,7 +3,7 @@
 This is the official expansion pack made by DzjengisKhan!
 
 This expansion pack will include:
-  - 79 New topics
+  - 80 New topics
   - 7 New platforms
   - 8 New events
   - 19 custom Researches
@@ -19,6 +19,7 @@ Contributors (all the names are from the greenheart games forum):
   - Drakiren (Event concepts)
   - Nezaja (Made 2 events)
   - Glampkoo (Texture Design)
+  - Kristof1104 (UI Techniques)
 
 
 ###Wiki
