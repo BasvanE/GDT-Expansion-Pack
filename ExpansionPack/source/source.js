@@ -431,7 +431,7 @@ var ExpPack = {};
 			});
 	};
 	/*  */
-
+	
 	/* Itara */
 	ExpPack.addPlatformItaraBackflash = function () {
 		var icon = './mods/ExpansionPack/source/img/Itara.png';
@@ -602,6 +602,41 @@ var ExpPack = {};
 								image: icon
 							});
 						}
+					}
+				]
+			});
+	};
+	/*  */
+	
+	/* Holo Corp */
+	ExpPack.addPlatformHoloBox = function () {
+    	var icon = './mods/ExpansionPack/source/img/HoloBox.png';
+        GDT.addPlatform(
+	        {
+	        	id: '12111996-0000-0011-0000-DZJENGISKHAN',
+	        	name: 'Holo Box',
+	        	company: 'Holo Corp',
+	         	startAmount: 1.7,
+	        	unitsSold: 5.3,
+	        	licencePrize: 250000,
+	            published: '20/1/1',
+	            platformRetireDate: '260/12/4',
+	            developmentCosts: 150000,
+	            genreWeightings: [0.9, 0.8, 0.7, 1, 0.7, 0.6],
+	            audienceWeightings: [0.7, 0.8, 1],
+	            techLevel: 7,
+	            iconUri: icon,
+	            events: [
+	            	{
+	                	id: '12111996-1111-0011-0001-DZJENGISKHAN',
+	                	date: '19/9/3',
+	                    getNotification: function (company) {
+	                    	return new Notification({
+	                        	header: "Industry News".localize(),
+	                        	text: "Today, Holo Corp, a new gaming company has just announced that they will be releasing their new console, the Holo Box. It will display games using holographic technology and eradicate the need for game disks.{n} The games will be loaded into a small flash drive which is then inserted into the console. This will reduce the cost of games. They are anticipating that the Holo Box will be a huge success. It will be released {0}".localize().format(General.getETADescription('19/9/3', '20/1/1')),
+	                        	image: icon
+	                        });
+	                    }
 					}
 				]
 			});
@@ -1098,36 +1133,36 @@ var ExpPack = {};
 		GDT.addResearchItem(
 		{
 			id: "Basic Holograms",
-                        name: "Basic Hologram".localize(),
-                        v: 4,
-                        canResearch: function (company) {
-                                return LevelCalculator.getMissionLevel('Graphic') > 4
+            name: "Basic Holograms".localize(),
+            v: 4,
+            canResearch: function (company) {
+            	return LevelCalculator.getMissionLevel('Graphic') > 4
 			},
-                        category: "Graphic",
-                        categoryDisplayName: "Graphic"
+            category: "Graphic",
+            categoryDisplayName: "Graphic"
 		});
 		GDT.addResearchItem(
 		{
-                        id: "Advanced Holograms",
-                        name: "Advanced Holograms".localize(),
-                        v: 8,
-                        canResearch: function (company) {
-                                return LevelCalculator.getMissionLevel('Graphic') > 6
-                        },
-                        category: "Graphic",
-                        categoryDisplayName: "Graphic"
-                });
+        	id: "Advanced Holograms",
+            name: "Advanced Holograms".localize(),
+            v: 8,
+            canResearch: function (company) {
+            	return LevelCalculator.getMissionLevel('Graphic') > 6
+            },
+            category: "Graphic",
+            categoryDisplayName: "Graphic"
+        });
 		GDT.addResearchItem(
-                {
-                        id: "Interactive Holograms",
-                        name: "Interactive Holograms".localize(),
-                        v: 10,
-                        canResearch: function (company) {
-                                return LevelCalculator.getMissionLevel('Graphic') > 8
-                        },
-                        category: "Graphic",
-                        categoryDisplayName: "Graphic"
-                });
+        {
+        	id: "Interactive Holograms",
+            name: "Interactive Holograms".localize(),
+            v: 10,
+            canResearch: function (company) {
+            	return LevelCalculator.getMissionLevel('Graphic') > 8
+            },
+            category: "Graphic",
+            categoryDisplayName: "Graphic"
+        });
 		/*  */
 		
 		/* Sound items */
@@ -1145,7 +1180,7 @@ var ExpPack = {};
 		GDT.addResearchItem(
 		{
 			id: "Copywritten Music",
-			name: "Copywriten sound".localize(),
+			name: "Copywritten sound".localize(),
 			v: 8,
 			canResearch: function () {
 				return LevelCalculator.getMissionLevel('Sound') > 7
@@ -1359,94 +1394,90 @@ var ExpPack = {};
 	div.append('<div id="applyPrice" class="selectorButton whiteButton" onclick="UI.selectPriceClick(this)" style="margin-left:50px;width: 450px">Set Price</div>');
 	
 	function applyPrice() {
-		game = GameManager.company.currentGame;
-		
-		if (game.gameSize === "medium") {
-			Sales.mediumUnitPrice = newPrice;
+		if(GameManager.company.isCurrentlyDevelopingGame())
+		{
+			game = GameManager.company.currentGame;
+			
+			if (game.gameSize === "medium") {
+				Sales.mediumUnitPrice = newPrice;
+			}
+			else if (game.gameSize === "large") {
+				Sales.largeUnitPrice = newPrice;
+			}
+			else if (game.gameSize === "aaa") {
+				Sales.aaaUnitPrice = newPrice;
+			}
+			else {
+				Sales.smallUnitPrice = newPrice;
+			}
+			
+			gamePrice = newPrice;
+			div.find("#exppack_current_price").html("Current price: " + gamePrice);
 		}
-		else if (game.gameSize === "large") {
-			Sales.largeUnitPrice = newPrice;
-		}
-		else if (game.gameSize === "aaa") {
-			Sales.aaaUnitPrice = newPrice;
-		}
-		else {
-			Sales.smallUnitPrice = newPrice;
-		}
-		
-		gamePrice = newPrice;
-		div.find("#exppack_current_price").html("Current price: " + gamePrice);
 	};
 	
 	function setPrice(e) {
 		if(GameManager.company.isCurrentlyDevelopingGame())
 		{
 			var game = GameManager.company.currentGame;
+			newPrice = e
+			
+			var div = $("#PriceContainer");
+			
+			if(newPrice == 7 && game.gameSize === "small")
+				div.find("#exppack_price").html(newPrice + " Cr. (Default)");
+			else if(newPrice == 11 && game.gameSize === "medium")
+				div.find("#exppack_price").html(newPrice + " Cr. (Default)");
+			else if(newPrice == 14 && game.gameSize === "large")
+				div.find("#exppack_price").html(newPrice + " Cr. (Default)");
+			else if(newPrice == 18 && game.gameSize === "aaa")
+				div.find("#exppack_price").html(newPrice + " Cr. (Default)");
+			else
+				div.find("#exppack_price").html(newPrice + " Cr.");
 		}
-		newPrice = e
-		
-		var div = $("#PriceContainer");
-		
-		if(newPrice == 7 && game.gameSize === "small")
-			div.find("#exppack_price").html(newPrice + " Cr. (Default)");
-		else if(newPrice == 11 && game.gameSize === "medium")
-			div.find("#exppack_price").html(newPrice + " Cr. (Default)");
-		else if(newPrice == 14 && game.gameSize === "large")
-			div.find("#exppack_price").html(newPrice + " Cr. (Default)");
-		else if(newPrice == 18 && game.gameSize === "aaa")
-			div.find("#exppack_price").html(newPrice + " Cr. (Default)");
-		else
-			div.find("#exppack_price").html(newPrice + " Cr.");
 	};
 	
 	/* calculateSales algorithm */
-	var salesCalculated = function (company, game, gamePrice) {
-		var price = gamePrice;
+	var salesCalculated = function (c, b) {
+		if(GameManager.company.isCurrentlyDevelopingGame()) {
+			var price = gamePrice;
 		
-		if(GameManager.company.isCurrentlyDevelopingGame())
-		{
-			var priceRatio = function (price) {
-				var a;
-				var game = GameManager.company.currentGame;
+			var priceRatio = function (price, b) {
+				var f;
 				
-				if(game.gameSize === "small")
-					a = price / 10;
-				else if(game.gameSize === "medium")
-					a = price / 20;
-				else if(game.gameSize === "large")
-					a = price / 40;
-				else if(game.gameSize === "aaa")
-					a = price / 60;
+				if(b.gameSize === "small")
+					f = 2 - (price / 10);
+				else if(b.gameSize === "medium")
+					f = 2 - (price / 20);
+				else if(b.gameSize === "large")
+					f = 2 - (price / 40);
+				else if(b.gameSize === "aaa")
+					f = 2 - (price / 60);
 				
-				return a;
-			}
+				return f;
+			};
 			
-			var sRatio = function (price, score) {
-				var b;
+			var e = b.score.clamp(1, 10);
+			
+			var scoreRatio = function (price, e) {
+				var d;
 				
 				if(score >= 9)
-					b = 1;
+					d = 1.3;
 				else if (score >= 7)
-					b = 0.8;
+					d = 1.1;
 				else if (score >= 5)
-					b = 0.6;
+					d = 0.8;
 				else if (score >= 3)
-					b = 0.4;
+					d = 0.5;
 				else
-					b = 0.2;
+					d = 0.1;
 					
-				return b;
-			}
+				return d;
+			};
 			
-			if(priceRatio - sRatio > 0)
-				saleReach -= priceRatio + sRatio;
-			else
-				saleReach += priceRatio + sRatio;
-			
-			saleReach = [saleReach, saleReach, saleReach];
-			
-			reach[i] += saleReach[i];
-		}
+			b.totalSalesCash *= (1 * priceRatio) * scoreRatio;
+		};
 	};
 	
 	GDT.on(GDT.eventKeys.gameplay.salesCalculated, salesCalculated);

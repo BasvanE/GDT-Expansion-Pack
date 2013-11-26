@@ -13,6 +13,7 @@
 		ExpPack.addPlatformGamelingColor();
 		ExpPack.addPlatformViva();
 		ExpPack.addPlatformItaraBackflash();
+		ExpPack.addPlatformHoloBox();
 	/*									*/
 		
 	/* Adds events to the game 			*/	
