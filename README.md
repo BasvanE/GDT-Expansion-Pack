@@ -6,7 +6,7 @@ This expansion pack will include:
   - 80 New topics
   - 8 New platforms
   - 8 New events
-  - 19 custom Researches
+  - 22 custom Researches
   - Custom prices
 
 Want your name in the list below?? Send me a private message on http://forum.greenheartgames.com/
