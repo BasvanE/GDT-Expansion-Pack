@@ -1,10 +1,10 @@
-###Expansion Pack for Game Dev Tycoon
+###Expansion Pack for Game Dev Tycoon (Current Version 0.3.2)
 
 This is the official expansion pack made by DzjengisKhan!
 
 This expansion pack will include:
   - 80 New topics
-  - 7 New platforms
+  - 8 New platforms
   - 8 New events
   - 19 custom Researches
   - Custom prices
