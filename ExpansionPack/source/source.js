@@ -511,7 +511,7 @@ var ExpPack = {};
 				startAmount: 2.125,
 				unitsSold: 3.634,
 				licencePrize: 250000,
-				published: '21/4/2',
+				published: '23/4/2',
 				platformRetireDate: '29/2/1',
 				developmentCosts: 150000,
 				genreWeightings: [0.7, 0.8, 0.9, 1, 0.6, 1],
