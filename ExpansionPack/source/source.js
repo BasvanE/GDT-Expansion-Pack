@@ -563,7 +563,7 @@ var ExpPack = {};
 						getNotification: function (company) {
 							return new Notification({
 								header: "Industry News".localize(),
-								text: "Ninvento just announced their next platform! The Gameling Color, as it is called, is another handheld console and features a 160x144 resolution with over 30k colors.{n} We are not sure if it will tip the suscess of the original Gameling but we can not wait!! Ninvento said the Gameling Color will be realesed {0}".localize().format(General.getETADescription('9/8/4', '9/11/2')),
+								text: "Ninvento just announced their next platform! The Gameling Color, as it is called, is another handheld console and features a 160x144 resolution with over 30k colors.{n} We are not sure if it will tip the suscess of the original Gameling but we can not wait!! Ninvento said the Gameling Color will be released {0}".localize().format(General.getETADescription('9/8/4', '9/11/2')),
 								image: icon
 							});
 						}
@@ -1319,7 +1319,7 @@ var ExpPack = {};
 		GDT.addResearchItem(
 		{
 			id: "Realistic Water",
-			name: "Realstic water".localize(),
+			name: "Realistic water".localize(),
 			v: 4,
 			canResearch: function () {
 				return LevelCalculator.getMissionLevel('World Design') > 3
