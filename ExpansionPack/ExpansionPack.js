@@ -1,22 +1,25 @@
 ﻿(function () {
 	var ready = function () {
 		
-	/* Adds topics to the game 			*/	
+	/* Adds topics to the game 			*/
 		ExpPack.addTopic();
-	/*									*/	
+	/*									*/
 	
-	/* Adds platforms to the game 		*/	
+	/* Adds platforms to the game 		*/
 		ExpPack.addPlatformGrapintosh();
 		ExpPack.addPlatformGrMac();
 		ExpPack.addPlatform3GS();
 		ExpPack.addPlatform2GS();
 		ExpPack.addPlatformGamelingColor();
 		ExpPack.addPlatformViva();
+		ExpPack.addPlatformPS2S();
 		ExpPack.addPlatformItaraBackflash();
+		ExpPack.addPlatformItara5200();
 		ExpPack.addPlatformHoloBox();
+		ExpPack.addPlatformMBox360S();
 	/*									*/
 		
-	/* Adds events to the game 			*/	
+	/* Adds events to the game 			*/
 		ExpPack.addEventCelebration();
 		ExpPack.addEventCuriosity();
 		ExpPack.addEventVac();
@@ -24,11 +27,12 @@
 		ExpPack.addEventMovieGame();
 		ExpPack.addEventFire();
 		ExpPack.addEventFirstMagazine();
-		ExpPack.addEventSecMagazine();	
+		ExpPack.addEventSecMagazine();
 	/*									*/
 	
 	/* Adds researches to the game		*/
 		ExpPack.addResearch();
+		ExpPack.addLabResearch();
 	/*									*/
 	};
 
@@ -42,6 +46,7 @@
 	'mods/gdt-modAPI/api/topics.js',
 	'mods/gdt-modAPI/api/research.js',
 	'mods/gdt-modAPI/examples/examples.js',
-	'mods/ExpansionPack/source/source.js'
+	'mods/ExpansionPack/source/source.js',
+	'mods/ExpansionPack/api/labResearch.js'
 	], ready, error);
 })();

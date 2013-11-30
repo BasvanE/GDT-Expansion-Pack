@@ -289,7 +289,7 @@ var ExpPack = {};
 		}, {
 		    id: "Skiing",
 		    name: "Skiing".localize("game topic"),
-		    genreWeightings: [1, 0.9, 0.9, 0.8, 1, 0.7],
+		    genreWeightings: [1, 0.9, 0.9, 1, 0.8, 0.7],
 		    audienceWeightings: [0.8, 1, 0.8]
 		}, {
 		    id: "Super Villain",
@@ -359,10 +359,10 @@ var ExpPack = {};
 			audienceWeightings: [0.6, 0.9, 1]
 		}]);
 	};
-	/*  */    
-	
+	/*  */
+
 	/* Platforms */
-	
+
 	/* Grapple */
 	ExpPack.addPlatformGrapintosh = function () {
 		var icon = './mods/ExpansionPack/source/img/Grapple.png';
@@ -397,20 +397,20 @@ var ExpPack = {};
 				]
 			});
 	};
-	
+
 	ExpPack.addPlatformGrMac = function () {
-		var icon = './mods/ExpansionPack/source/img/Grapple.png';		
+		var icon = './mods/ExpansionPack/source/img/grMac.png';		
 		GDT.addPlatform(
 			{
 				id: '12111996-0000-0000-0001-DZJENGISKHAN',
 				name: 'grMac',
 				company: 'Grapple',
 				startAmount: 2.6,
-				unitsSold: 6.434,
+				unitsSold: 5.434,
 				licencePrize: 40000,
 				published: '16/8/1',
 				platformRetireDate: '260/12/4',
-				developmentCosts: 500,
+				developmentCosts: 25000,
 				genreWeightings: [1, 0.9, 1, 1, 1, 0.8],
 				audienceWeightings: [0.8, 0.9, 1],
 				techLevel: 6,
@@ -431,7 +431,7 @@ var ExpPack = {};
 			});
 	};
 	/*  */
-	
+
 	/* Itara */
 	ExpPack.addPlatformItaraBackflash = function () {
 		var icon = './mods/ExpansionPack/source/img/Itara.png';
@@ -465,10 +465,43 @@ var ExpPack = {};
 				]
 			});
 	};
-	/*  */
 	
+	ExpPack.addPlatformItara5200 = function () {
+		var icon = './mods/ExpansionPack/source/img/itara5200.png';
+		GDT.addPlatform(
+			{
+				id: '12111996-0000-0100-0001-DZJENGISKHAN',
+				name: 'Itara 5200',
+				company: 'Itara',
+				startAmount: 0.4,
+				unitsSold: 0.462,
+				licencePrize: 45000,
+				published: '2/11/2',
+				platformRetireDate: '6/4/2',
+				developmentCosts: 25000,
+				genreWeightings: [0.8, 1, 1, 0.9, 0.7, 1],
+				audienceWeightings: [0.8, 1, 0.7],
+				techLevel: 1,
+				iconUri: icon,
+				events: [
+					{
+						id: '31102000-2-1-4-1-2-LINELIAR',
+						date: '2/9/1',
+						getNotification: function (company) {
+							return new Notification({
+								header: "Industry News".localize(),
+								text: "Today Itara announced their first platform. They called it: Itara 5200.{n} The console uses a analog joystick and has to compete with the popular TES from Ninvento.\nThe Itara 5200 will be released in {0}.".localize().format(General.getETADescription('2/9/1', '2/11/2')),
+								image: icon
+							});
+						}
+					}
+				]
+			});
+	};
+	/*  */
+
 	/* Ninvento */	
-	ExpPack.addPlatform3GS = function () {			
+	ExpPack.addPlatform3GS = function () {
 		var icon = './mods/ExpansionPack/source/img/3GS.png';
 		GDT.addPlatform(
 			{
@@ -500,8 +533,8 @@ var ExpPack = {};
 				]
 			});
 	};
-			
-	ExpPack.addPlatform2GS = function () {		
+
+	ExpPack.addPlatform2GS = function () {
 		var icon = './mods/ExpansionPack/source/img/2GS.png';
 		GDT.addPlatform(
 			{
@@ -533,7 +566,7 @@ var ExpPack = {};
 				]
 			});
 	};
-	
+
 	ExpPack.addPlatformGamelingColor = function () {
 		var gameling = Platforms.allPlatforms.first(function(p){return p.id == 'Gameling';});
 		if (gameling){
@@ -598,7 +631,40 @@ var ExpPack = {};
 						getNotification: function (company) {
 							return new Notification({
 								header: "Industry News".localize(),
-								text: "Vony developer of the PPS platform has been spreading rumors that they are working on a new platform called 'Viva Playsystem' or 'VPS' in short.{n} They haven't released much info about the VPS but they claim that the new handheld console will be released {0}".localize().format(General.getETADescription('22/3/4', '22/6/2')), /*'22/3/4', '22/6/2'*/
+								text: "Vonny, developer of the PPS platform, has been spreading rumors that they are working on a new platform called 'Viva Playsystem' or 'VPS' in short.{n} They haven't released much info about the VPS but they claim that the new handheld console will be released {0}".localize().format(General.getETADescription('22/3/4', '22/6/2')),
+								image: icon
+							});
+						}
+					}
+				]
+			});
+	};
+	
+	ExpPack.addPlatformPS2S = function () {		
+		var icon = './mods/ExpansionPack/source/img/playSystem2Slim.png';
+		GDT.addPlatform(
+			{
+				id: '12111996-0000-0010-0001-DZJENGISKHAN',
+				name: 'Playsystem 2 Slim',
+				company: 'Vonny',
+				startAmount: 1.4,
+				unitsSold: 2.7,
+				licencePrize: 350000,
+				published: '12/2/2',
+				platformRetireDate: '19/1/3',
+				developmentCosts: 70000,
+				genreWeightings: [1, 0.8, 1, 0.9, 0.7, 0.9],
+				audienceWeightings: [0.9, 1, 0.8],
+				techLevel: 5,
+				iconUri: icon,
+				events: [
+					{
+						id: '12111996-1111-0010-0010-DZJENGISKHAN',
+						date: '11/11/2',
+						getNotification: function (company) {
+							return new Notification({
+								header: "Industry News".localize(),
+								text: "Vonny just released info on an improved version of their successfully Playsystem 2. Vonny called the new platform the 'Playsystem 2 Slim'.{n} Maybe not the most original name ever, but they claim that the the ps2 slim does have better hardware then the original ps2.\nVonny was not very clear about the release date but we excpect it {0}".localize().format(General.getETADescription('11/11/4', '12/2/2')),
 								image: icon
 							});
 						}
@@ -634,6 +700,41 @@ var ExpPack = {};
 	                    	return new Notification({
 	                        	header: "Industry News".localize(),
 	                        	text: "Today, Holo Corp, a new gaming company has just announced that they will be releasing their new console, the Holo Box. It will display games using holographic technology and eradicate the need for game disks.{n} The games will be loaded into a small flash drive which is then inserted into the console. This will reduce the cost of games. They are anticipating that the Holo Box will be a huge success. It will be released {0}".localize().format(General.getETADescription('19/9/3', '20/1/1')),
+	                        	image: icon
+	                        });
+	                    }
+					}
+				]
+			});
+	};
+	/*  */
+	
+	/* Mirconoft */
+	ExpPack.addPlatformMBox360S = function () {
+    	var icon = './mods/ExpansionPack/source/img/mBox360Slim.png';
+        GDT.addPlatform(
+	        {
+	        	id: '12111996-1111-0100-0000-DZJENGISKHAN',
+	        	name: 'mBox 360 Slim',
+	        	company: 'Mirconoft',
+	         	startAmount: 2,
+	        	unitsSold: 3.2,
+	        	licencePrize: 500000,
+	            published: '17/4/4',
+	            platformRetireDate: '24/9/3',
+	            developmentCosts: 80000,
+	            genreWeightings: [1, 0.9, 1, 0.9, 0.7, 0.9],
+	            audienceWeightings: [0.8, 0.9, 1],
+	            techLevel: 5,
+	            iconUri: icon,
+	            events: [
+	            	{
+	                	id: '12111996-1111-0100-0001-DZJENGISKHAN',
+	                	date: '17/1/1',
+	                    getNotification: function (company) {
+	                    	return new Notification({
+	                        	header: "Industry News".localize(),
+	                        	text: "Mirconoft announced their improvement on their mBox 360, called: mBox 360 Slim.\nAccording to the critics, Mirconoft didn't make huge improvements and thus they are curious to see how the market will respond. {n} The mBox 360 Slim will be released {0}".localize().format(General.getETADescription('17/1/1', '17/4/4')),
 	                        	image: icon
 	                        });
 	                    }
@@ -757,7 +858,7 @@ var ExpPack = {};
 				
 				return company.currentLevel == 1 && company.isGameProgressBetween(0.6, 0.9) && company.gameLog.length > 4;
 			},
-		getNotification: function (company) {
+			getNotification: function (company) {
 				var game = company.currentGame;
 	
 				var msg = "While you were working on your game someone knocked on the door of the garage. It was a man who wanted to sell you a vacuum cleaner. Do you want to buy the vacuum cleaner for 4K?".localize().format(game.title);
@@ -1319,7 +1420,7 @@ var ExpPack = {};
 		GDT.addResearchItem(
 		{
 			id: "Realistic Water",
-			name: "Realistic water".localize(),
+			name: "Realstic water".localize(),
 			v: 4,
 			canResearch: function () {
 				return LevelCalculator.getMissionLevel('World Design') > 3
@@ -1367,10 +1468,56 @@ var ExpPack = {};
 	};
 	/*  */
 	
+	/*  */
+	ExpPack.addLabResearch = function () {
+		var ForDGraphics = GDT.addResearchItem({
+			id : "4D Graphics",
+			name : "4D Graphics7".localize(),
+			v : 14,
+			canResearch : function (company) {
+				return false
+			},
+			category: "Graphic",
+			categoryDisplayName: "Graphic".localize(),
+			group : "graphic-type",
+			consolePart : true,
+			techLevel : 8,
+			showXPGain : true
+		});
+		
+		GDT.addLabResearchItem(
+		{
+			id: "4D Graphics Project",
+			name: "4D Graphics".localize(),
+			pointsCost: 200,
+			canResearch: function () {
+				var company = GameManager.company;
+				
+				return !company.flags.graphics4D && LevelCalculator.getMissionLevel(/*company, "3D Graphics V7"*/'Level Design') > 1;
+			},
+			iconUri: "./images/projectIcons/superb/graphics-v6.png",
+			description: "Cows....".localize(),
+			targetZone: 2,
+			complete: function () {
+				var company = GameManager.company;
+			
+				company.flags.graphics4D = true;
+				GDT.on(GDT.eventKeys.gameplay.researchCompleted, ForDGraphics);
+				company.notifications.push(new Notification({
+					header: "Lab report".localize(),
+					text: "Cows....".localize(),
+					image: "./images/projectIcons/superb/graphics-v6.png"
+				}))
+			}
+		});
+	};
+	/*  */
+	
 	/* Custom prices for games */
 	var company = GameManager.company;
 	var gamePrice;
 	var newPrice;
+	var dataStore = GDT.getDataStore("MasExpPack")
 	
 	UI.selectPriceClick = function (a) {
 	Sound.click();
@@ -1386,7 +1533,7 @@ var ExpPack = {};
 	var div = $("body");
 	div.append('<div id="PriceContainer" class="windowBorder tallWindow" style="overflow:auto;display:none;"> <div id="priceSelector" class="windowTitle smallerWindowTitle">Custom Price</div>');
 	div = $("#PriceContainer");
-	
+
 	div.append('<div id="exppack_price" style="text-align:center;margin-left:50px;width: 450px"></div>');
 	div.append('<div id="exppack_current_price" style="text-align:center;margin-left:50px;width: 450px"></div>');
 	div.append('<div id="exppack_select_price" style="text-align:center;margin-left:50px;width: 450px"></div>');
@@ -1414,6 +1561,7 @@ var ExpPack = {};
 			gamePrice = newPrice;
 			div.find("#exppack_current_price").html("Current price: " + gamePrice);
 		}
+		dataStore.data.gamePrice = gamePrice;
 	};
 	
 	function setPrice(e) {
@@ -1438,49 +1586,47 @@ var ExpPack = {};
 	};
 	
 	/* calculateSales algorithm */
-	var salesCalculated = function (c, b) {
-		if(GameManager.company.isCurrentlyDevelopingGame()) {
+	var salesCalculated = function (company, game) {
 			var price = gamePrice;
-		
-			var priceRatio = function (price, b) {
-				var f;
-				
-				if(b.gameSize === "small")
-					f = 2 - (price / 10);
-				else if(b.gameSize === "medium")
-					f = 2 - (price / 20);
-				else if(b.gameSize === "large")
-					f = 2 - (price / 40);
-				else if(b.gameSize === "aaa")
-					f = 2 - (price / 60);
-				
-				return f;
+
+			var priceRatio = function (price, game) {
+				var a;
+
+				if(game.gameSize === "small")
+					a = 2 - (price / 10);
+				else if(game.gameSize === "medium")
+					a = 2 - (price / 20);
+				else if(game.gameSize === "large")
+					a = 2 - (price / 40);
+				else if(game.gameSize === "aaa")
+					a = 2 - (price / 60);
+
+				return a;
 			};
-			
-			var e = b.score.clamp(1, 10);
-			
-			var scoreRatio = function (price, e) {
-				var d;
-				
+
+			var score = game.score.clamp(1, 10);
+
+			var scoreRatio = function (score) {
+				var b;
+
 				if(score >= 9)
-					d = 1.3;
+					b = 1.3;
 				else if (score >= 7)
-					d = 1.1;
+					b = 1.1;
 				else if (score >= 5)
-					d = 0.8;
+					b = 0.8;
 				else if (score >= 3)
-					d = 0.5;
+					b = 0.5;
 				else
-					d = 0.1;
-					
-				return d;
+					b = 0.1;
+
+				return b;
 			};
-			
-			b.totalSalesCash *= (1 * priceRatio) * scoreRatio;
-		};
+
+			game.totalSalesCash *= 1 * priceRatio(price, game) * scoreRatio(score);
 	};
-	
-	GDT.on(GDT.eventKeys.gameplay.salesCalculated, salesCalculated);
+
+	GDT.fire(GDT.eventKeys.gameplay.salesCalculated, salesCalculated);
 	/*  */
 	
 	var original_showContextMenu = UI._showContextMenu;
@@ -1539,4 +1685,5 @@ var ExpPack = {};
 	};
 	UI._showContextMenu = new_showContextMenu;
 	/*  */
+	
 })();
