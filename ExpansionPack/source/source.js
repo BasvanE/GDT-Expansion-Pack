@@ -1,5 +1,28 @@
 var ExpPack = {};
-(function () {	
+(function () {
+	//compatibility check
+	var compatibilityCheck = function(data){
+		for (var i = 0; i < ModSupport.availableMods.length; i++) {
+			var mod = ModSupport.availableMods[i];
+			if(mod.url == "https://github.com/Turntablelover/Game-Dev-Tycoon-Mod" && mod.active){
+				var div = $("body");
+				div.append('<div id="ErrorContainer" class="windowBorder smallWindow" style="overflow:auto;display:none;"> <div id="cheatmodtop" class="windowTitle smallerWindowTitle">Compatibility Problem</div>');
+				div = $("#ErrorContainer");
+				div.append('<div id="error" style="margin-left:50px;width: 400px;" >Expansion Pack Mod is <span style="color:red;">NOT</span> compatible with VENOMOUS mod.</br></br> To continue using Expansion Pack Mod Please disable VENOMOUS mod in the mods menu and restart your Game Dev Tycoon</div>');
+				div.append('<div id="mainmenubutton" class="selectorButton whiteButton" onclick="UI.toggleMainMenu()" style="display:inline-block;position: relative;margin-left:50px;width: 350px;" >Main Menu</div>');
+				div.gdDialog({popout: !0,close: 0})
+			}
+		}
+	};
+
+	ExpPack.initCompatibilityChecks = function(){
+		if(GDT.compatibilityCheckActive == 'undefined' || GDT.compatibilityCheckActive == null){
+			GDT.on(GDT.eventKeys.saves.loading, compatibilityCheck);
+			GDT.on(GDT.eventKeys.saves.saving, compatibilityCheck);
+			GDT.compatibilityCheckActive = true;
+		}
+	};
+	
 	/* Topics */
 	ExpPack.addTopic = function () {
 		GDT.addTopics([
@@ -1472,7 +1495,7 @@ var ExpPack = {};
 	ExpPack.addLabResearch = function () {
 		var ForDGraphics = GDT.addResearchItem({
 			id : "4D Graphics",
-			name : "4D Graphics7".localize(),
+			name : "4D Graphics".localize(),
 			v : 14,
 			canResearch : function (company) {
 				return false
@@ -1481,7 +1504,7 @@ var ExpPack = {};
 			categoryDisplayName: "Graphic".localize(),
 			group : "graphic-type",
 			consolePart : true,
-			techLevel : 8,
+			techLevel : 7,
 			showXPGain : true
 		});
 		
@@ -1490,19 +1513,15 @@ var ExpPack = {};
 			id: "4D Graphics Project",
 			name: "4D Graphics".localize(),
 			pointsCost: 200,
-			canResearch: function () {
-				var company = GameManager.company;
-				
+			canResearch: function (company) {
 				return !company.flags.graphics4D && LevelCalculator.getMissionLevel(/*company, "3D Graphics V7"*/'Level Design') > 1;
 			},
 			iconUri: "./images/projectIcons/superb/graphics-v6.png",
 			description: "Cows....".localize(),
 			targetZone: 2,
-			complete: function () {
-				var company = GameManager.company;
-			
+			complete: function (company) {
 				company.flags.graphics4D = true;
-				GDT.on(GDT.eventKeys.gameplay.researchCompleted, ForDGraphics);
+				GDT.fire(GameManager, GDT.eventKeys.gameplay.researchCompleted, ForDGraphics);
 				company.notifications.push(new Notification({
 					header: "Lab report".localize(),
 					text: "Cows....".localize(),
@@ -1685,4 +1704,5 @@ var ExpPack = {};
 	};
 	UI._showContextMenu = new_showContextMenu;
 	/*  */
+	
 })();

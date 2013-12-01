@@ -1,6 +1,7 @@
 ﻿(function () {
 	var ready = function () {
-		
+		ExpPack.initCompatibilityChecks();
+			
 	/* Adds topics to the game 			*/
 		ExpPack.addTopic();
 	/*									*/
