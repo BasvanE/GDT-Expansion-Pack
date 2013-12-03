@@ -4,10 +4,12 @@ This is the Expansion Pack Mod (EPM), founded by DzjengisKhan!
 
 This expansion pack will include:
   - 80 New topics
-  - 8 New platforms
+  - 11 New platforms
   - 8 New events
   - 22 custom Researches
   - Custom prices
+  - Black Bull (energy drink for your staff)
+  - 1 Bèta R&D Lab research (unable to use in engines)
 
 
 ###Team
@@ -29,6 +31,21 @@ This is a list of people who help/helped with the mod. All the names are from [t
 
 Want to be a part of the mod?? Send me a private message [here](http://forum.greenheartgames.com/users/dzjengiskhan/activity)
 with your addtion for the expansion pack and I will judge if it's good enough to be added to the pack!
+
+###Changle Log
+
+Version 0.3.4
+  - Added "Black Bull". Black Bull is an energy drink that you can buy for you staff when they get tired. It will give them some energy. But won't make them as fresh as sending them on a vacation.
+
+Version 0.3.3
+  - Made some modifications to the custom prices
+  - Bèta R&D Lab research (you can research the option but can't use it in your engine. Maybe someone can help me fix that)
+  - 3 New platforms (Textures made by @Gamingthrou) So unfortunately you have to start a new save game. Note to      developers of GDT: Maybe you can fix it in the API so people don't have to start a new game when a new platform is added ^^
+
+Version 0.3.2
+  - Added custom prices. UI techniques based on @kristof1104 cheat mod (Go check it out it's a great mod)
+  - 2 New awesome events. Made by: @Nezaja
+  - 3 New researches + 1 new platform. Made by: @nathan00107
 
 ###Wiki
 
