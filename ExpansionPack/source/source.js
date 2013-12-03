@@ -1,6 +1,6 @@
 var ExpPack = {};
 (function () {
-	//compatibility check
+	/* compatibility check */
 	var compatibilityCheck = function(data){
 		for (var i = 0; i < ModSupport.availableMods.length; i++) {
 			var mod = ModSupport.availableMods[i];
@@ -22,6 +22,7 @@ var ExpPack = {};
 			GDT.compatibilityCheckActive = true;
 		}
 	};
+	/*  */
 	
 	/* Topics */
 	ExpPack.addTopic = function () {
@@ -480,7 +481,7 @@ var ExpPack = {};
 						getNotification: function (company) {
 							return new Notification({
 								header: "Industry News".localize(),
-								text: "Today Itara, a company known for their consoles in the early consolemarket, have announced that they're gonna release a new console called the Itara Backflash.{n} This console will compete with consoles like the TES. Itara has announced that they are anticipating the console to be very successfull.{n} The Itara Flashback is getting released in {0}.".localize().format(General.getETADescription('12/7/3', '12/11/3')),
+								text: "Today Itara, a company known for their consoles in the early consolemarket, have announced that they're gonna release a new console called the Itara Backflash.{n} This console will compete with consoles like the TES. Itara has announced that they are anticipating the console to be very successfull.{n} The Itara Backflash is getting released in {0}.".localize().format(General.getETADescription('12/7/3', '12/11/3')),
 								image: icon
 							});
 						}
@@ -1492,22 +1493,7 @@ var ExpPack = {};
 	/*  */
 	
 	/*  */
-	ExpPack.addLabResearch = function () {
-		var ForDGraphics = GDT.addResearchItem({
-			id : "4D Graphics",
-			name : "4D Graphics".localize(),
-			v : 14,
-			canResearch : function (company) {
-				return false
-			},
-			category: "Graphic",
-			categoryDisplayName: "Graphic".localize(),
-			group : "graphic-type",
-			consolePart : true,
-			techLevel : 7,
-			showXPGain : true
-		});
-		
+	ExpPack.addLabResearch = function () {		
 		GDT.addLabResearchItem(
 		{
 			id: "4D Graphics Project",
@@ -1521,7 +1507,21 @@ var ExpPack = {};
 			targetZone: 2,
 			complete: function (company) {
 				company.flags.graphics4D = true;
-				GDT.fire(GameManager, GDT.eventKeys.gameplay.researchCompleted, ForDGraphics);
+				//GDT.fire(GameManager, GDT.eventKeys.gameplay.researchCompleted, ForDGraphics);
+				GDT.addResearchItem({
+					id : "4D Graphics",
+					name : "4D Graphics".localize(),
+					v : 14,
+					canResearch : function (company) {
+						return false
+					},
+					category: "Graphic",
+					categoryDisplayName: "Graphic".localize(),
+					group : "graphic-type",
+					consolePart : true,
+					techLevel : 7,
+					showXPGain : true
+				});
 				company.notifications.push(new Notification({
 					header: "Lab report".localize(),
 					text: "Cows....".localize(),
@@ -1533,176 +1533,227 @@ var ExpPack = {};
 	/*  */
 	
 	/* Custom prices for games */
-	var company = GameManager.company;
-	var gamePrice;
-	var newPrice;
-	var dataStore = GDT.getDataStore("MasExpPack")
-	
-	UI.selectPriceClick = function (a) {
-	Sound.click();
-		switch (a.id) {
-			case "applyPrice":
-			applyPrice();
-				break;
-			default:
-				return;
-		}
-	};
-	
-	var div = $("body");
-	div.append('<div id="PriceContainer" class="windowBorder tallWindow" style="overflow:auto;display:none;"> <div id="priceSelector" class="windowTitle smallerWindowTitle">Custom Price</div>');
-	div = $("#PriceContainer");
-
-	div.append('<div id="exppack_price" style="text-align:center;margin-left:50px;width: 450px"></div>');
-	div.append('<div id="exppack_current_price" style="text-align:center;margin-left:50px;width: 450px"></div>');
-	div.append('<div id="exppack_select_price" style="text-align:center;margin-left:50px;width: 450px"></div>');
-	div.append('<div class="priceSlider"></div>');
-	div.append('<div id="applyPrice" class="selectorButton whiteButton" onclick="UI.selectPriceClick(this)" style="margin-left:50px;width: 450px">Set Price</div>');
-	
-	function applyPrice() {
-		if(GameManager.company.isCurrentlyDevelopingGame())
-		{
-			game = GameManager.company.currentGame;
-			
-			if (game.gameSize === "medium") {
-				Sales.mediumUnitPrice = newPrice;
+	ExpPack.addCustomPrice = function () {
+		var company = GameManager.company;
+		var gamePrice;
+		var newPrice;
+		var dataStore = GDT.getDataStore("MasExpPack")
+		
+		UI.selectPriceClick = function (a) {
+		Sound.click();
+			switch (a.id) {
+				case "applyPrice":
+				applyPrice();
+					break;
+				default:
+					return;
 			}
-			else if (game.gameSize === "large") {
-				Sales.largeUnitPrice = newPrice;
-			}
-			else if (game.gameSize === "aaa") {
-				Sales.aaaUnitPrice = newPrice;
-			}
-			else {
-				Sales.smallUnitPrice = newPrice;
-			}
-			
-			gamePrice = newPrice;
-			div.find("#exppack_current_price").html("Current price: " + gamePrice);
-		}
-		dataStore.data.gamePrice = gamePrice;
-	};
+		};
+		
+		var div = $("body");
+		div.append('<div id="PriceContainer" class="windowBorder tallWindow" style="overflow:auto;display:none;"> <div id="priceSelector" class="windowTitle smallerWindowTitle">Custom Price</div>');
+		div = $("#PriceContainer");
 	
-	function setPrice(e) {
-		if(GameManager.company.isCurrentlyDevelopingGame())
-		{
-			var game = GameManager.company.currentGame;
-			newPrice = e
-			
-			var div = $("#PriceContainer");
-			
-			if(newPrice == 7 && game.gameSize === "small")
-				div.find("#exppack_price").html(newPrice + " Cr. (Default)");
-			else if(newPrice == 11 && game.gameSize === "medium")
-				div.find("#exppack_price").html(newPrice + " Cr. (Default)");
-			else if(newPrice == 14 && game.gameSize === "large")
-				div.find("#exppack_price").html(newPrice + " Cr. (Default)");
-			else if(newPrice == 18 && game.gameSize === "aaa")
-				div.find("#exppack_price").html(newPrice + " Cr. (Default)");
-			else
-				div.find("#exppack_price").html(newPrice + " Cr.");
-		}
-	};
-	
-	/* calculateSales algorithm */
-	var salesCalculated = function (company, game) {
-			var price = gamePrice;
-
-			var priceRatio = function (price, game) {
-				var a;
-
-				if(game.gameSize === "small")
-					a = 2 - (price / 10);
-				else if(game.gameSize === "medium")
-					a = 2 - (price / 20);
-				else if(game.gameSize === "large")
-					a = 2 - (price / 40);
-				else if(game.gameSize === "aaa")
-					a = 2 - (price / 60);
-
-				return a;
-			};
-
-			var score = game.score.clamp(1, 10);
-
-			var scoreRatio = function (score) {
-				var b;
-
-				if(score >= 9)
-					b = 1.3;
-				else if (score >= 7)
-					b = 1.1;
-				else if (score >= 5)
-					b = 0.8;
-				else if (score >= 3)
-					b = 0.5;
+		div.append('<div id="exppack_price" style="text-align:center;margin-left:50px;width: 450px"></div>');
+		div.append('<div id="exppack_current_price" style="text-align:center;margin-left:50px;width: 450px"></div>');
+		div.append('<div id="exppack_select_price" style="text-align:center;margin-left:50px;width: 450px"></div>');
+		div.append('<div class="priceSlider"></div>');
+		div.append('<div id="applyPrice" class="selectorButton whiteButton" onclick="UI.selectPriceClick(this)" style="margin-left:50px;width: 450px">Set Price</div>');
+		
+		function applyPrice() {
+			if(GameManager.company.isCurrentlyDevelopingGame())
+			{
+				game = GameManager.company.currentGame;
+				
+				if (game.gameSize === "medium") {
+					Sales.mediumUnitPrice = newPrice;
+				}
+				else if (game.gameSize === "large") {
+					Sales.largeUnitPrice = newPrice;
+				}
+				else if (game.gameSize === "aaa") {
+					Sales.aaaUnitPrice = newPrice;
+				}
+				else {
+					Sales.smallUnitPrice = newPrice;
+				}
+				
+				gamePrice = newPrice;
+				div.find("#exppack_current_price").html("Current price: " + gamePrice);
+			}
+			dataStore.data.gamePrice = gamePrice;
+		};
+		
+		function setPrice(e) {
+			if(GameManager.company.isCurrentlyDevelopingGame())
+			{
+				var game = GameManager.company.currentGame;
+				newPrice = e
+				
+				var div = $("#PriceContainer");
+				
+				if(newPrice == 7 && game.gameSize === "small")
+					div.find("#exppack_price").html(newPrice + " Cr. (Default)");
+				else if(newPrice == 11 && game.gameSize === "medium")
+					div.find("#exppack_price").html(newPrice + " Cr. (Default)");
+				else if(newPrice == 14 && game.gameSize === "large")
+					div.find("#exppack_price").html(newPrice + " Cr. (Default)");
+				else if(newPrice == 18 && game.gameSize === "aaa")
+					div.find("#exppack_price").html(newPrice + " Cr. (Default)");
 				else
-					b = 0.1;
-
-				return b;
-			};
-
-			game.totalSalesCash *= 1 * priceRatio(price, game) * scoreRatio(score);
+					div.find("#exppack_price").html(newPrice + " Cr.");
+			}
+		};
+		
+		/* calculateSales algorithm */
+		var salesCalculated = function (company, game) {
+				var price = gamePrice;
+	
+				var priceRatio = function (price, game) {
+					var a;
+	
+					if(game.gameSize === "small")
+						a = 2 - (price / 10);
+					else if(game.gameSize === "medium")
+						a = 2 - (price / 20);
+					else if(game.gameSize === "large")
+						a = 2 - (price / 40);
+					else if(game.gameSize === "aaa")
+						a = 2 - (price / 60);
+	
+					return a;
+				};
+	
+				var score = game.score.clamp(1, 10);
+	
+				var scoreRatio = function (score) {
+					var b;
+	
+					if(score >= 9)
+						b = 1.3;
+					else if (score >= 7)
+						b = 1.1;
+					else if (score >= 5)
+						b = 0.8;
+					else if (score >= 3)
+						b = 0.5;
+					else
+						b = 0.1;
+	
+					return b;
+				};
+	
+				game.totalSalesCash *= 1 * priceRatio(price, game) * scoreRatio(score);
+		};
+	
+		GDT.fire(GDT.eventKeys.gameplay.salesCalculated, salesCalculated);
+		/*  */
+		
+		var original_showContextMenu = UI._showContextMenu;
+		var new_showContextMenu = function (b, c, d, h) {
+			GameManager.company.isCurrentlyDevelopingGame() && c.push({
+					label: "Game Price...",
+					action: function () {
+						Sound.click();
+						GameManager.resume(true);
+						
+						var div = $("#PriceContainer");
+							 
+						div.scrollTop()
+							 
+						div.gdDialog({
+							popout: !0,
+							close: !0
+						})
+					}
+				})
+				
+			var game = GameManager.company.currentGame;
+			var max_price;
+			
+			if (GameManager.company.isCurrentlyDevelopingGame() && game.gameSize === "medium") {
+				max_price = 20;
+				gamePrice = Sales.mediumUnitPrice;
+			}
+			else if (GameManager.company.isCurrentlyDevelopingGame() && game.gameSize === "large") {
+				max_price = 40;
+				gamePrice = Sales.largeUnitPrice;
+			}
+			else if (GameManager.company.isCurrentlyDevelopingGame() && game.gameSize === "aaa") {
+				max_price = 60;
+				gamePrice = Sales.aaaUnitPrice;
+			}
+			else if (GameManager.company.isCurrentlyDevelopingGame()) {
+				max_price = 10;
+				gamePrice = Sales.smallUnitPrice;
+			}
+			
+			div.find(".priceSlider").slider({
+				min: 1,
+				max: max_price,
+				range: "min",
+				value: Math.floor(gamePrice),
+				animate: !1,
+				slide: function (a, b) {
+					var c = b.value;
+					setPrice(c);
+				}
+			});
+			setPrice(gamePrice);
+		
+			original_showContextMenu(b, c, d, h);
+		};
+		UI._showContextMenu = new_showContextMenu;
 	};
-
-	GDT.fire(GDT.eventKeys.gameplay.salesCalculated, salesCalculated);
 	/*  */
 	
-	var original_showContextMenu = UI._showContextMenu;
-	var new_showContextMenu = function (b, c, d, h) {
-		GameManager.company.isCurrentlyDevelopingGame() && c.push({
-				label: "Game Price...",
-				action: function () {
-					Sound.click();
-					GameManager.resume(true);
-					
-					var div = $("#PriceContainer");
-						 
-					div.scrollTop()
-						 
-					div.gdDialog({
-						popout: !0,
-						close: !0
-					})
-				}
-			})
+	/* Black Bull */
+	ExpPack.addBlackBull = function () {
+		var menuItems = [];
+		var div = $("body");
+		div = $("#BlackBull");
+		
+		var original_PopupMenu = UI._showContextMenu;
+		var new_initPopupMenu = function (type, menuItems, x, y) {
+			var company = GameManager.company
+			var targetChar = company.currentLevel > 1 ? UI.getCharUnderCursor() : company.staff[0];
 			
-		var game = GameManager.company.currentGame;
-		var max_price;
-		
-		if (GameManager.company.isCurrentlyDevelopingGame() && game.gameSize === "medium") {
-			max_price = 20;
-			gamePrice = Sales.mediumUnitPrice;
-		}
-		else if (GameManager.company.isCurrentlyDevelopingGame() && game.gameSize === "large") {
-			max_price = 40;
-			gamePrice = Sales.largeUnitPrice;
-		}
-		else if (GameManager.company.isCurrentlyDevelopingGame() && game.gameSize === "aaa") {
-			max_price = 60;
-			gamePrice = Sales.aaaUnitPrice;
-		}
-		else if (GameManager.company.isCurrentlyDevelopingGame()) {
-			max_price = 10;
-			gamePrice = Sales.smallUnitPrice;
-		}
-		
-		div.find(".priceSlider").slider({
-			min: 1,
-			max: max_price,
-			range: "min",
-			value: Math.floor(gamePrice),
-			animate: !1,
-			slide: function (a, b) {
-				var c = b.value;
-				setPrice(c);
+			if(targetChar) {
+				if (targetChar.state != CharacterState.Researching &&
+					(targetChar.state != CharacterState.Training && targetChar.state != CharacterState.Vacation)) {
+					if(company.currentLevel > 1 && targetChar.flags.needsVacation)
+					{
+						menuItems.push({
+							label : "Buy a Black Bull".localize("menu item"),
+							action : function () {
+								Sound.click();
+								GameManager.resume(true);
+								var div = $("#BlackBull");
+								company.adjustCash(-500, "Black Bull");
+								
+								targetChar.relaxDelta = 0;
+								var vacationInterval;
+								var canRecharge;
+								var timeLastUsed = GameManager.gameTime * GameManager.SECONDS_PER_WEEK * 1E3;
+								if (timeLastUsed < timeLastUsed + 8)
+									vacationInterval = 2;
+								if (timeLastUsed >= timeLastUsed + 8)
+									vacationInterval = 4;
+								targetChar.flags.nextVacation = GameManager.gameTime + vacationInterval * GameManager.SECONDS_PER_WEEK * 1E3;
+								targetChar.flags.relaxGained = 0;
+								targetChar.flags.needsVacation = false;
+								canRecharge = true;
+								
+							}
+						})
+					}
+				}
 			}
-		});
-		setPrice(gamePrice);
-	
-		original_showContextMenu(b, c, d, h);
+			original_PopupMenu(type, menuItems, x, y);
+		};
+		
+		UI._showContextMenu = new_initPopupMenu;
 	};
-	UI._showContextMenu = new_showContextMenu;
 	/*  */
 	
 })();

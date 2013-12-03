@@ -1,6 +1,10 @@
 ﻿(function () {
 	var ready = function () {
+	/* Epic Random Features				*/
 		ExpPack.initCompatibilityChecks();
+		ExpPack.addCustomPrice();
+		ExpPack.addBlackBull();
+	/*									*/
 			
 	/* Adds topics to the game 			*/
 		ExpPack.addTopic();
