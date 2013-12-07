@@ -1606,8 +1606,9 @@ var ExpPack = {};
 		};
 		
 		/* calculateSales algorithm */
-		var salesCalculated = function (company, game) {
-				var price = gamePrice;
+		var salesCalculated = function (company, unused_var) {
+				var price = dataStore.data.gamePrice;
+				var currentGame = company.game
 	
 				var priceRatio = function (price, game) {
 					var a;
@@ -1624,7 +1625,7 @@ var ExpPack = {};
 					return a;
 				};
 	
-				var score = game.score.clamp(1, 10);
+				var score = currentGame.score.clamp(1, 10);
 	
 				var scoreRatio = function (score) {
 					var b;
@@ -1643,10 +1644,10 @@ var ExpPack = {};
 					return b;
 				};
 	
-				game.totalSalesCash *= 1 * priceRatio(price, game) * scoreRatio(score);
+				currentGame.totalSalesCash *= 1 * priceRatio(price, currentGame) * scoreRatio(score);
 		};
 	
-		GDT.fire(GDT.eventKeys.gameplay.salesCalculated, salesCalculated);
+		GDT.on(GDT.eventKeys.gameplay.salesCalculated, salesCalculated);
 		/*  */
 		
 		var original_showContextMenu = UI._showContextMenu;
