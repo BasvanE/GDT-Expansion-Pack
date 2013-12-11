@@ -1607,13 +1607,18 @@ var ExpPack = {};
 		
 		/* calculateSales algorithm */
 		var salesCalculated = function (company, unused_var) {
-				if (price < 1) {
-					var price = dataStore.data.gamePrice;
-				} else {
-					var price = dataStore.data.gamePrice;
-				};
-						
 				var currentGame = company.game;
+				var price = dataStore.data.gamePrice;
+    				if (price < 1) {
+           				if(currentGame.gameSize == "small")
+           					price =  Sales.smallUnitPrice;
+           				if(currentGame.gameSize == "medium")
+           					price =  Sales.mediumUnitPrice;
+           				if(currentGame.gameSize == "large")
+           					price =  Sales.largeUnitPrice;
+           				if(currentGame.gameSize == "aaa")
+           					price =  Sales.aaaUnitPrice;
+    				};
 	
 				var priceRatio = function (price, game) {
 					var a;
