@@ -389,7 +389,7 @@ var ExpPack = {};
 
 	/* Grapple */
 	ExpPack.addPlatformGrapintosh = function () {
-		var icon = './mods/ExpansionPack/source/img/Grapple.png';
+		var icon = './mods/ExpansionPack/source/img/grapintosh.png';
 		GDT.addPlatform(
 			{
 				id: 'Grapintosh',
@@ -458,7 +458,7 @@ var ExpPack = {};
 
 	/* Itara */
 	ExpPack.addPlatformItaraBackflash = function () {
-		var icon = './mods/ExpansionPack/source/img/Itara.png';
+		var icon = './mods/ExpansionPack/source/img/itaraBackflash.png';
 		GDT.addPlatform(
 			{
 				id: '31102000-2-1-4-1-LINELIAR',
@@ -1537,7 +1537,7 @@ var ExpPack = {};
 		var company = GameManager.company;
 		var gamePrice;
 		var newPrice;
-		var dataStore = GDT.getDataStore("MasExpPack")
+		var dataStore = GDT.getDataStore("MasExpPack");
 		
 		UI.selectPriceClick = function (a) {
 		Sound.click();
@@ -1607,8 +1607,13 @@ var ExpPack = {};
 		
 		/* calculateSales algorithm */
 		var salesCalculated = function (company, unused_var) {
-				var price = dataStore.data.gamePrice;
-				var currentGame = company.game
+				if (price < 1) {
+					var price = dataStore.data.gamePrice;
+				} else {
+					var price = dataStore.data.gamePrice;
+				};
+						
+				var currentGame = company.game;
 	
 				var priceRatio = function (price, game) {
 					var a;
