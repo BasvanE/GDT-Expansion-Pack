@@ -1612,13 +1612,13 @@ var ExpPack = {};
     				if (price < 1) {
            				if(currentGame.gameSize == "small")
            					price =  Sales.smallUnitPrice;
-           				if(currentGame.gameSize == "medium")
+           				else if(currentGame.gameSize == "medium")
            					price =  Sales.mediumUnitPrice;
-           				if(currentGame.gameSize == "large")
+           				else if(currentGame.gameSize == "large")
            					price =  Sales.largeUnitPrice;
-           				if(currentGame.gameSize == "aaa")
+           				else if(currentGame.gameSize == "aaa")
            					price =  Sales.aaaUnitPrice;
-    				};
+    				}
 	
 				var priceRatio = function (price, game) {
 					var a;
