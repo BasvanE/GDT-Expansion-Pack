@@ -37,7 +37,6 @@
 	
 	/* Adds researches to the game		*/
 		ExpPack.addResearch();
-		ExpPack.addLabResearch();
 	/*									*/
 	};
 
@@ -52,6 +51,7 @@
 	'mods/gdt-modAPI/api/research.js',
 	'mods/gdt-modAPI/examples/examples.js',
 	'mods/ExpansionPack/source/source.js',
+	'mods/ExpansionPack/source/CC_AddOn.js',
 	'mods/ExpansionPack/api/labResearch.js'
 	], ready, error);
 })();

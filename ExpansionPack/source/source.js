@@ -1,6 +1,6 @@
 var ExpPack = {};
 (function () {
-	/* compatibility check */
+	/* Compatibility check */
 	var compatibilityCheck = function(data){
 		for (var i = 0; i < ModSupport.availableMods.length; i++) {
 			var mod = ModSupport.availableMods[i];
@@ -1492,52 +1492,12 @@ var ExpPack = {};
 	};
 	/*  */
 	
-	/*  */
-	ExpPack.addLabResearch = function () {		
-		GDT.addLabResearchItem(
-		{
-			id: "4D Graphics Project",
-			name: "4D Graphics".localize(),
-			pointsCost: 200,
-			canResearch: function (company) {
-				return !company.flags.graphics4D && LevelCalculator.getMissionLevel(/*company, "3D Graphics V7"*/'Level Design') > 1;
-			},
-			iconUri: "./images/projectIcons/superb/graphics-v6.png",
-			description: "Cows....".localize(),
-			targetZone: 2,
-			complete: function (company) {
-				company.flags.graphics4D = true;
-				//GDT.fire(GameManager, GDT.eventKeys.gameplay.researchCompleted, ForDGraphics);
-				GDT.addResearchItem({
-					id : "4D Graphics",
-					name : "4D Graphics".localize(),
-					v : 14,
-					canResearch : function (company) {
-						return false
-					},
-					category: "Graphic",
-					categoryDisplayName: "Graphic".localize(),
-					group : "graphic-type",
-					consolePart : true,
-					techLevel : 7,
-					showXPGain : true
-				});
-				company.notifications.push(new Notification({
-					header: "Lab report".localize(),
-					text: "Cows....".localize(),
-					image: "./images/projectIcons/superb/graphics-v6.png"
-				}))
-			}
-		});
-	};
-	/*  */
-	
 	/* Custom prices for games */
 	ExpPack.addCustomPrice = function () {
 		var company = GameManager.company;
 		var gamePrice;
 		var newPrice;
-		var dataStore = GDT.getDataStore("MasExpPack");
+		var dataStore = GDT.getDataStore("MasExpPack")
 		
 		UI.selectPriceClick = function (a) {
 		Sound.click();
@@ -1606,57 +1566,50 @@ var ExpPack = {};
 		};
 		
 		/* calculateSales algorithm */
-		var salesCalculated = function (company, unused_var) {
-				var currentGame = company.game;
-				var price = dataStore.data.gamePrice;
-    				if (price < 1) {
-           				if(currentGame.gameSize == "small")
-           					price =  Sales.smallUnitPrice;
-           				else if(currentGame.gameSize == "medium")
-           					price =  Sales.mediumUnitPrice;
-           				else if(currentGame.gameSize == "large")
-           					price =  Sales.largeUnitPrice;
-           				else if(currentGame.gameSize == "aaa")
-           					price =  Sales.aaaUnitPrice;
-    				}
+		var salesCalculated = function (company, game) {
+			var price = dataStore.data.gamePrice;
+			var currentGame = company.game;
+			if (price < 1) {
+				if(currentGame.gameSize == "small")
+					price =  Sales.smallUnitPrice;
+				else if(currentGame.gameSize == "medium")
+					price =  Sales.mediumUnitPrice;
+				else if(currentGame.gameSize == "large")
+					price =  Sales.largeUnitPrice;
+				else if(currentGame.gameSize == "aaa")
+					price =  Sales.aaaUnitPrice;
+			}
+			var priceRatio = function (price, game) {
+				var a;
+				if(game.gameSize === "small")
+					a = 2 - (price / 10);
+				else if(game.gameSize === "medium")
+					a = 2 - (price / 20);
+				else if(game.gameSize === "large")
+					a = 2 - (price / 40);
+				else if(game.gameSize === "aaa")
+					a = 2 - (price / 60);
+				return a;
+			}
+			var score = game.score.clamp(1, 10);
+			var scoreRatio = function (score) {
+				var b;
 	
-				var priceRatio = function (price, game) {
-					var a;
+				if(score >= 9)
+					b = 1.3;
+				else if (score >= 7)
+					b = 1.1;
+				else if (score >= 5)
+					b = 0.8;
+				else if (score >= 3)
+					b = 0.5;
+				else
+					b = 0.1;
 	
-					if(game.gameSize === "small")
-						a = 2 - (price / 10);
-					else if(game.gameSize === "medium")
-						a = 2 - (price / 20);
-					else if(game.gameSize === "large")
-						a = 2 - (price / 40);
-					else if(game.gameSize === "aaa")
-						a = 2 - (price / 60);
-	
-					return a;
-				};
-	
-				var score = currentGame.score.clamp(1, 10);
-	
-				var scoreRatio = function (score) {
-					var b;
-	
-					if(score >= 9)
-						b = 1.3;
-					else if (score >= 7)
-						b = 1.1;
-					else if (score >= 5)
-						b = 0.8;
-					else if (score >= 3)
-						b = 0.5;
-					else
-						b = 0.1;
-	
-					return b;
-				};
-	
-				currentGame.totalSalesCash *= 1 * priceRatio(price, currentGame) * scoreRatio(score);
+				return b;
+			};
+			game.totalSalesCash *= 1 * priceRatio(price, game) * scoreRatio(score);
 		};
-	
 		GDT.on(GDT.eventKeys.gameplay.salesCalculated, salesCalculated);
 		/*  */
 		
@@ -1766,5 +1719,4 @@ var ExpPack = {};
 		UI._showContextMenu = new_initPopupMenu;
 	};
 	/*  */
-	
 })();

@@ -1,7 +1,7 @@
 ﻿{
-	"id" : "MasExpPack",
+	"id" : "ExpPackMod",
 	"name" : "Expansion Pack Mod",
-	"version":"0.3.4",
+	"version":"0.5.0",
 	"author":"DzjengisKhan (Founder & Leader) & LineLiar (Co-Leader)",
 	"url":"https://github.com/DzjengisKhan/GDT-Expansion-Pack",
 	"description" : "The one and only 'Expansion Pack Mod' for Game Dev Tycoon.",
