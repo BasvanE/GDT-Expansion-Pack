@@ -93,7 +93,7 @@ var CusCom = {};
 		p.Vindows81 = {
 			id: "Vindows 8.1",
 			name: "Vindows 8.1".localize(),
-			engineCost: 7E4,
+			engineCost: 8E4,
 			v: 12,
 			techLevel : 5,
 			canResearch: function (company) {
@@ -196,7 +196,7 @@ var CusCom = {};
 		};
 		/*  */
 	
-	p.osParts = [p.VindowsVista, p.Vindows7Starter, p.Vindows7HomeBasic, p.Vindows7HomePremium, p.Vindows7Ultimate, p.vindows8, p.vindows81 p.OSY100, p.OSY102, p.OSY106, p.OSY108, p.OSY109, p.Penguin];
+	p.osParts = [p.VindowsVista, p.Vindows7Starter, p.Vindows7HomeBasic, p.Vindows7HomePremium, p.Vindows7Ultimate, p.Vindows8, p.Vindows81, p.OSY100, p.OSY102, p.OSY106, p.OSY108, p.OSY109, p.Penguin];
 	/*  */
 	
 	/* CPU */
