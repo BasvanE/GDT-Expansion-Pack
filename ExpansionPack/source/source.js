@@ -1566,9 +1566,10 @@ var ExpPack = {};
 		};
 		
 		/* calculateSales algorithm */
-		var salesCalculated = function (company, game) {
+		var salesCalculated = function (company, unused_var) {
 			var price = dataStore.data.gamePrice;
 			var currentGame = company.game;
+			
 			if (price < 1) {
 				if(currentGame.gameSize == "small")
 					price =  Sales.smallUnitPrice;
@@ -1578,7 +1579,8 @@ var ExpPack = {};
 					price =  Sales.largeUnitPrice;
 				else if(currentGame.gameSize == "aaa")
 					price =  Sales.aaaUnitPrice;
-			}
+			};
+			
 			var priceRatio = function (price, game) {
 				var a;
 				if(game.gameSize === "small")
@@ -1590,8 +1592,9 @@ var ExpPack = {};
 				else if(game.gameSize === "aaa")
 					a = 2 - (price / 60);
 				return a;
-			}
-			var score = game.score.clamp(1, 10);
+			};
+			
+			var score = currentGame.score.clamp(1, 10);
 			var scoreRatio = function (score) {
 				var b;
 	
@@ -1608,7 +1611,7 @@ var ExpPack = {};
 	
 				return b;
 			};
-			game.totalSalesCash *= 1 * priceRatio(price, game) * scoreRatio(score);
+			currentGame.totalSalesCash *= 1 * priceRatio(price, currentGame) * scoreRatio(score);
 		};
 		GDT.on(GDT.eventKeys.gameplay.salesCalculated, salesCalculated);
 		/*  */
