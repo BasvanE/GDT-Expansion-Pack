@@ -1497,7 +1497,7 @@ var ExpPack = {};
 		var company = GameManager.company;
 		var gamePrice;
 		var newPrice;
-		var dataStore = GDT.getDataStore("MasExpPack")
+		var dataStore = GDT.getDataStore("ExpPackMod")
 		
 		UI.selectPriceClick = function (a) {
 		Sound.click();
