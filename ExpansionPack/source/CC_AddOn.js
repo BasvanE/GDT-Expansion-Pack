@@ -206,7 +206,7 @@ var CusCom = {};
 			name: "Outtel i3 Processor".localize(),
 			engineCost: 2E4,
 			v: 2,
-			techLevel : 0,
+			techLevel : 2,
 			canResearch: function (company) {
 				return !company.flags.customHardwareResearched;
 				},
@@ -220,7 +220,7 @@ var CusCom = {};
 			name: "Outtel i5 Processor".localize(),
 			engineCost: 3.5E4,
 			v: 3,
-			techLevel : 0,
+			techLevel : 3,
 			canResearch: function (company) {
 				return !company.flags.customHardwareResearched;
 				},
@@ -234,7 +234,7 @@ var CusCom = {};
 			name: "Outtel i7 Processor".localize(),
 			engineCost: 5E4,
 			v: 5,
-			techLevel : 0,
+			techLevel : 5,
 			canResearch: function (company) {
 				return !company.flags.customHardwareResearched;
 				},
@@ -795,8 +795,8 @@ var CusCom = {};
 			group: "Storage"
 		};
 		p.HDD2TB = {
-			id: "HDD 250 GB",
-			name: "HDD 250 GB".localize(),
+			id: "HDD 2 TB",
+			name: "HDD 2 TB".localize(),
 			engineCost: 9E4,
 			v: 10,
 			techLevel : 5,
