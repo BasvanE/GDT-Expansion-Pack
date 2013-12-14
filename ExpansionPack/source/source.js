@@ -389,7 +389,7 @@ var ExpPack = {};
 
 	/* Grapple */
 	ExpPack.addPlatformGrapintosh = function () {
-		var icon = './mods/ExpansionPack/source/img/grapintosh.png';
+		var icon = './mods/ExpansionPack/source/img/Grapple.png';
 		GDT.addPlatform(
 			{
 				id: 'Grapintosh',
@@ -458,7 +458,7 @@ var ExpPack = {};
 
 	/* Itara */
 	ExpPack.addPlatformItaraBackflash = function () {
-		var icon = './mods/ExpansionPack/source/img/itaraBackflash.png';
+		var icon = './mods/ExpansionPack/source/img/Itara.png';
 		GDT.addPlatform(
 			{
 				id: '31102000-2-1-4-1-LINELIAR',
@@ -1492,6 +1492,62 @@ var ExpPack = {};
 	};
 	/*  */
 	
+	/*  */
+	ExpPack.addLabResearch = function () {	
+		var ForDGraphics = function (company) {
+			GDT.addResearchItem(
+			{
+				id : "4D Graphics",
+				name : "4D Graphics".localize(),
+				v : 14,
+				canResearch : function (company) {
+					return false;
+				},
+				category: "Graphic",
+				categoryDisplayName: "Graphic".localize(),
+				group : "graphic-type",
+				consolePart : true,
+				techLevel : 7,
+				showXPGain : true
+			});
+		};
+			
+		GDT.addLabResearchItem(
+		{
+			id: "4D Graphics Project",
+			name: "4D Graphics".localize(),
+			pointsCost: 200,
+			canResearch: function (company) {
+				return !company.flags.graphics4D && LevelCalculator.getMissionLevel(/*company, "3D Graphics V7"*/'Level Design') > 1;
+			},
+			iconUri: "./images/projectIcons/superb/graphics-v6.png",
+			description: "Cows....".localize(),
+			targetZone: 2,
+			complete: function (company) {
+				company.flags.graphics4D = true;
+				//GDT.fire(GDT.eventKeys.gameplay.researchCompleted, ForDGraphics);
+				company.researchCompleted.push({id : "4D Graphics",
+				name : "4D Graphics".localize(),
+				v : 14,
+				canResearch : function (company) {
+					return false;
+				},
+				category: "Graphic",
+				categoryDisplayName: "Graphic".localize(),
+				group : "graphic-type",
+				consolePart : true,
+				techLevel : 7,
+				showXPGain : true});
+				company.notifications.push(new Notification({
+					header: "Lab report".localize(),
+					text: "Cows....".localize(),
+					image: "./images/projectIcons/superb/graphics-v6.png"
+				}))
+			}
+		});
+	};
+	/*  */
+	
 	/* Custom prices for games */
 	ExpPack.addCustomPrice = function () {
 		var company = GameManager.company;
@@ -1566,10 +1622,9 @@ var ExpPack = {};
 		};
 		
 		/* calculateSales algorithm */
-		var salesCalculated = function (company, unused_var) {
+		var salesCalculated = function (company, game) {
 			var price = dataStore.data.gamePrice;
 			var currentGame = company.game;
-			
 			if (price < 1) {
 				if(currentGame.gameSize == "small")
 					price =  Sales.smallUnitPrice;
@@ -1579,8 +1634,7 @@ var ExpPack = {};
 					price =  Sales.largeUnitPrice;
 				else if(currentGame.gameSize == "aaa")
 					price =  Sales.aaaUnitPrice;
-			};
-			
+			}
 			var priceRatio = function (price, game) {
 				var a;
 				if(game.gameSize === "small")
@@ -1592,9 +1646,8 @@ var ExpPack = {};
 				else if(game.gameSize === "aaa")
 					a = 2 - (price / 60);
 				return a;
-			};
-			
-			var score = currentGame.score.clamp(1, 10);
+			}
+			var score = game.score.clamp(1, 10);
 			var scoreRatio = function (score) {
 				var b;
 	
@@ -1611,9 +1664,9 @@ var ExpPack = {};
 	
 				return b;
 			};
-			currentGame.totalSalesCash *= 1 * priceRatio(price, currentGame) * scoreRatio(score);
+			game.totalSalesCash *= 1 * priceRatio(price, game) * scoreRatio(score);
 		};
-		GDT.on(GDT.eventKeys.gameplay.salesCalculated, salesCalculated);
+		GDT.fire(GDT.eventKeys.gameplay.salesCalculated, salesCalculated);
 		/*  */
 		
 		var original_showContextMenu = UI._showContextMenu;

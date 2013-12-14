@@ -1195,9 +1195,9 @@ var CusCom = {};
 		var version = GameManager.company.licencedPlatforms.count(function (p) {
 				return p.isCustom
 			}) + 1;
-		var consoles = getUnusedCustomConsoles();
-		for (var i = 0; i < consoles.length; i++) {
-			var item = $("<div><img src='mods/ExpansionPack/source/img/{0}' style='width:200px;'/><div class='sliderTabCaption rsTmb'>".format(consoles[i]) + PlatformShim.toStaticHtml("Variation {0}".localize().format(i + 1)) + "</div></div>");
+		var computers = getUnusedCustomComputers();
+		for (var i = 0; i < computers.length; i++) {
+			var item = $("<div><img src='mods/ExpansionPack/source/ccimg/{0}' style='width:200px;'/><div class='sliderTabCaption rsTmb'>".format(computers[i]) + PlatformShim.toStaticHtml("Variation {0}".localize().format(i + 1)) + "</div></div>");
 			slider.append(item)
 		}
 		if (PlatformShim.ISWIN8)
@@ -1231,7 +1231,7 @@ var CusCom = {};
 			var techLevel = featuresWithTechLevel.average(function (f) {
 					return f.techLevel
 				});
-			var cost = Math.floor(techLevel * 300);
+			var cost = Math.floor(techLevel * 250);
 			var qF = menu.find(".budgetSlider").slider("value") / 100;
 			var project = {
 				id : "custom computer",
@@ -1257,23 +1257,23 @@ var CusCom = {};
 	var getVariation = function (icon) {
 		return parseInt(icon.slice(38, 39))
 	};
-	var getUnusedCustomConsoles = function () {
-		var consoles = [];
-		for (var i = 1; i < 7; i++) {
+	var getUnusedCustomComputers = function () {
+		var computers = [];
+		for (var i = 1; i < 8; i++) {
 			if (GameManager.company.flags["computer" + i + "Used"])
 				continue;
 			else
-				consoles = consoles.concat(["case" + i + "V1.png", "case" +
+				computers = computers.concat(["case" + i + "V1.png", "case" +
 							i + "V2.png", "case" + i + "V3.png"]);
-			if (consoles.length === 6)
+			if (computers.length === 6)
 				break
 		}
-		if (consoles.length === 0) {
-			for (var i = 1; i < 5; i++)
+		if (computers.length === 0) {
+			for (var i = 1; i < 8; i++)
 				GameManager.company.flags["computer" + i + "Used"] = undefined;
-			return getUnusedCustomConsoles()
+			return getUnusedCustomComputers()
 		}
-		return consoles
+		return computers
 	};
 	var updateConsoleInfo = function () {
 		var modalContent = $(".simplemodal-data");
@@ -1490,7 +1490,7 @@ var CusCom = {};
 				selectedComputerFeatures.push(feature);
 				UI._updateGameDefinitionCost()
 			} else {
-				if (feature.group === "Operating System" || feature.group === "CPU" || feature.group === "GPU")
+				if (feature.group === "Operating System" || feature.group === "CPU" || feature.group === "GPU" || feature.group === "Motherboard" || feature.group === "RAM" || feature.group === "Storage")
 					return;
 				element.removeClass("selectedFeature");
 				selectedComputerFeatures.remove(feature)
@@ -1616,8 +1616,14 @@ var CusCom = {};
 			targetZone : zone,
 			startTime : GameManager.gameTime
 		});
-		GameManager.currentHwProject = currentComputerProject;
-		VisualsManager.putConsoleToPedestal()
+		if (zone ==
+			0) {
+			GameManager.currentHwProject = currentComputerProject;
+			VisualsManager.putConsoleToPedestal()
+		} else if (zone == 2) {
+			GameManager.currentRnDProject = currentComputerProject;
+			Tutorial.rndProjectStarted()
+		}
 	};
 	GameManager.finishProject = function (project) {
 		if (GameManager.currentHwProject == project)
@@ -1670,10 +1676,10 @@ var CusCom = {};
 			});
 		var goodFeatureValue = 22;
 		var featureFactor = featureValues / goodFeatureValue;
-		factor = factor * 0.7 + 0.3 * featureFactor;
+		factor = factor * 0.8 + 0.4 * featureFactor;
 		if (factor > 1) {
 			var rest = factor - 1;
-			factor = 1 + rest * 0.3
+			factor = 1 + rest * 0.4
 		}
 		var startAmount = Platforms.allPlatforms.filter(function (p) {
 				return p.techLevel <= project.techLevel

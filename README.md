@@ -1,4 +1,4 @@
-###Expansion Pack for Game Dev Tycoon (Current Version 0.5.0)
+###Expansion Pack for Game Dev Tycoon (Current Version 0.5.1)
 
 This is the Expansion Pack Mod (EPM), founded by DzjengisKhan!
 
