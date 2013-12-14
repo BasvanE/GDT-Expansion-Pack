@@ -1444,7 +1444,7 @@ var ExpPack = {};
 		GDT.addResearchItem(
 		{
 			id: "Realistic Water",
-			name: "Realstic water".localize(),
+			name: "Realistic water".localize(),
 			v: 4,
 			canResearch: function () {
 				return LevelCalculator.getMissionLevel('World Design') > 3
