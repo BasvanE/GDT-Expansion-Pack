@@ -886,8 +886,259 @@ var CusCom = {};
 	p.storageParts = [p.HDD250GB, p.HDD500GB, p.HDD750GB, p.HDD1TB, p.HDD2TB, p.SSD30GB, p.SSD60GB, p.SSD120GB, p.SSD240GB, p.SSD580GB];
 	/*  */
 	
+	/* Power Supply */
+		/* Aztec */
+		p.AztecCasePowerSupply = {
+			id: "Aztec Case Power Supply",
+			name: "Aztec Case Power Supply".localize(),
+			engineCost: 1.5E4,
+			v: 2,
+			techLevel : 2,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Power Supply",
+			categoryDisplayName: "Aztec".localize(),
+			group: "Power Supply"
+		};
+		p.AztecBasiqPowerSeries = {
+			id: "Aztec Basiq Power Series",
+			name: "Aztec Basiq Power Series".localize(),
+			engineCost: 3E4,
+			v: 4,
+			techLevel : 3,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Power Supply",
+			categoryDisplayName: "Aztec".localize(),
+			group: "Power Supply"
+		};
+		p.AztecEarthwattsSeries = {
+			id: "Aztec Earthwatts Series",
+			name: "Aztec Earthwatts Series".localize(),
+			engineCost: 4E4,
+			v: 6,
+			techLevel : 4,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Power Supply",
+			categoryDisplayName: "Aztec".localize(),
+			group: "Power Supply"
+		};
+		p.AztecCPQSeries = {
+			id: "Aztec CPQ Series",
+			name: "Aztec CPX Series".localize(),
+			engineCost: 5E4,
+			v: 8,
+			techLevel : 5,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Power Supply",
+			categoryDisplayName: "Aztec".localize(),
+			group: "Power Supply"
+		};
+		p.AztecHCGSeries = {
+			id: "Aztec HCG Series",
+			name: "Aztec HCG Series".localize(),
+			engineCost: 6E4,
+			v: 10,
+			techLevel : 6,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Power Supply",
+			categoryDisplayName: "Aztec".localize(),
+			group: "Power Supply"
+		};
+		p.AztecHCPSeries = {
+			id: "Aztec HCP Series",
+			name: "Aztec HCP Series".localize(),
+			engineCost: 8E4,
+			v: 12,
+			techLevel : 7,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Power Supply",
+			categoryDisplayName: "Aztec".localize(),
+			group: "Power Supply"
+		};
+		/*  */
+		
+		/* GoldStone */
+		p.GoldStoneSFXSeries = {
+			id: "GoldStone SFX Series",
+			name: "Aztec SFX Series".localize(),
+			engineCost: 1.5E4,
+			v: 4,
+			techLevel : 3,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Power Supply",
+			categoryDisplayName: "GoldStone".localize(),
+			group: "Power Supply"
+		};
+		p.GoldStoneGeminiSeries = {
+			id: "GoldStone Gemini Series",
+			name: "Aztec Gemini Series".localize(),
+			engineCost: 2.5E4,
+			v: 6,
+			techLevel : 4,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Power Supply",
+			categoryDisplayName: "GoldStone".localize(),
+			group: "Power Supply"
+		};
+		p.GoldStoneStriderSeries = {
+			id: "GoldStone Strider Series",
+			name: "Aztec Strider Series".localize(),
+			engineCost: 4E4,
+			v: 8,
+			techLevel : 5,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Power Supply",
+			categoryDisplayName: "GoldStone".localize(),
+			group: "Power Supply"
+		};
+		p.GoldStoneNightjarSeries = {
+			id: "GoldStone Nightjar Series",
+			name: "Aztec Nightjar Series".localize(),
+			engineCost: 6E4,
+			v: 10,
+			techLevel : 6,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Power Supply",
+			categoryDisplayName: "GoldStone".localize(),
+			group: "Power Supply"
+		};
+		p.GoldStoneZeusSeries = {
+			id: "GoldStone Zeus Series",
+			name: "Aztec Zeus Series".localize(),
+			engineCost: 7.5E4,
+			v: 12,
+			techLevel : 7,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Power Supply",
+			categoryDisplayName: "GoldStone".localize(),
+			group: "Power Supply"
+		};
+		/*  */
+		
+		/* QueenWin */
+		p.QueenWinMKPowerSeries = {
+			id: "QueenWin MK Power Series",
+			name: "QueenWin MK Power Series".localize(),
+			engineCost: 2E4,
+			v: 2,
+			techLevel : 2,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Power Supply",
+			categoryDisplayName: "QueenWin".localize(),
+			group: "Power Supply"
+		};	
+		p.QueenWinMaxPower = {
+			id: "QueenWin Maximum Power Series",
+			name: "QueenWin Maximum Power Series".localize(),
+			engineCost: 3.5E4,
+			v: 4,
+			techLevel : 3,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Power Supply",
+			categoryDisplayName: "QueenWin".localize(),
+			group: "Power Supply"
+		};
+		p.QueenWinMach1 = {
+			id: "QueenWin Mach 1 Series",
+			name: "QueenWin Mach 1 Series".localize(),
+			engineCost: 5E4,
+			v: 6,
+			techLevel : 4,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Power Supply",
+			categoryDisplayName: "QueenWin".localize(),
+			group: "Power Supply"
+		};
+		p.QueenWinLazer = {
+			id: "QueenWin Lazer Series",
+			name: "QueenWin Lazer Series".localize(),
+			engineCost: 6E4,
+			v: 8,
+			techLevel : 5,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Power Supply",
+			categoryDisplayName: "QueenWin".localize(),
+			group: "Power Supply"
+		};	
+		p.QueenWinLazerGold = {
+			id: "QueenWin Lazer Gold Series",
+			name: "QueenWin Lazer Gold Series".localize(),
+			engineCost: 7E4,
+			v: 10,
+			techLevel : 6,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Power Supply",
+			categoryDisplayName: "QueenWin".localize(),
+			group: "Power Supply"
+		};
+		p.QueenWinLazerPlatinum = {
+			id: "QueenWin Lazer Platinum Series",
+			name: "QueenWin Lazer Platinum Series".localize(),
+			engineCost: 8.5E4,
+			v: 12,
+			techLevel : 7,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Power Supply",
+			categoryDisplayName: "QueenWin".localize(),
+			group: "Power Supply"
+		};
+		/*  */
+	
+	p.PowerSupplyParts = [p.AztecCasePowerSupply, p.AztecBasiqPowerSeries, p.AztecEarthwattsSeries, p.AztecCPQSeries, p.AztecHCGSeries, p.AztecHCPSeries ,p.GoldStoneSFXSeries, p.GoldStoneGeminiSeries, p.GoldStoneStriderSeries, p.GoldStoneNightjarSeries, p.GoldStoneZeusSeries, p.QueenWinMKPowerSeries, p.QueenWinMaxPower, p.QueenWinMach1, p.QueenWinLazer, p.QueenWinLazerGold, p.QueenWinLazerPlatinum];
+	/*  */
+	
 	p.allComputerParts = function () {
-		return p.osParts.concat(p.CPUParts).concat(p.MBParts).concat(p.GPUParts).concat(p.RAMParts).concat(p.storageParts)
+		return p.osParts.concat(p.CPUParts).concat(p.MBParts).concat(p.GPUParts).concat(p.RAMParts).concat(p.storageParts).concat(p.PowerSupplyParts)
 	};
 	
 	var menuItems = [];
@@ -982,6 +1233,12 @@ var CusCom = {};
 			'<div onClick="prevPage()" class="dialogBackButton fontCharacterButton icon-arrow-left"></div>' +
 			'<div class="dialogScreen7Title windowTitle" style="width: 500px">Storage</div>' +
 			'<div class="featureSelectionContainer7" style="margin: 40px 20px 20px 20px; padding-right: 20px; height: 430px; overflow: scroll; overflow-x: hidden; overflow-y: auto;"></div>' +
+			'<div onClick="nextPage()" class="dialogNextButton baseButton disabledButton">Next</div>' +
+		'</div>' +
+		'<div class="dialogScreen8" style="margin-left: 100%;height: 100%;position: absolute;top: 0px">' +
+			'<div onClick="prevPage()" class="dialogBackButton fontCharacterButton icon-arrow-left"></div>' +
+			'<div class="dialogScreen8Title windowTitle" style="width: 500px">Power Supply</div>' +
+			'<div class="featureSelectionContainer8" style="margin: 40px 20px 20px 20px; padding-right: 20px; height: 430px; overflow: scroll; overflow-x: hidden; overflow-y: auto;"></div>' +
 			'<div class="centeredButtonWrapper">' +
 				'<div onClick="UI.createConsoleClick()" class="okButton selectorButton windowMainActionButton orangeButton windowLargeOkButton">Start Development</div>' +
 			'</div>' +
@@ -1004,6 +1261,7 @@ var CusCom = {};
 		UI.maxFont(menu.find(".dialogScreen5Title"), 34, 50);
 		UI.maxFont(menu.find(".dialogScreen6Title"), 34, 50);
 		UI.maxFont(menu.find(".dialogScreen7Title"), 34, 50);
+		UI.maxFont(menu.find(".dialogScreen8Title"), 34, 50);
 		UI.maxFont(menu.find(".windowMainActionButton"), 34, 50);
 		var options = {};
 		options.disableCheckForNotifications = true;
@@ -1048,6 +1306,9 @@ var CusCom = {};
 				$("#createComputerMenu").find(".dialogScreen7").transition({
 					"margin-left" : "600%"
 				});
+				$("#createComputerMenu").find(".dialogScreen8").transition({
+					"margin-left" : "700%"
+				});
 			};
 			if (curPage == 1)
 			{
@@ -1071,6 +1332,9 @@ var CusCom = {};
 				});
 				$("#createComputerMenu").find(".dialogScreen7").transition({
 					"margin-left" : "500%"
+				});
+				$("#createComputerMenu").find(".dialogScreen8").transition({
+					"margin-left" : "600%"
 				});
 			};
 			if (curPage == 2)
@@ -1096,6 +1360,9 @@ var CusCom = {};
 				$("#createComputerMenu").find(".dialogScreen7").transition({
 					"margin-left" : "400%"
 				});
+				$("#createComputerMenu").find(".dialogScreen8").transition({
+					"margin-left" : "500%"
+				});
 			};
 			if (curPage == 3)
 			{
@@ -1119,6 +1386,9 @@ var CusCom = {};
 				});
 				$("#createComputerMenu").find(".dialogScreen7").transition({
 					"margin-left" : "300%"
+				});
+				$("#createComputerMenu").find(".dialogScreen8").transition({
+					"margin-left" : "400%"
 				});
 			};
 			if (curPage == 4)
@@ -1144,6 +1414,9 @@ var CusCom = {};
 				$("#createComputerMenu").find(".dialogScreen7").transition({
 					"margin-left" : "200%"
 				});
+				$("#createComputerMenu").find(".dialogScreen8").transition({
+					"margin-left" : "300%"
+				});
 			};
 			if (curPage == 5)
 			{
@@ -1166,6 +1439,36 @@ var CusCom = {};
 					"margin-left" : 0
 				});
 				$("#createComputerMenu").find(".dialogScreen7").transition({
+					"margin-left" : "100%"
+				});
+				$("#createComputerMenu").find(".dialogScreen8").transition({
+					"margin-left" : "200%"
+				});
+			};
+			if (curPage == 6)
+			{
+				$("#createComputerMenu").find(".dialogScreen1").transition({
+					"margin-left" : "-600%"
+				});
+				$("#createComputerMenu").find(".dialogScreen2").transition({
+					"margin-left" : "-500%"
+				});
+				$("#createComputerMenu").find(".dialogScreen3").transition({
+					"margin-left" : "-400%"
+				});
+				$("#createComputerMenu").find(".dialogScreen4").transition({
+					"margin-left" : "-300%"
+				});
+				$("#createComputerMenu").find(".dialogScreen5").transition({
+					"margin-left" : "-200%"
+				});
+				$("#createComputerMenu").find(".dialogScreen6").transition({
+					"margin-left" : "-100%"
+				});
+				$("#createComputerMenu").find(".dialogScreen7").transition({
+					"margin-left" : 0
+				});
+				$("#createComputerMenu").find(".dialogScreen8").transition({
 					"margin-left" : "100%"
 				});
 			};
@@ -1310,6 +1613,9 @@ var CusCom = {};
 					$("#createComputerMenu").find(".dialogScreen7").transition({
 						"margin-left" : "1000%"
 					});
+					$("#createComputerMenu").find(".dialogScreen8").transition({
+						"margin-left" : "1200%"
+					});
 				};
 				if (curPage == 2)
 				{
@@ -1333,6 +1639,9 @@ var CusCom = {};
 					});
 					$("#createComputerMenu").find(".dialogScreen7").transition({
 						"margin-left" : "800%"
+					});
+					$("#createComputerMenu").find(".dialogScreen8").transition({
+						"margin-left" : "1000%"
 					});
 				};
 				if (curPage == 3)
@@ -1358,6 +1667,9 @@ var CusCom = {};
 					$("#createComputerMenu").find(".dialogScreen7").transition({
 						"margin-left" : "600%"
 					});
+					$("#createComputerMenu").find(".dialogScreen8").transition({
+						"margin-left" : "800%"
+					});
 				};
 				if (curPage == 4)
 				{
@@ -1381,6 +1693,9 @@ var CusCom = {};
 					});
 					$("#createComputerMenu").find(".dialogScreen7").transition({
 						"margin-left" : "400%"
+					});
+					$("#createComputerMenu").find(".dialogScreen8").transition({
+						"margin-left" : "600%"
 					});
 				};
 				if (curPage == 5)
@@ -1406,6 +1721,9 @@ var CusCom = {};
 					$("#createComputerMenu").find(".dialogScreen7").transition({
 						"margin-left" : "200%"
 					});
+					$("#createComputerMenu").find(".dialogScreen8").transition({
+						"margin-left" : "400%"
+					});
 				};
 				if (curPage == 6)
 				{
@@ -1430,6 +1748,36 @@ var CusCom = {};
 					$("#createComputerMenu").find(".dialogScreen7").transition({
 						"margin-left" : 0
 					});
+					$("#createComputerMenu").find(".dialogScreen8").transition({
+						"margin-left" : "200%"
+					});
+				};
+				if (curPage == 7)
+				{
+					$("#createComputerMenu").find(".dialogScreen1").transition({
+						"margin-left" : "-1400%"
+					});
+					$("#createComputerMenu").find(".dialogScreen2").transition({
+						"margin-left" : "-1200%"
+					});
+					$("#createComputerMenu").find(".dialogScreen3").transition({
+						"margin-left" : "-1000%"
+					});
+					$("#createComputerMenu").find(".dialogScreen4").transition({
+						"margin-left" : "-800%"
+					});
+					$("#createComputerMenu").find(".dialogScreen5").transition({
+						"margin-left" : "-600%"
+					});
+					$("#createComputerMenu").find(".dialogScreen6").transition({
+						"margin-left" : "-400%"
+					});
+					$("#createComputerMenu").find(".dialogScreen7").transition({
+						"margin-left" : "-200%"
+					});
+					$("#createComputerMenu").find(".dialogScreen8").transition({
+						"margin-left" : 0
+					});
 				};
 			});
 			nextButton.removeClass("baseButton").addClass("selectorButton").addClass("orangeButton")
@@ -1451,10 +1799,11 @@ var CusCom = {};
 		var featureContainer4 = modalContent.find(".featureSelectionContainer5");
 		var featureContainer5 = modalContent.find(".featureSelectionContainer6");
 		var featureContainer6 = modalContent.find(".featureSelectionContainer7");
+		var featureContainer7 = modalContent.find(".featureSelectionContainer8");
 		
 		var company = GameManager.company;
 		
-		var allAvailableGameFeatures = p.osParts.concat(p.CPUParts, p.GPUParts, p.MBParts, p.RAMParts, p.storageParts);
+		var allAvailableGameFeatures = p.osParts.concat(p.CPUParts, p.GPUParts, p.MBParts, p.RAMParts, p.storageParts, p.PowerSupplyParts);
 		
 		featureContainer1.empty();
 		featureContainer2.empty();
@@ -1462,6 +1811,7 @@ var CusCom = {};
 		featureContainer4.empty();
 		featureContainer5.empty();
 		featureContainer6.empty();
+		featureContainer7.empty();
 			
 		selectedComputerFeatures = [];
 		var category = null;
@@ -1479,6 +1829,7 @@ var CusCom = {};
 					featureContainer4.find(groupClass).removeClass("selectedFeature");
 					featureContainer5.find(groupClass).removeClass("selectedFeature");
 					featureContainer6.find(groupClass).removeClass("selectedFeature");
+					featureContainer7.find(groupClass).removeClass("selectedFeature");
 					
 					var features2Remove = selectedComputerFeatures.filter(function (f) {
 							return f.group === feature.group
@@ -1490,7 +1841,7 @@ var CusCom = {};
 				selectedComputerFeatures.push(feature);
 				UI._updateGameDefinitionCost()
 			} else {
-				if (feature.group === "Operating System" || feature.group === "CPU" || feature.group === "GPU" || feature.group === "Motherboard" || feature.group === "RAM" || feature.group === "Storage")
+				if (feature.group === "Operating System" || feature.group === "CPU" || feature.group === "GPU" || feature.group === "Motherboard" || feature.group === "RAM" || feature.group === "Storage" || feature.group === "Power Supply")
 					return;
 				element.removeClass("selectedFeature");
 				selectedComputerFeatures.remove(feature)
@@ -1513,6 +1864,8 @@ var CusCom = {};
 					featureContainer5.append($('<div class="featureSelectionCategoryHeading">{0}</div>'.format(feature.categoryDisplayName ? feature.categoryDisplayName : feature.category)));
 				if (feature.category == "Storage")
 					featureContainer6.append($('<div class="featureSelectionCategoryHeading">{0}</div>'.format(feature.categoryDisplayName ? feature.categoryDisplayName : feature.category)));
+				if (feature.category == "Power Supply")
+					featureContainer7.append($('<div class="featureSelectionCategoryHeading">{0}</div>'.format(feature.categoryDisplayName ? feature.categoryDisplayName : feature.category)));
 				
 				categoryDisplayName = feature.categoryDisplayName
 			}
@@ -1543,6 +1896,8 @@ var CusCom = {};
 				featureContainer5.append(element);
 			if (feature.category == "Storage")	
 				featureContainer6.append(element);
+			if (feature.category == "Power Supply")	
+				featureContainer7.append(element);
 			
 			if (GameManager.uiSettings.selectedComputerFeatures && GameManager.uiSettings.selectedComputerFeatures.indexOf(feature.id) != -1)
 				toggleSelectFeature(element,
@@ -1670,7 +2025,7 @@ var CusCom = {};
 					return r.id === id
 				})
 			}).filter(function (f) {
-				return f.category != "Operating System".localize() && f.category != "CPU".localize() && f.category != "Motherboard".localize() && f.category != "GPU".localize() && f.category != "RAM".localize() && f.category != "Storage".localize()
+				return f.category != "Operating System".localize() && f.category != "CPU".localize() && f.category != "Motherboard".localize() && f.category != "GPU".localize() && f.category != "RAM".localize() && f.category != "Storage".localize() && f.category != "Power Supply".localize()
 			}).sum(function (f) {
 				return f.v
 			});
@@ -1720,7 +2075,45 @@ var CusCom = {};
 		for (var i = 0; i < customComputer.length; i++)
 			customComputer[i].saleCancelled = true;
 		company.licencedPlatforms.push(computer);
-		Media.createConsoleStartStory(computer);
-		Tutorial.consoleReleased(1.4)
+		Media.createComputerStartStory(computer)
+	};
+	
+	Media.createComputerStartStory = function (computer) {
+		var company = GameManager.company;
+		var isGoodTech = computer.isGoodTech;
+		var featureFactor = computer.featureFactor;
+		var success = computer.successFactor;
+		var quality = computer.qF;
+		var msg = "{0} has released their computer {1} today.".localize().format(company.name, computer.name);
+		if (isGoodTech)
+			msg += " " + "The computer seems to really push the limits of technology and is the most modern computer ever to hit shelves.".localize();
+		else
+			msg += " " + "The computer does not seem quite on par with the high tech competitors but we will see what players think.".localize();
+		msg += " Looking at the features of {0}, it seems that the ".localize().format(computer.name);
+		if (featureFactor >=
+			0.8)
+			msg += "list is extensive which is a good sign and could lead to a wide variety of games becoming available.".localize();
+		else
+			msg += " " + "list is a bit slim. Don't expect too many gadgets and equipment to be available for this computer.".localize();
+		msg += "{n}" + "First tests indicate that {0}".localize().format(computer.name);
+		if (quality >= 0.8)
+			msg += "'s build quality is excellent and will likely be able to handle the pressure, even from your heaviest games.".localize();
+		else if (quality >= 0.5)
+			msg += " " + "is of average build quality. Don't expect it to last forever but in general you should not see many issues.".localize();
+		else
+			msg += " " + "is a bit fragile. We wouldn't be surprised if you need to make use of the warranty sooner or later.".localize();
+		msg += "\n" + "All in all ".localize("fragment continues with 'we think that the computer...'");
+		if (success >= 1)
+			msg += " " + "we think that the computer will stir up the market and prove to be very successful.".localize("fragment, started with 'All in all'").format(computer.name);
+		else if (success >= 0.8)
+			msg += " " + "we think that the computer will do reasonably well in the market and it is a welcome addition.".localize("fragment, started with 'All in all'").format(computer.name);
+		else
+			msg += " " + "it's hard to say whether the computer will do well as there are so many other good computers out there.".localize("fragment, started with 'All in all'").format(computer.name);
+		company.notifications.push(new Notification({
+				header : "Industry News".localize("heading"),
+				text : msg,
+				weeksUntilFired : 0.4,
+				image : computer.iconUri
+			}))
 	};
 })();
