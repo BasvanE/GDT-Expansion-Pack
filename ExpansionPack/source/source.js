@@ -10,7 +10,7 @@ var ExpPack = {};
 				div = $("#ErrorContainer");
 				div.append('<div id="error" style="margin-left:50px;width: 400px;" >Expansion Pack Mod is <span style="color:red;">NOT</span> compatible with VENOMOUS mod.</br></br> To continue using Expansion Pack Mod Please disable VENOMOUS mod in the mods menu and restart your Game Dev Tycoon</div>');
 				div.append('<div id="mainmenubutton" class="selectorButton whiteButton" onclick="UI.toggleMainMenu()" style="display:inline-block;position: relative;margin-left:50px;width: 350px;" >Main Menu</div>');
-				div.gdDialog({popout: !0,close: 0})
+				div.gdDialog({popout: !0,close: 0});
 			}
 		}
 	};
@@ -1228,7 +1228,7 @@ var ExpPack = {};
 			name: "Realistic particles".localize(),
 			v: 6,
 			canResearch: function (company) {
-				return LevelCalculator.getMissionLevel('Graphic') > 7
+				return LevelCalculator.getMissionLevel('Graphic') > 7;
 			},
 			category: "Graphic",
 			categoryDisplayName: "Graphic"
@@ -1239,7 +1239,7 @@ var ExpPack = {};
 			name: "Advanced shaders".localize(),
 			v: 6,
 			canResearch: function (company) {
-				return LevelCalculator.getMissionLevel('Graphic') > 5
+				return LevelCalculator.getMissionLevel('Graphic') > 5;
 			},
 			category: "Graphic",
 			categoryDisplayName: "Graphic"
@@ -1250,7 +1250,7 @@ var ExpPack = {};
 			name: "Animated Textures".localize(),
 			v: 2,
 			canResearch: function (company) {
-				return LevelCalculator.getMissionLevel('Graphic') > 3
+				return LevelCalculator.getMissionLevel('Graphic') > 3;
 			},
 			category: "Graphic",
 			categoryDisplayName: "Graphic"
@@ -1261,7 +1261,7 @@ var ExpPack = {};
             name: "Basic Holograms".localize(),
             v: 4,
             canResearch: function (company) {
-            	return LevelCalculator.getMissionLevel('Graphic') > 4
+            	return LevelCalculator.getMissionLevel('Graphic') > 4;
 			},
             category: "Graphic",
             categoryDisplayName: "Graphic"
@@ -1272,7 +1272,7 @@ var ExpPack = {};
             name: "Advanced Holograms".localize(),
             v: 8,
             canResearch: function (company) {
-            	return LevelCalculator.getMissionLevel('Graphic') > 6
+            	return LevelCalculator.getMissionLevel('Graphic') > 6;
             },
             category: "Graphic",
             categoryDisplayName: "Graphic"
@@ -1283,7 +1283,7 @@ var ExpPack = {};
             name: "Interactive Holograms".localize(),
             v: 10,
             canResearch: function (company) {
-            	return LevelCalculator.getMissionLevel('Graphic') > 8
+            	return LevelCalculator.getMissionLevel('Graphic') > 8;
             },
             category: "Graphic",
             categoryDisplayName: "Graphic"
@@ -1297,7 +1297,7 @@ var ExpPack = {};
 			name: "Realistic sound".localize(),
 			v: 6,
 			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Sound') > 6
+				return LevelCalculator.getMissionLevel('Sound') > 6;
 			},
 			category: "Sound",
 			categoryDisplayName: "Sound"
@@ -1308,7 +1308,7 @@ var ExpPack = {};
 			name: "Copywritten sound".localize(),
 			v: 8,
 			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Sound') > 7
+				return LevelCalculator.getMissionLevel('Sound') > 7;
 			},
 			category: "Sound",
 			categoryDisplayName: "Sound"
@@ -1322,7 +1322,7 @@ var ExpPack = {};
 			name: "Superior A.I.".localize(),
 			v: 8,
 			canResearch: function () {
-				return LevelCalculator.getMissionLevel('AI') > 7
+				return LevelCalculator.getMissionLevel('AI') > 7;
 			},
 			category: "AI",
 			categoryDisplayName: "A.I."
@@ -1333,7 +1333,7 @@ var ExpPack = {};
 			name: "A.I. difficulty".localize(),
 			v: 4,
 			canResearch: function () {
-				return LevelCalculator.getMissionLevel('AI') > 4
+				return LevelCalculator.getMissionLevel('AI') > 4;
 			},
 			category: "AI",
 			categoryDisplayName: "A.I."
@@ -1347,7 +1347,7 @@ var ExpPack = {};
 			name: "Cheat Codes".localize(),
 			v: 4,
 			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Gameplay') > 3
+				return LevelCalculator.getMissionLevel('Gameplay') > 3;
 			},
 			category: "Gameplay",
 			categoryDisplayName: "Gameplay"
@@ -1358,7 +1358,7 @@ var ExpPack = {};
 			name: "Premium content".localize(),
 			v: 8,
 			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Gameplay') > 6
+				return LevelCalculator.getMissionLevel('Gameplay') > 6;
 			},
 			category: "Gameplay",
 			categoryDisplayName: "Gameplay"
@@ -1383,7 +1383,7 @@ var ExpPack = {};
 			name: "Seasons".localize(),
 			v: 6,
 			canResearch: function (e) {
-				return LevelCalculator.getMissionLevel('Engine') > 6
+				return LevelCalculator.getMissionLevel('Engine') > 6;
 			},
 			category: "Engine",
 			categoryDisplayName: "Engine"
@@ -1397,7 +1397,7 @@ var ExpPack = {};
 			name: "Collectables".localize(),
 			v: 2,
 			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Story/Quests') > 2
+				return LevelCalculator.getMissionLevel('Story/Quests') > 2;
 			},
 			category: "Story/Quests",
 			categoryDisplayName: "Story/Quests"
@@ -1408,7 +1408,7 @@ var ExpPack = {};
 			name: "Simple quests".localize(),
 			v: 2,
 			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Story/Quests') > 3
+				return LevelCalculator.getMissionLevel('Story/Quests') > 3;
 			},
 			category: "Story/Quests",
 			categoryDisplayName: "Story/Quests"
@@ -1419,7 +1419,7 @@ var ExpPack = {};
 			name: "Advanced quests".localize(),
 			v: 6,
 			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Story/Quests') > 6
+				return LevelCalculator.getMissionLevel('Story/Quests') > 6;
 			},
 			category: "Story/Quests",
 			categoryDisplayName: "Story/Quests"
@@ -1433,7 +1433,7 @@ var ExpPack = {};
 			name: "Language settings".localize(),
 			v: 4,
 			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Dialogs') > 4
+				return LevelCalculator.getMissionLevel('Dialogs') > 4;
 			},
 			category: "Dialogs",
 			categoryDisplayName: "Dialogues",
@@ -1447,7 +1447,7 @@ var ExpPack = {};
 			name: "Realistic water".localize(),
 			v: 4,
 			canResearch: function () {
-				return LevelCalculator.getMissionLevel('World Design') > 3
+				return LevelCalculator.getMissionLevel('World Design') > 3;
 			},
 			category: "World Design",
 			categoryDisplayName: "World Design"
@@ -1458,7 +1458,7 @@ var ExpPack = {};
 			name: "Realistic plant life".localize(),
 			v: 6,
 			canResearch: function () {
-				return LevelCalculator.getMissionLevel('World Design') > 6
+				return LevelCalculator.getMissionLevel('World Design') > 6;
 			},
 			category: "World Design",
 			categoryDisplayName: "World Design"
@@ -1472,7 +1472,7 @@ var ExpPack = {};
 			name: "Bosses".localize(),
 			v: 2,
 			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Level Design') > 2
+				return LevelCalculator.getMissionLevel('Level Design') > 2;
 			},
 			category: "Level Design",
 			categoryDisplayName: "Level Design"
@@ -1483,7 +1483,7 @@ var ExpPack = {};
 			name: "Swift loading".localize(),
 			v: 4,
 			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Level Design') > 5
+				return LevelCalculator.getMissionLevel('Level Design') > 5;
 			},
 			category: "Level Design",
 			categoryDisplayName: "Level Design"
@@ -1542,7 +1542,7 @@ var ExpPack = {};
 					header: "Lab report".localize(),
 					text: "Cows....".localize(),
 					image: "./images/projectIcons/superb/graphics-v6.png"
-				}))
+				}));
 			}
 		});
 	};
@@ -1553,7 +1553,7 @@ var ExpPack = {};
 		var company = GameManager.company;
 		var gamePrice;
 		var newPrice;
-		var dataStore = GDT.getDataStore("ExpPackMod")
+		var dataStore = GDT.getDataStore("ExpPackMod");
 		
 		UI.selectPriceClick = function (a) {
 		Sound.click();
@@ -1604,7 +1604,7 @@ var ExpPack = {};
 			if(GameManager.company.isCurrentlyDevelopingGame())
 			{
 				var game = GameManager.company.currentGame;
-				newPrice = e
+				newPrice = e;
 				
 				var div = $("#PriceContainer");
 				
@@ -1646,7 +1646,7 @@ var ExpPack = {};
 				else if(game.gameSize === "aaa")
 					a = 2 - (price / 60);
 				return a;
-			}
+			};
 			var score = game.score.clamp(1, 10);
 			var scoreRatio = function (score) {
 				var b;
@@ -1679,14 +1679,14 @@ var ExpPack = {};
 						
 						var div = $("#PriceContainer");
 							 
-						div.scrollTop()
+						div.scrollTop();
 							 
 						div.gdDialog({
 							popout: !0,
 							close: !0
-						})
+						});
 					}
-				})
+			});
 				
 			var game = GameManager.company.currentGame;
 			var max_price;
@@ -1735,7 +1735,7 @@ var ExpPack = {};
 		
 		var original_PopupMenu = UI._showContextMenu;
 		var new_initPopupMenu = function (type, menuItems, x, y) {
-			var company = GameManager.company
+			var company = GameManager.company;
 			var targetChar = company.currentLevel > 1 ? UI.getCharUnderCursor() : company.staff[0];
 			
 			if(targetChar) {
@@ -1765,7 +1765,7 @@ var ExpPack = {};
 								canRecharge = true;
 								
 							}
-						})
+						});
 					}
 				}
 			}
@@ -1775,4 +1775,19 @@ var ExpPack = {};
 		UI._showContextMenu = new_initPopupMenu;
 	};
 	/*  */
+	
+	
+	/*
+	 * Custom Price Bug Fix ~Everard
+	 */
+	ExpPack.checkCustomPrice = function() {
+		GDT.off(GDT.eventKeys.gameplay.beforeReleaseGame, ExpPack.checkCustomPrice);
+		if (GDT.getDataStore("ExpPackMod").data.gamePrice >= 1){
+			return;
+		}else{
+			GDT.getDataStore("ExpPackMod").data.gamePrice = 7;
+		}
+	};GDT.on(GDT.eventKeys.gameplay.beforeReleaseGame, ExpPack.checkCustomPrice);
+	
+	
 })();
