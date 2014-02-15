@@ -18,7 +18,7 @@ This is a list of people who help/helped with the mod. All the names are from [t
 
 /* Content Creators */
   - DzjengisKhan (Founder and leader of the EPM)
-  - LineLiear (Co-Leader of the EPM)
+  - LineLiar (Co-Leader of the EPM)
   - Nathan00107 (Made 2 events and a platform)
   - Gamingthrou (Made textures for platforms)
   - Glampkoo (Made textures for platforms)
