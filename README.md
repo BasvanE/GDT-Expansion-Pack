@@ -1,4 +1,4 @@
-###Expansion Pack for Game Dev Tycoon (Current Version 0.5.1)
+###Expansion Pack for Game Dev Tycoon (Current Version 1.0.0)
 
 This is the Expansion Pack Mod (EPM), founded by DzjengisKhan!
 
@@ -10,7 +10,7 @@ This expansion pack will include:
   - Custom prices
   - Black Bull (energy drink for your staff)
   - Custom Computers
-
+  - Possibility to search for a certain topic when you start creating a game
 
 ###Team
 
@@ -29,14 +29,19 @@ This is a list of people who help/helped with the mod. All the names are from [t
   
 /* Other */
   - Kristof1104 (UI Techniques and a friend that helps when/where he can)
+  - Alphabit (For helping me out a lot and being a great friend)
+  - SirEverard (For helping me out a lot and being a great frind)
 
 Want to be a part of the mod?? Send me a private message [here](http://forum.greenheartgames.com/users/dzjengiskhan/activity)
 with your addition for the expansion pack and I will judge if it's good enough to be added to the pack!
 
 ###Change Log
 
+Version 1.0.0
+  - Added search bar in the topic menu when creating a game for easy topic finding. (+ starting fresh with version number)
+
 Version 0.5.0
-	- Added custom computers. In the hardware lab, you can now make your own computers. You have multiple options for OS, CPU, Motherboard, GPU, RAM and Storage. You can select from 18 awesome cases which get progressively cooler (like with custom consoles). All the credit for the textures goes to silverwolf (Greenheart Games Forum name)!
+  - Added custom computers. In the hardware lab, you can now make your own computers. You have multiple options for OS, CPU, Motherboard, GPU, RAM and Storage. You can select from 18 awesome cases which get progressively cooler (like with custom consoles). All the credit for the textures goes to silverwolf (Greenheart Games Forum name)!
 	- New license
 	
 Version 0.3.4
