@@ -1436,7 +1436,7 @@ var ExpPack = {};
 				return LevelCalculator.getMissionLevel('Dialogs') > 4;
 			},
 			category: "Dialogs",
-			categoryDisplayName: "Dialogues",
+			categoryDisplayName: "Dialogues"
 		});
 		/*  */
 		
