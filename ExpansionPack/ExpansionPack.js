@@ -52,6 +52,6 @@
 	'mods/gdt-modAPI/examples/examples.js',
 	'mods/ExpansionPack/source/source.js',
 	'mods/ExpansionPack/source/CC_AddOn.js',
-	'mods/ExpansionPack/api/labResearch.js'
+	'mods/ExpansionPack/source/Search_AddOn.js'
 	], ready, error);
 })();
