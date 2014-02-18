@@ -1,4 +1,4 @@
-###Expansion Pack for Game Dev Tycoon (Current Version 1.0.0)
+###Expansion Pack for Game Dev Tycoon (Current Version 1.1.0)
 
 This is the Expansion Pack Mod (EPM), founded by DzjengisKhan!
 
@@ -36,6 +36,9 @@ Want to be a part of the mod?? Send me a private message [here](http://forum.gre
 with your addition for the expansion pack and I will judge if it's good enough to be added to the pack!
 
 ###Change Log
+
+Version 1.1.0
+  - SirEverard optimized the search bar to look like the wat it's supposed to be.
 
 Version 1.0.0
   - Added search bar in the topic menu when creating a game for easy topic finding. (+ starting fresh with version number)
