@@ -1,6 +1,9 @@
-###Expansion Pack for Game Dev Tycoon (Current Version 1.1.0)
+###Expansion Pack for Game Dev Tycoon (Current Version 1.1.5)
 
-This is the Expansion Pack Mod (EPM), founded by DzjengisKhan!
+This is my overal expansion pack for Game Dev Tycoon.
+It is made with the intention of being the best content-adding mod in the GDT community and so far I think we're doing a great job at that because with plenty new topics, platforms, events, custom computers, custom prices and many more this mod will make a new gameplay a very entertaining one 
+
+Note: [This mod requires UltimateLib](http://gdt-ultimatesuite.abesco.de/)
 
 This expansion pack will include:
   - 80 New topics
@@ -11,6 +14,7 @@ This expansion pack will include:
   - Black Bull (energy drink for your staff)
   - Custom Computers
   - Possibility to search for a certain topic when you start creating a game
+  - Game difficulties (easy, normal, hard)
 
 ###Team
 
@@ -36,6 +40,10 @@ Want to be a part of the mod?? Send me a private message [here](http://forum.gre
 with your addition for the expansion pack and I will judge if it's good enough to be added to the pack!
 
 ###Change Log
+
+Version 1.1.5
+  - Added custom difficulties.
+  - Requirement for UltimateLib.
 
 Version 1.1.0
   - SirEverard optimized the search bar to look like the wat it's supposed to be.
