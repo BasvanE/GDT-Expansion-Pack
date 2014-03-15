@@ -1,8 +1,10 @@
 var searchBar = {};
 (function () {
+	/* Remove this when UL 1.4 is out */
 	jQuery.expr[':'].epmstartswith = function (a, i, m) {
 		return jQuery(a).text().toUpperCase().substr(0, m[3].length) === m[3].toUpperCase();
 	};
+	/* */
   
 	//Add search
 	function addSearchTopics() {
@@ -49,8 +51,11 @@ var searchBar = {};
 				}
 			});
 		}
-		$('head').append('<style id="topicSearchCss" type="text/css"> .listContainer { overflow-x: hidden; } #topicsToPick { overflow-x: hidden;	overflow-y: visible; height: 92%; position: relative; padding-bottom: 3px; padding-left: 10px; } </style>');
+		$('head').append('<style id="topicSearchCss" type="text/css"> .listContainer { overflow-x: hidden; } #topicsToPick { overflow-x: hidden; overflow-y: visible; height: 92%; position: relative; padding-bottom: 3px; padding-left: 10px; } </style>');
 		$('#topicSearchCss').append('.numberCircle { position: absolute; top: 1px; right: 1px; display: block; height: 20px; width: 20px; line-height: 18.5px; border-radius: 50%; background-color: #494949; color: #ededed; text-align: center; font-size: 13px; }');
+		//UltimateLib.Visuals.Custom.setCss("listContainerFix", ".listContainer { overflow-x: show; overflow-y: show; }");
+		//UltimateLib.Visuals.Custom.setCss("topicSearchOverflow", "#topicsToPick { overflow-x: hidden;	overflow-y: visible; height: 92%; position: relative; padding-bottom: 3px; padding-left: 10px; }");
+		//UltimateLib.Visuals.Custom.setCss("numberCircleCss", ".numberCircle { position: absolute; top: 1px; right: 1px; display: block; height: 20px; width: 20px; line-height: 18.5px; border-radius: 50%; background-color: #494949; color: #ededed; text-align: center; font-size: 13px; }");
 	} addSearchTopics();
 	
 	function usedTopics(topic) {
@@ -61,8 +66,6 @@ var searchBar = {};
 		}
 		if (a.gameLog.length >= 1) {
 			for (var i = 0; i < a.gameLog.length; i++) {
-				console.log(topic)
-				console.log(a.gameLog[i].topic.name)
 				if (a.gameLog[i].topic.name == topic) {
 					uses++;
 				}
@@ -74,9 +77,7 @@ var searchBar = {};
 		var keepme = UI.pickTopicClick;
  
 		UI.pickTopicClick = function (element) {
-			console.log(element);
 			$(element).find(".numberCircle").remove();
-			console.log(element);
 			return keepme(element);
 		}
 	} pickTopicBypass();
