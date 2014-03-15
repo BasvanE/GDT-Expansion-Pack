@@ -5,5 +5,6 @@
 	"author":"DzjengisKhan (Founder & Leader) & LineLiar (Co-Leader)",
 	"url":"https://github.com/DzjengisKhan/GDT-Expansion-Pack",
 	"description" : "The one and only 'Expansion Pack Mod' for Game Dev Tycoon.",
-	"main" : "./ExpansionPack.js"
+	"main" : "./ExpansionPack.js",
+	"dependencies" : {"UltimateLib":"1.x.x"}
 }
