@@ -688,7 +688,7 @@ var ExpPack = {};
 						getNotification: function (company) {
 							return new Notification({
 								header: "Industry News".localize(),
-								text: "Vonny just released info on an improved version of their successfully Playsystem 2. Vonny called the new platform the 'Playsystem 2 Slim'.{n} Maybe not the most original name ever, but they claim that the the ps2 slim does have better hardware then the original ps2.\nVonny was not very clear about the release date but we excpect it {0}".localize().format(General.getETADescription('11/11/4', '12/2/2')),
+								text: "Vonny just released info on an improved version of their successfully Playsystem 2. Vonny called the new platform the 'Playsystem 2 Slim'.{n} Maybe not the most original name ever, but they claim that the the ps2 slim does have better hardware then the original ps2.\nVonny was not very clear about the release date but we expect it {0}".localize().format(General.getETADescription('11/11/4', '12/2/2')),
 								image: icon
 							});
 						}
@@ -783,12 +783,12 @@ var ExpPack = {};
 			getNotification: function (company) {
 				var game = company.currentGame;
 
-				var msg = "You have almost finished {0}! Maybe you should give a party for the neighborhood to celebrate it? But it will cost some money ofcourse.".localize().format(game.title);
+				var msg = "You have almost finished {0}! Maybe you should give a party for the neighbourhood to celebrate it? But it will cost some money of course.".localize().format(game.title);
 				return new Notification({
 					sourceId: eventId,
 					header: "Celebration party?".localize(),
 					text: msg,
-					options: ["Party time!", "Do nothing"]
+					options: ["Party time!", "No party"]
 				});
 			},
 			complete: function (decision) {
@@ -845,7 +845,7 @@ var ExpPack = {};
 				if (decision === 0) {
 					var n = new Notification({
 						header: "Give them what they want!".localize(),
-						text: "The fans are excited about what you have told them and they are spreading your word across the world!."
+						text: "The fans are excited about what you have told them and they are spreading your word across the world!"
 					});
 					n.adjustHype(5 + 6 * company.getRandom());
 					company.activeNotifications.addRange(n.split());
@@ -1247,7 +1247,7 @@ var ExpPack = {};
 		GDT.addResearchItem(
 		{
 			id: "Animated Textures",
-			name: "Animated Textures".localize(),
+			name: "Animated textures".localize(),
 			v: 2,
 			canResearch: function (company) {
 				return LevelCalculator.getMissionLevel('Graphic') > 3;
@@ -1258,7 +1258,7 @@ var ExpPack = {};
 		GDT.addResearchItem(
 		{
 			id: "Basic Holograms",
-            name: "Basic Holograms".localize(),
+            name: "Basic holograms".localize(),
             v: 4,
             canResearch: function (company) {
             	return LevelCalculator.getMissionLevel('Graphic') > 4;
@@ -1269,7 +1269,7 @@ var ExpPack = {};
 		GDT.addResearchItem(
 		{
         	id: "Advanced Holograms",
-            name: "Advanced Holograms".localize(),
+            name: "Advanced holograms".localize(),
             v: 8,
             canResearch: function (company) {
             	return LevelCalculator.getMissionLevel('Graphic') > 6;
@@ -1280,7 +1280,7 @@ var ExpPack = {};
 		GDT.addResearchItem(
         {
         	id: "Interactive Holograms",
-            name: "Interactive Holograms".localize(),
+            name: "Interactive holograms".localize(),
             v: 10,
             canResearch: function (company) {
             	return LevelCalculator.getMissionLevel('Graphic') > 8;
@@ -1489,62 +1489,6 @@ var ExpPack = {};
 			categoryDisplayName: "Level Design"
 		});
 		/*  */
-	};
-	/*  */
-	
-	/*  */
-	ExpPack.addLabResearch = function () {	
-		var ForDGraphics = function (company) {
-			GDT.addResearchItem(
-			{
-				id : "4D Graphics",
-				name : "4D Graphics".localize(),
-				v : 14,
-				canResearch : function (company) {
-					return false;
-				},
-				category: "Graphic",
-				categoryDisplayName: "Graphic".localize(),
-				group : "graphic-type",
-				consolePart : true,
-				techLevel : 7,
-				showXPGain : true
-			});
-		};
-			
-		GDT.addLabResearchItem(
-		{
-			id: "4D Graphics Project",
-			name: "4D Graphics".localize(),
-			pointsCost: 200,
-			canResearch: function (company) {
-				return !company.flags.graphics4D && LevelCalculator.getMissionLevel(/*company, "3D Graphics V7"*/'Level Design') > 1;
-			},
-			iconUri: "./images/projectIcons/superb/graphics-v6.png",
-			description: "Cows....".localize(),
-			targetZone: 2,
-			complete: function (company) {
-				company.flags.graphics4D = true;
-				//GDT.fire(GDT.eventKeys.gameplay.researchCompleted, ForDGraphics);
-				company.researchCompleted.push({id : "4D Graphics",
-				name : "4D Graphics".localize(),
-				v : 14,
-				canResearch : function (company) {
-					return false;
-				},
-				category: "Graphic",
-				categoryDisplayName: "Graphic".localize(),
-				group : "graphic-type",
-				consolePart : true,
-				techLevel : 7,
-				showXPGain : true});
-				company.notifications.push(new Notification({
-					header: "Lab report".localize(),
-					text: "Cows....".localize(),
-					image: "./images/projectIcons/superb/graphics-v6.png"
-				}));
-			}
-		});
 	};
 	/*  */
 	

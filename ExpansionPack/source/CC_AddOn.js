@@ -1137,8 +1137,655 @@ var CusCom = {};
 	p.PowerSupplyParts = [p.AztecCasePowerSupply, p.AztecBasiqPowerSeries, p.AztecEarthwattsSeries, p.AztecCPQSeries, p.AztecHCGSeries, p.AztecHCPSeries ,p.GoldStoneSFXSeries, p.GoldStoneGeminiSeries, p.GoldStoneStriderSeries, p.GoldStoneNightjarSeries, p.GoldStoneZeusSeries, p.QueenWinMKPowerSeries, p.QueenWinMaxPower, p.QueenWinMach1, p.QueenWinLazer, p.QueenWinLazerGold, p.QueenWinLazerPlatinum];
 	/*  */
 	
+	/* Keyboard */
+		/* None */
+		p.addNoKeyboard = {
+			id: "None",
+			name: "None".localize(),
+			engineCost: 0,
+			v: 0,
+			techLevel : 0,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Keyboard",
+			categoryDisplayName: "None".localize(),
+			group: "Keyboard"
+		};
+		/*  */
+		
+		/* Razer */
+		p.RazerDeathStalker = {
+			id: "Razor DeathStalker",
+			name: "Razor DeathStalker".localize(),
+			engineCost: 0.5E4,
+			v: 2,
+			techLevel : 2,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Keyboard",
+			categoryDisplayName: "Razor".localize(),
+			group: "Keyboard"
+		};
+		p.RazerBlackWidow = {
+			id: "Razor Black Widow",
+			name: "Razor Black Widow".localize(),
+			engineCost: 1E4,
+			v: 4,
+			techLevel : 3,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Keyboard",
+			categoryDisplayName: "Razor".localize(),
+			group: "Keyboard"
+		};
+		p.RazerAnansi = {
+			id: "Razor Anansi",
+			name: "Razor Anansi".localize(),
+			engineCost: 1.5E4,
+			v: 6,
+			techLevel : 4,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Keyboard",
+			categoryDisplayName: "Razor".localize(),
+			group: "Keyboard"
+		};
+		p.RazerBlackWidowExpert = {
+			id: "Razor Black Widow Expert",
+			name: "Razor Black Widow Expert".localize(),
+			engineCost: 2E4,
+			v: 8,
+			techLevel : 5,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Keyboard",
+			categoryDisplayName: "Razor".localize(),
+			group: "Keyboard"
+		};
+		p.RazerBlackWidowUltimateElite = {
+			id: "Razor Black Widow Ultimate Elite",
+			name: "Razor Black Widow Ultimate Elite".localize(),
+			engineCost: 2.5E4,
+			v: 10,
+			techLevel : 6,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Keyboard",
+			categoryDisplayName: "Razor".localize(),
+			group: "Keyboard"
+		};
+		p.RazerDeathStalkerUltimateElite = {
+			id: "Razor DeathStalker Ultimate Elite",
+			name: "Razor DeathStalker Ultimate Elite".localize(),
+			engineCost: 3E4,
+			v: 12,
+			techLevel : 7,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Keyboard",
+			categoryDisplayName: "Razor".localize(),
+			group: "Keyboard"
+		};
+		/*  */
+		
+		/* IronSeries */
+		p.IronSeriesApex = {
+			id: "IronSeries Apex",
+			name: "IronSeries Apex".localize(),
+			engineCost: 0.8E4,
+			v: 4,
+			techLevel : 4,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Keyboard",
+			categoryDisplayName: "IronSeries".localize(),
+			group: "Keyboard"
+		};
+		p.IronSeriesMechanical = {
+			id: "IronSeries Mechanical",
+			name: "IronSeries Mechanical".localize(),
+			engineCost: 1.25E4,
+			v: 6,
+			techLevel : 5,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Keyboard",
+			categoryDisplayName: "IronSeries".localize(),
+			group: "Keyboard"
+		};
+		/*  */
+		
+		/* LogiWare */
+		p.LogiWareG105 = {
+			id: "LogiWare G105",
+			name: "LogiWare G105".localize(),
+			engineCost: 0.4E4,
+			v: 2,
+			techLevel : 2,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Keyboard",
+			categoryDisplayName: "LogiWare".localize(),
+			group: "Keyboard"
+		};
+		p.LogiWareG510s = {
+			id: "LogiWare G510s",
+			name: "LogiWare G510s".localize(),
+			engineCost: 1E4,
+			v: 6,
+			techLevel : 4,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Keyboard",
+			categoryDisplayName: "LogiWare".localize(),
+			group: "Keyboard"
+		};
+		p.LogiWareG710Plus = {
+			id: "LogiWare G710 Plus",
+			name: "LogiWare G710 Plus".localize(),
+			engineCost: 1.5E4,
+			v: 8,
+			techLevel : 5,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Keyboard",
+			categoryDisplayName: "LogiWare".localize(),
+			group: "Keyboard"
+		};
+		p.LogiWareG19s = {
+			id: "LogieWare G19s",
+			name: "LogieWare G19s".localize(),
+			engineCost: 2.25E4,
+			v: 10,
+			techLevel : 6,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Keyboard",
+			categoryDisplayName: "LogiWare".localize(),
+			group: "Keyboard"
+		};
+		/*  */
+		
+	p.KeyboardParts = [p.addNoKeyboard, p.RazerDeathStalker, p.RazerBlackWidow, p.RazerAnansi, p.RazerBlackWidowExpert, p.RazerBlackWidowUltimateElite, p.RazerDeathStalkerUltimateElite, p.IronSeriesApex, p.IronSeriesMechanical, p.LogiWareG105, p.LogiWareG510s, p.LogiWareG710Plus, p.LogiWareG19s];
+	/*  */
+	
+	/* Mice */
+		/* None */
+		p.addNoMice = {
+			id: "None",
+			name: "None".localize(),
+			engineCost: 0,
+			v: 0,
+			techLevel : 0,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Mice",
+			categoryDisplayName: "None".localize(),
+			group: "Mice"
+		};
+		/*  */
+		
+		/* Razer */
+		p.RazerAbyssus = {
+			id: "Razor Abyssus",
+			name: "Razor Abyssus".localize(),
+			engineCost: 0.25E4,
+			v: 2,
+			techLevel : 2,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Mice",
+			categoryDisplayName: "Razor".localize(),
+			group: "Mice"
+		};
+		p.RazerDeathAdder = {
+			id: "Razor DeathAdder",
+			name: "Razor DeathAdder".localize(),
+			engineCost: 0.5E4,
+			v: 4,
+			techLevel : 3,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Mice",
+			categoryDisplayName: "Razor".localize(),
+			group: "Mice"
+		};
+		p.RazerOrochi = {
+			id: "Razor Orochi",
+			name: "Razor Orochi".localize(),
+			engineCost: 0.75E4,
+			v: 6,
+			techLevel : 4,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Mice",
+			categoryDisplayName: "Razor".localize(),
+			group: "Mice"
+		};
+		p.RazerNaga = {
+			id: "Razor Naga",
+			name: "Razor Naga".localize(),
+			engineCost: 1E4,
+			v: 8,
+			techLevel : 5,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Mice",
+			categoryDisplayName: "Razor".localize(),
+			group: "Mice"
+		};
+		p.RazerMamba = {
+			id: "Razor Mamba",
+			name: "Razor Mamba".localize(),
+			engineCost: 1.5E4,
+			v: 10,
+			techLevel : 6,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Mice",
+			categoryDisplayName: "Razor".localize(),
+			group: "Mice"
+		};
+		p.RazerOuroboros = {
+			id: "Razor Ouroboros",
+			name: "Razor Ouroboros".localize(),
+			engineCost: 1.75E4,
+			v: 12,
+			techLevel : 7,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Mice",
+			categoryDisplayName: "Razor".localize(),
+			group: "Mice"
+		};
+		/*  */
+		
+		/* IronSeries */
+		p.IronSeriesKinzu = {
+			id: "IronSeries Kinzu",
+			name: "IronSeries Kinzu".localize(),
+			engineCost: 1E4,
+			v: 2,
+			techLevel : 0.2,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Mice",
+			categoryDisplayName: "IronSeries".localize(),
+			group: "Mice"
+		};
+		p.IronSeriesKana = {
+			id: "IronSeries Kana",
+			name: "IronSeries Kana".localize(),
+			engineCost: 0.35E4,
+			v: 4,
+			techLevel : 2,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Mice",
+			categoryDisplayName: "IronSeries".localize(),
+			group: "Mice"
+		};
+		p.IronSeriesRival = {
+			id: "IronSeries Rival",
+			name: "IronSeries Rival".localize(),
+			engineCost: 0.75E4,
+			v: 6,
+			techLevel : 4,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Mice",
+			categoryDisplayName: "IronSeries".localize(),
+			group: "Mice"
+		};
+		p.IronSeriesSensei = {
+			id: "IronSeries Sensei",
+			name: "IronSeries Sensei".localize(),
+			engineCost: 1.25E4,
+			v: 10,
+			techLevel : 6,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Mice",
+			categoryDisplayName: "IronSeries".localize(),
+			group: "Mice"
+		};
+		/*  */
+		
+		/* LogiWare */
+		p.LogiWareG100s = {
+			id: "LogiWare G100s",
+			name: "LogiWare G100s".localize(),
+			engineCost: 0.2E4,
+			v: 2,
+			techLevel : 2,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Mice",
+			categoryDisplayName: "LogiWare".localize(),
+			group: "Mice"
+		};
+		p.LogiWareG400s = {
+			id: "LogiWare G400s",
+			name: "LogiWare G400s".localize(),
+			engineCost: 0.4E4,
+			v: 4,
+			techLevel : 3,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Mice",
+			categoryDisplayName: "LogiWare".localize(),
+			group: "Mice"
+		};
+		p.LogiWareG500s = {
+			id: "LogiWare G500s",
+			name: "LogiWare G500s".localize(),
+			engineCost: 0.6E4,
+			v: 6,
+			techLevel : 4,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Mice",
+			categoryDisplayName: "LogiWare".localize(),
+			group: "Mice"
+		};
+		p.LogiWareG600MMO = {
+			id: "LogiWare G600 MMO",
+			name: "LogiWare G600 MMO".localize(),
+			engineCost: 0.75E4,
+			v: 8,
+			techLevel : 5,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Mice",
+			categoryDisplayName: "LogiWare".localize(),
+			group: "Mice"
+		};
+		p.LogiWareG602 = {
+			id: "LogiWare G602",
+			name: "LogiWare G602".localize(),
+			engineCost: 0.75E4,
+			v: 8,
+			techLevel : 5,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Mice",
+			categoryDisplayName: "LogiWare".localize(),
+			group: "Mice"
+		};
+		p.LogiWareG700s = {
+			id: "LogiWare G700s",
+			name: "LogiWare G700s".localize(),
+			engineCost: 1E4,
+			v: 12,
+			techLevel : 7,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Mice",
+			categoryDisplayName: "LogiWare".localize(),
+			group: "Mice"
+		};
+		/*  */
+		
+	p.MiceParts = [p.addNoMice, p.RazerAbyssus, p.RazerDeathAdder, p.RazerOrochi, p.RazerNaga, p.RazerMamba, p.RazerOuroboros, p.IronSeriesKinzu, p.IronSeriesKana, p.IronSeriesRival, p.IronSeriesSensei, p.LogiWareG100s, p.LogiWareG400s, p.LogiWareG500s, p.LogiWareG600MMO, p.LogiWareG602, p.LogiWareG700s];
+	/*  */
+	
+	/* Headset */
+		/* None */
+			p.addNoHeadset = {
+				id: "None",
+				name: "None".localize(),
+				engineCost: 0,
+				v: 0,
+				techLevel : 0,
+				canResearch: function (company) {
+					return !company.flags.customHardwareResearched;
+				},
+				consolePart : true,
+				category: "Headset",
+				categoryDisplayName: "None".localize(),
+				group: "Headset"
+			};
+		/*  */
+	
+		/* Razer */
+		p.RazerCarcharias = {
+			id: "Razor Carcharias",
+			name: "Razor Carcharias".localize(),
+			engineCost: 0.35E4,
+			v: 2,
+			techLevel : 2,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Headset",
+			categoryDisplayName: "Razor".localize(),
+			group: "Headset"
+		};
+		p.RazerKrakenPro = {
+			id: "Razor Kraken Pro",
+			name: "Razor Kraken Pro".localize(),
+			engineCost: 0.6E4,
+			v: 4,
+			techLevel : 3,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Headset",
+			categoryDisplayName: "Razor".localize(),
+			group: "Headset"
+		};
+		p.RazerTiamat22 = {
+			id: "Razor Tiamat 2.2",
+			name: "Razor Tiamat 2.2".localize(),
+			engineCost: 0.95E4,
+			v: 6,
+			techLevel : 4,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Headset",
+			categoryDisplayName: "Razor".localize(),
+			group: "Headset"
+		};
+		p.RazerBlackShark = {
+			id: "Razor BlackShark",
+			name: "Razor BlackShark".localize(),
+			engineCost: 1.15E4,
+			v: 8,
+			techLevel : 5,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Headset",
+			categoryDisplayName: "Razor".localize(),
+			group: "Headset"
+		};
+		p.RazerChimaera = {
+			id: "Razor Chimaera",
+			name: "Razor Chimaera".localize(),
+			engineCost: 1.15E4,
+			v: 8,
+			techLevel : 5,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Headset",
+			categoryDisplayName: "Razor".localize(),
+			group: "Headset"
+		};
+		p.RazerMegalodon = {
+			id: "Razor Megalodon",
+			name: "Razor Megalodon".localize(),
+			engineCost: 1.5E4,
+			v: 10,
+			techLevel : 6,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Headset",
+			categoryDisplayName: "Razor".localize(),
+			group: "Headset"
+		};
+		p.RazerTiamat77 = {
+			id: "Razor Tiamat 7.7",
+			name: "Razor Tiamat 7.7".localize(),
+			engineCost: 1.6E4,
+			v: 10,
+			techLevel : 6,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Headset",
+			categoryDisplayName: "Razor".localize(),
+			group: "Headset"
+		};
+		p.RazerChimaera51 = {
+			id: "Razor Chimaera 5.1",
+			name: "Razor Chimaera 5.1".localize(),
+			engineCost: 1.75E4,
+			v: 12,
+			techLevel : 7,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Headset",
+			categoryDisplayName: "Razor".localize(),
+			group: "Headset"
+		};
+		/*  */
+		
+		/* LogiWare */
+		p.LogiWareG230 = {
+			id: "LogiWare G230",
+			name: "LogiWare G230".localize(),
+			engineCost: 0.25E4,
+			v: 2,
+			techLevel : 2,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Headset",
+			categoryDisplayName: "LogiWare".localize(),
+			group: "Headset"
+		};
+		p.LogiWareG430 = {
+			id: "LogiWare G430",
+			name: "LogiWare G430".localize(),
+			engineCost: 0.4E4,
+			v: 4,
+			techLevel : 4,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Headset",
+			categoryDisplayName: "LogiWare".localize(),
+			group: "Headset"
+		};
+		p.LogiWareG35 = {
+			id: "LogiWare G35",
+			name: "LogiWare G35".localize(),
+			engineCost: 1.5E4,
+			v: 10,
+			techLevel : 6,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Headset",
+			categoryDisplayName: "LogiWare".localize(),
+			group: "Headset"
+		};
+		p.LogiWareG930 = {
+			id: "LogiWare G930",
+			name: "LogiWare G930".localize(),
+			engineCost: 1.75E4,
+			v: 12,
+			techLevel : 7,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+			},
+			consolePart : true,
+			category: "Headset",
+			categoryDisplayName: "LogiWare".localize(),
+			group: "Headset"
+		};
+		/*  */
+		
+	p.HeadsetParts = [p.addNoHeadset, p.RazerCarcharias, p.RazerKrakenPro, p.RazerTiamat22, p.RazerBlackShark, p.RazerChimaera, p.RazerMegalodon, p.RazerTiamat77, p.RazerChimaera51, p.LogiWareG230, p.LogiWareG430, p.LogiWareG35, p.LogiWareG930];
+	/*  */
+	
 	p.allComputerParts = function () {
-		return p.osParts.concat(p.CPUParts).concat(p.MBParts).concat(p.GPUParts).concat(p.RAMParts).concat(p.storageParts).concat(p.PowerSupplyParts)
+		return p.osParts.concat(p.CPUParts).concat(p.MBParts).concat(p.GPUParts).concat(p.RAMParts).concat(p.storageParts).concat(p.PowerSupplyParts).concat(p.KeyboardParts).concat(p.MiceParts).concat(p.headsetParts)
 	};
 	
 	var menuItems = [];
@@ -1188,7 +1835,7 @@ var CusCom = {};
 	document.getElementById("createComputerMenu").innerHTML = '<div class="dialogScreenContainer tallWindow">' +
 		'<div class="windowCostLabel"></div>' +
 		'<div class="dialogScreen1">' +
-			'<div class="dialogScreen1Title windowTitle">Custom Computer</div>' +
+			'<div class="dialogScreenPCTitle windowTitle">Custom Computer</div>' +
 			'<div class="dialogScreen1ContentContainer">' +
 				'<input class="computerName" type="text" value="" maxlength="30" style="font-size: 22pt" required />' +
 				'<div class="computerSliderContainer"></div>' +
@@ -1201,44 +1848,62 @@ var CusCom = {};
 		'</div>' +
 		'<div class="dialogScreen2">' +
 			'<div onClick="prevPage()"  class="dialogBackButton fontCharacterButton icon-arrow-left"></div>' +
-			'<div class="dialogScreen2Title windowTitle">Operating System</div>' +
+			'<div class="dialogScreenPCTitle windowTitle">Operating System</div>' +
 			'<div class="featureSelectionContainer2" style="margin: 40px 20px 20px 20px; padding-right: 20px; height: 430px; overflow: scroll; overflow-x: hidden; overflow-y: auto;"></div>' +
 			'<div onClick="nextPage()" class="dialogNextButton baseButton disabledButton">Next</div>' +
 		'</div>' +
 		'<div class="dialogScreen3" style="margin-left: 100%;height: 100%;position: absolute;top: 0px">' +
 			'<div onClick="prevPage()"  class="dialogBackButton fontCharacterButton icon-arrow-left"></div>' +
-			'<div class="dialogScreen3Title windowTitle" style="width: 500px">CPU</div>' +
+			'<div class="dialogScreenPCTitle windowTitle" style="width: 500px">CPU</div>' +
 			'<div class="featureSelectionContainer3" style="margin: 40px 20px 20px 20px; padding-right: 20px; height: 430px; overflow: scroll; overflow-x: hidden; overflow-y: auto;"></div>' +
 			'<div onClick="nextPage()" class="dialogNextButton baseButton disabledButton">Next</div>' +
 		'</div>' +
 		'<div class="dialogScreen4" style="margin-left: 100%;height: 100%;position: absolute;top: 0px">' +
 			'<div onClick="prevPage()" class="dialogBackButton fontCharacterButton icon-arrow-left"></div>' +
-			'<div class="dialogScreen4Title windowTitle" style="width: 500px">Motherboard</div>' +
+			'<div class="dialogScreenPCTitle windowTitle" style="width: 500px">Motherboard</div>' +
 			'<div class="featureSelectionContainer4" style="margin: 40px 20px 20px 20px; padding-right: 20px; height: 430px; overflow: scroll; overflow-x: hidden; overflow-y: auto;"></div>' +
 			'<div onClick="nextPage()" class="dialogNextButton baseButton disabledButton">Next</div>' +
 		'</div>' +
 		'<div class="dialogScreen5" style="margin-left: 100%;height: 100%;position: absolute;top: 0px">' +
 			'<div onClick="prevPage()" class="dialogBackButton fontCharacterButton icon-arrow-left"></div>' +
-			'<div class="dialogScreen5Title windowTitle" style="width: 500px">GPU</div>' +
+			'<div class="dialogScreenPCTitle windowTitle" style="width: 500px">GPU</div>' +
 			'<div class="featureSelectionContainer5" style="margin: 40px 20px 20px 20px; padding-right: 20px; height: 430px; overflow: scroll; overflow-x: hidden; overflow-y: auto;"></div>' +
 			'<div onClick="nextPage()" class="dialogNextButton baseButton disabledButton">Next</div>' +
 		'</div>' +
 		'<div class="dialogScreen6" style="margin-left: 100%;height: 100%;position: absolute;top: 0px">' +
 			'<div onClick="prevPage()" class="dialogBackButton fontCharacterButton icon-arrow-left"></div>' +
-			'<div class="dialogScreen6Title windowTitle" style="width: 500px">RAM</div>' +
+			'<div class="dialogScreenPCTitle windowTitle" style="width: 500px">RAM</div>' +
 			'<div class="featureSelectionContainer6" style="margin: 40px 20px 20px 20px; padding-right: 20px; height: 430px; overflow: scroll; overflow-x: hidden; overflow-y: auto;"></div>' +
 			'<div onClick="nextPage()" class="dialogNextButton baseButton disabledButton">Next</div>' +
 		'</div>' +
 		'<div class="dialogScreen7" style="margin-left: 100%;height: 100%;position: absolute;top: 0px">' +
 			'<div onClick="prevPage()" class="dialogBackButton fontCharacterButton icon-arrow-left"></div>' +
-			'<div class="dialogScreen7Title windowTitle" style="width: 500px">Storage</div>' +
+			'<div class="dialogScreenPCTitle windowTitle" style="width: 500px">Storage</div>' +
 			'<div class="featureSelectionContainer7" style="margin: 40px 20px 20px 20px; padding-right: 20px; height: 430px; overflow: scroll; overflow-x: hidden; overflow-y: auto;"></div>' +
 			'<div onClick="nextPage()" class="dialogNextButton baseButton disabledButton">Next</div>' +
 		'</div>' +
 		'<div class="dialogScreen8" style="margin-left: 100%;height: 100%;position: absolute;top: 0px">' +
 			'<div onClick="prevPage()" class="dialogBackButton fontCharacterButton icon-arrow-left"></div>' +
-			'<div class="dialogScreen8Title windowTitle" style="width: 500px">Power Supply</div>' +
+			'<div class="dialogScreenPCTitle windowTitle" style="width: 500px">Power Supply</div>' +
 			'<div class="featureSelectionContainer8" style="margin: 40px 20px 20px 20px; padding-right: 20px; height: 430px; overflow: scroll; overflow-x: hidden; overflow-y: auto;"></div>' +
+			'<div onClick="nextPage()" class="dialogNextButton baseButton disabledButton">Next</div>' +
+		'</div>' +
+		'<div class="dialogScreen9" style="margin-left: 100%;height: 100%;position: absolute;top: 0px">' +
+			'<div onClick="prevPage()" class="dialogBackButton fontCharacterButton icon-arrow-left"></div>' +
+			'<div class="dialogScreenPCTitle windowTitle" style="width: 500px">Keyboard</div>' +
+			'<div class="featureSelectionContainer9" style="margin: 40px 20px 20px 20px; padding-right: 20px; height: 430px; overflow: scroll; overflow-x: hidden; overflow-y: auto;"></div>' +
+			'<div onClick="nextPage()" class="dialogNextButton baseButton disabledButton">Next</div>' +
+		'</div>' +
+		'<div class="dialogScreen10" style="margin-left: 100%;height: 100%;position: absolute;top: 0px">' +
+			'<div onClick="prevPage()" class="dialogBackButton fontCharacterButton icon-arrow-left"></div>' +
+			'<div class="dialogScreenPCTitle windowTitle" style="width: 500px">Mice</div>' +
+			'<div class="featureSelectionContainer10" style="margin: 40px 20px 20px 20px; padding-right: 20px; height: 430px; overflow: scroll; overflow-x: hidden; overflow-y: auto;"></div>' +
+			'<div onClick="nextPage()" class="dialogNextButton baseButton disabledButton">Next</div>' +
+		'</div>' +
+		'<div class="dialogScreen11" style="margin-left: 100%;height: 100%;position: absolute;top: 0px">' +
+			'<div onClick="prevPage()" class="dialogBackButton fontCharacterButton icon-arrow-left"></div>' +
+			'<div class="dialogScreenPCTitle windowTitle" style="width: 500px">Headset</div>' +
+			'<div class="featureSelectionContainer11" style="margin: 40px 20px 20px 20px; padding-right: 20px; height: 430px; overflow: scroll; overflow-x: hidden; overflow-y: auto;"></div>' +
 			'<div class="centeredButtonWrapper">' +
 				'<div onClick="UI.createConsoleClick()" class="okButton selectorButton windowMainActionButton orangeButton windowLargeOkButton">Start Development</div>' +
 			'</div>' +
@@ -1262,6 +1927,9 @@ var CusCom = {};
 		UI.maxFont(menu.find(".dialogScreen6Title"), 34, 50);
 		UI.maxFont(menu.find(".dialogScreen7Title"), 34, 50);
 		UI.maxFont(menu.find(".dialogScreen8Title"), 34, 50);
+		UI.maxFont(menu.find(".dialogScreen9Title"), 34, 50);
+		UI.maxFont(menu.find(".dialogScreen10Title"), 34, 50);
+		UI.maxFont(menu.find(".dialogScreen11Title"), 34, 50);
 		UI.maxFont(menu.find(".windowMainActionButton"), 34, 50);
 		var options = {};
 		options.disableCheckForNotifications = true;
@@ -1309,6 +1977,15 @@ var CusCom = {};
 				$("#createComputerMenu").find(".dialogScreen8").transition({
 					"margin-left" : "700%"
 				});
+				$("#createComputerMenu").find(".dialogScreen9").transition({
+					"margin-left" : "800%"
+				});
+				$("#createComputerMenu").find(".dialogScreen10").transition({
+					"margin-left" : "900%"
+				});
+				$("#createComputerMenu").find(".dialogScreen11").transition({
+					"margin-left" : "1000%"
+				});
 			};
 			if (curPage == 1)
 			{
@@ -1335,6 +2012,15 @@ var CusCom = {};
 				});
 				$("#createComputerMenu").find(".dialogScreen8").transition({
 					"margin-left" : "600%"
+				});
+				$("#createComputerMenu").find(".dialogScreen9").transition({
+					"margin-left" : "700%"
+				});
+				$("#createComputerMenu").find(".dialogScreen10").transition({
+					"margin-left" : "800%"
+				});
+				$("#createComputerMenu").find(".dialogScreen11").transition({
+					"margin-left" : "900%"
 				});
 			};
 			if (curPage == 2)
@@ -1363,6 +2049,15 @@ var CusCom = {};
 				$("#createComputerMenu").find(".dialogScreen8").transition({
 					"margin-left" : "500%"
 				});
+				$("#createComputerMenu").find(".dialogScreen9").transition({
+					"margin-left" : "600%"
+				});
+				$("#createComputerMenu").find(".dialogScreen10").transition({
+					"margin-left" : "700%"
+				});
+				$("#createComputerMenu").find(".dialogScreen11").transition({
+					"margin-left" : "800%"
+				});
 			};
 			if (curPage == 3)
 			{
@@ -1389,6 +2084,15 @@ var CusCom = {};
 				});
 				$("#createComputerMenu").find(".dialogScreen8").transition({
 					"margin-left" : "400%"
+				});
+				$("#createComputerMenu").find(".dialogScreen9").transition({
+					"margin-left" : "500%"
+				});
+				$("#createComputerMenu").find(".dialogScreen10").transition({
+					"margin-left" : "600%"
+				});
+				$("#createComputerMenu").find(".dialogScreen11").transition({
+					"margin-left" : "700%"
 				});
 			};
 			if (curPage == 4)
@@ -1417,6 +2121,15 @@ var CusCom = {};
 				$("#createComputerMenu").find(".dialogScreen8").transition({
 					"margin-left" : "300%"
 				});
+				$("#createComputerMenu").find(".dialogScreen9").transition({
+					"margin-left" : "400%"
+				});
+				$("#createComputerMenu").find(".dialogScreen10").transition({
+					"margin-left" : "500%"
+				});
+				$("#createComputerMenu").find(".dialogScreen11").transition({
+					"margin-left" : "600%"
+				});
 			};
 			if (curPage == 5)
 			{
@@ -1444,6 +2157,15 @@ var CusCom = {};
 				$("#createComputerMenu").find(".dialogScreen8").transition({
 					"margin-left" : "200%"
 				});
+				$("#createComputerMenu").find(".dialogScreen9").transition({
+					"margin-left" : "300%"
+				});
+				$("#createComputerMenu").find(".dialogScreen10").transition({
+					"margin-left" : "400%"
+				});
+				$("#createComputerMenu").find(".dialogScreen11").transition({
+					"margin-left" : "500%"
+				});
 			};
 			if (curPage == 6)
 			{
@@ -1469,6 +2191,123 @@ var CusCom = {};
 					"margin-left" : 0
 				});
 				$("#createComputerMenu").find(".dialogScreen8").transition({
+					"margin-left" : "100%"
+				});
+				$("#createComputerMenu").find(".dialogScreen9").transition({
+					"margin-left" : "200%"
+				});
+				$("#createComputerMenu").find(".dialogScreen10").transition({
+					"margin-left" : "300%"
+				});
+				$("#createComputerMenu").find(".dialogScreen11").transition({
+					"margin-left" : "400%"
+				});
+			};
+			if (curPage == 7)
+			{
+				$("#createComputerMenu").find(".dialogScreen1").transition({
+					"margin-left" : "-700%"
+				});
+				$("#createComputerMenu").find(".dialogScreen2").transition({
+					"margin-left" : "-600%"
+				});
+				$("#createComputerMenu").find(".dialogScreen3").transition({
+					"margin-left" : "-500%"
+				});
+				$("#createComputerMenu").find(".dialogScreen4").transition({
+					"margin-left" : "-400%"
+				});
+				$("#createComputerMenu").find(".dialogScreen5").transition({
+					"margin-left" : "-300%"
+				});
+				$("#createComputerMenu").find(".dialogScreen6").transition({
+					"margin-left" : "-200%"
+				});
+				$("#createComputerMenu").find(".dialogScreen7").transition({
+					"margin-left" : "-100%"
+				});
+				$("#createComputerMenu").find(".dialogScreen8").transition({
+					"margin-left" : 0
+				});
+				$("#createComputerMenu").find(".dialogScreen9").transition({
+					"margin-left" : "100%"
+				});
+				$("#createComputerMenu").find(".dialogScreen10").transition({
+					"margin-left" : "200%"
+				});
+				$("#createComputerMenu").find(".dialogScreen11").transition({
+					"margin-left" : "300%"
+				});
+			};
+			if (curPage == 8)
+			{
+				$("#createComputerMenu").find(".dialogScreen1").transition({
+					"margin-left" : "-800%"
+				});
+				$("#createComputerMenu").find(".dialogScreen2").transition({
+					"margin-left" : "-700%"
+				});
+				$("#createComputerMenu").find(".dialogScreen3").transition({
+					"margin-left" : "-600%"
+				});
+				$("#createComputerMenu").find(".dialogScreen4").transition({
+					"margin-left" : "-500%"
+				});
+				$("#createComputerMenu").find(".dialogScreen5").transition({
+					"margin-left" : "-400%"
+				});
+				$("#createComputerMenu").find(".dialogScreen6").transition({
+					"margin-left" : "-300%"
+				});
+				$("#createComputerMenu").find(".dialogScreen7").transition({
+					"margin-left" : "-200%"
+				});
+				$("#createComputerMenu").find(".dialogScreen8").transition({
+					"margin-left" : "-100%"
+				});
+				$("#createComputerMenu").find(".dialogScreen9").transition({
+					"margin-left" : 0
+				});
+				$("#createComputerMenu").find(".dialogScreen10").transition({
+					"margin-left" : "100%"
+				});
+				$("#createComputerMenu").find(".dialogScreen11").transition({
+					"margin-left" : "200%"
+				});
+			};
+			if (curPage == 9)
+			{
+				$("#createComputerMenu").find(".dialogScreen1").transition({
+					"margin-left" : "-900%"
+				});
+				$("#createComputerMenu").find(".dialogScreen2").transition({
+					"margin-left" : "-800%"
+				});
+				$("#createComputerMenu").find(".dialogScreen3").transition({
+					"margin-left" : "-700%"
+				});
+				$("#createComputerMenu").find(".dialogScreen4").transition({
+					"margin-left" : "-600%"
+				});
+				$("#createComputerMenu").find(".dialogScreen5").transition({
+					"margin-left" : "-500%"
+				});
+				$("#createComputerMenu").find(".dialogScreen6").transition({
+					"margin-left" : "-400%"
+				});
+				$("#createComputerMenu").find(".dialogScreen7").transition({
+					"margin-left" : "-300%"
+				});
+				$("#createComputerMenu").find(".dialogScreen8").transition({
+					"margin-left" : "-200%"
+				});
+				$("#createComputerMenu").find(".dialogScreen9").transition({
+					"margin-left" : "-100%"
+				});
+				$("#createComputerMenu").find(".dialogScreen10").transition({
+					"margin-left" : 0
+				});
+				$("#createComputerMenu").find(".dialogScreen11").transition({
 					"margin-left" : "100%"
 				});
 			};
@@ -1562,17 +2401,17 @@ var CusCom = {};
 	};
 	var getUnusedCustomComputers = function () {
 		var computers = [];
-		for (var i = 1; i < 8; i++) {
+		for (var i = 1; i < 9; i++) {
 			if (GameManager.company.flags["computer" + i + "Used"])
 				continue;
 			else
 				computers = computers.concat(["case" + i + "V1.png", "case" +
 							i + "V2.png", "case" + i + "V3.png"]);
-			if (computers.length === 6)
+			if (computers.length === 8)
 				break
 		}
 		if (computers.length === 0) {
-			for (var i = 1; i < 8; i++)
+			for (var i = 1; i < 9; i++)
 				GameManager.company.flags["computer" + i + "Used"] = undefined;
 			return getUnusedCustomComputers()
 		}
@@ -1616,6 +2455,15 @@ var CusCom = {};
 					$("#createComputerMenu").find(".dialogScreen8").transition({
 						"margin-left" : "1200%"
 					});
+					$("#createComputerMenu").find(".dialogScreen9").transition({
+						"margin-left" : "1400%"
+					});
+					$("#createComputerMenu").find(".dialogScreen10").transition({
+						"margin-left" : "1600%"
+					});
+					$("#createComputerMenu").find(".dialogScreen11").transition({
+						"margin-left" : "1800%"
+					});
 				};
 				if (curPage == 2)
 				{
@@ -1642,6 +2490,15 @@ var CusCom = {};
 					});
 					$("#createComputerMenu").find(".dialogScreen8").transition({
 						"margin-left" : "1000%"
+					});
+					$("#createComputerMenu").find(".dialogScreen9").transition({
+						"margin-left" : "1200%"
+					});
+					$("#createComputerMenu").find(".dialogScreen10").transition({
+						"margin-left" : "1400%"
+					});
+					$("#createComputerMenu").find(".dialogScreen11").transition({
+						"margin-left" : "1600%"
 					});
 				};
 				if (curPage == 3)
@@ -1670,6 +2527,15 @@ var CusCom = {};
 					$("#createComputerMenu").find(".dialogScreen8").transition({
 						"margin-left" : "800%"
 					});
+					$("#createComputerMenu").find(".dialogScreen9").transition({
+						"margin-left" : "1000%"
+					});
+					$("#createComputerMenu").find(".dialogScreen10").transition({
+						"margin-left" : "1200%"
+					});
+					$("#createComputerMenu").find(".dialogScreen11").transition({
+						"margin-left" : "1400%"
+					});
 				};
 				if (curPage == 4)
 				{
@@ -1696,6 +2562,15 @@ var CusCom = {};
 					});
 					$("#createComputerMenu").find(".dialogScreen8").transition({
 						"margin-left" : "600%"
+					});
+					$("#createComputerMenu").find(".dialogScreen9").transition({
+						"margin-left" : "800%"
+					});
+					$("#createComputerMenu").find(".dialogScreen10").transition({
+						"margin-left" : "1000%"
+					});
+					$("#createComputerMenu").find(".dialogScreen11").transition({
+						"margin-left" : "1200%"
 					});
 				};
 				if (curPage == 5)
@@ -1724,6 +2599,15 @@ var CusCom = {};
 					$("#createComputerMenu").find(".dialogScreen8").transition({
 						"margin-left" : "400%"
 					});
+					$("#createComputerMenu").find(".dialogScreen9").transition({
+						"margin-left" : "600%"
+					});
+					$("#createComputerMenu").find(".dialogScreen10").transition({
+						"margin-left" : "800%"
+					});
+					$("#createComputerMenu").find(".dialogScreen11").transition({
+						"margin-left" : "1000%"
+					});
 				};
 				if (curPage == 6)
 				{
@@ -1750,6 +2634,15 @@ var CusCom = {};
 					});
 					$("#createComputerMenu").find(".dialogScreen8").transition({
 						"margin-left" : "200%"
+					});
+					$("#createComputerMenu").find(".dialogScreen9").transition({
+						"margin-left" : "400%"
+					});
+					$("#createComputerMenu").find(".dialogScreen10").transition({
+						"margin-left" : "600%"
+					});
+					$("#createComputerMenu").find(".dialogScreen11").transition({
+						"margin-left" : "800%"
 					});
 				};
 				if (curPage == 7)
@@ -1778,6 +2671,123 @@ var CusCom = {};
 					$("#createComputerMenu").find(".dialogScreen8").transition({
 						"margin-left" : 0
 					});
+					$("#createComputerMenu").find(".dialogScreen9").transition({
+						"margin-left" : "200%"
+					});
+					$("#createComputerMenu").find(".dialogScreen10").transition({
+						"margin-left" : "400%"
+					});
+					$("#createComputerMenu").find(".dialogScreen11").transition({
+						"margin-left" : "600%"
+					});
+				};
+				if (curPage == 8)
+				{
+					$("#createComputerMenu").find(".dialogScreen1").transition({
+						"margin-left" : "-1600%"
+					});
+					$("#createComputerMenu").find(".dialogScreen2").transition({
+						"margin-left" : "-1400%"
+					});
+					$("#createComputerMenu").find(".dialogScreen3").transition({
+						"margin-left" : "-1200%"
+					});
+					$("#createComputerMenu").find(".dialogScreen4").transition({
+						"margin-left" : "-1000%"
+					});
+					$("#createComputerMenu").find(".dialogScreen5").transition({
+						"margin-left" : "-800%"
+					});
+					$("#createComputerMenu").find(".dialogScreen6").transition({
+						"margin-left" : "-600%"
+					});
+					$("#createComputerMenu").find(".dialogScreen7").transition({
+						"margin-left" : "-400%"
+					});
+					$("#createComputerMenu").find(".dialogScreen8").transition({
+						"margin-left" : "-200%"
+					});
+					$("#createComputerMenu").find(".dialogScreen9").transition({
+						"margin-left" : 0
+					});
+					$("#createComputerMenu").find(".dialogScreen10").transition({
+						"margin-left" : "200%"
+					});
+					$("#createComputerMenu").find(".dialogScreen11").transition({
+						"margin-left" : "400%"
+					});
+				};
+				if (curPage == 9)
+				{
+					$("#createComputerMenu").find(".dialogScreen1").transition({
+						"margin-left" : "-1800%"
+					});
+					$("#createComputerMenu").find(".dialogScreen2").transition({
+						"margin-left" : "-1600%"
+					});
+					$("#createComputerMenu").find(".dialogScreen3").transition({
+						"margin-left" : "-1400%"
+					});
+					$("#createComputerMenu").find(".dialogScreen4").transition({
+						"margin-left" : "-1200%"
+					});
+					$("#createComputerMenu").find(".dialogScreen5").transition({
+						"margin-left" : "-1000%"
+					});
+					$("#createComputerMenu").find(".dialogScreen6").transition({
+						"margin-left" : "-800%"
+					});
+					$("#createComputerMenu").find(".dialogScreen7").transition({
+						"margin-left" : "-600%"
+					});
+					$("#createComputerMenu").find(".dialogScreen8").transition({
+						"margin-left" : "-400%"
+					});
+					$("#createComputerMenu").find(".dialogScreen9").transition({
+						"margin-left" : "-200%"
+					});
+					$("#createComputerMenu").find(".dialogScreen10").transition({
+						"margin-left" : 0
+					});
+					$("#createComputerMenu").find(".dialogScreen11").transition({
+						"margin-left" : "200%"
+					});
+				};
+				if (curPage == 10)
+				{
+					$("#createComputerMenu").find(".dialogScreen1").transition({
+						"margin-left" : "-200%"
+					});
+					$("#createComputerMenu").find(".dialogScreen2").transition({
+						"margin-left" : "-1800%"
+					});
+					$("#createComputerMenu").find(".dialogScreen3").transition({
+						"margin-left" : "-1600%"
+					});
+					$("#createComputerMenu").find(".dialogScreen4").transition({
+						"margin-left" : "-1400%"
+					});
+					$("#createComputerMenu").find(".dialogScreen5").transition({
+						"margin-left" : "-1200%"
+					});
+					$("#createComputerMenu").find(".dialogScreen6").transition({
+						"margin-left" : "-1000%"
+					});
+					$("#createComputerMenu").find(".dialogScreen7").transition({
+						"margin-left" : "-800%"
+					});
+					$("#createComputerMenu").find(".dialogScreen8").transition({
+						"margin-left" : "-600%"
+					});
+					$("#createComputerMenu").find(".dialogScreen9").transition({
+						"margin-left" : "-400%"
+					});
+					$("#createComputerMenu").find(".dialogScreen10").transition({
+						"margin-left" : "-200%"
+					});
+					$("#createComputerMenu").find(".dialogScreen11").transition({
+						"margin-left" : 0
+					});
 				};
 			});
 			nextButton.removeClass("baseButton").addClass("selectorButton").addClass("orangeButton")
@@ -1800,10 +2810,13 @@ var CusCom = {};
 		var featureContainer5 = modalContent.find(".featureSelectionContainer6");
 		var featureContainer6 = modalContent.find(".featureSelectionContainer7");
 		var featureContainer7 = modalContent.find(".featureSelectionContainer8");
+		var featureContainer8 = modalContent.find(".featureSelectionContainer9");
+		var featureContainer9 = modalContent.find(".featureSelectionContainer10");
+		var featureContainer10 = modalContent.find(".featureSelectionContainer11");
 		
 		var company = GameManager.company;
 		
-		var allAvailableGameFeatures = p.osParts.concat(p.CPUParts, p.GPUParts, p.MBParts, p.RAMParts, p.storageParts, p.PowerSupplyParts);
+		var allAvailableGameFeatures = p.osParts.concat(p.CPUParts, p.GPUParts, p.MBParts, p.RAMParts, p.storageParts, p.PowerSupplyParts, p.KeyboardParts, p.MiceParts, p.HeadsetParts);
 		
 		featureContainer1.empty();
 		featureContainer2.empty();
@@ -1812,6 +2825,9 @@ var CusCom = {};
 		featureContainer5.empty();
 		featureContainer6.empty();
 		featureContainer7.empty();
+		featureContainer8.empty();
+		featureContainer9.empty();
+		featureContainer10.empty();
 			
 		selectedComputerFeatures = [];
 		var category = null;
@@ -1830,6 +2846,9 @@ var CusCom = {};
 					featureContainer5.find(groupClass).removeClass("selectedFeature");
 					featureContainer6.find(groupClass).removeClass("selectedFeature");
 					featureContainer7.find(groupClass).removeClass("selectedFeature");
+					featureContainer8.find(groupClass).removeClass("selectedFeature");
+					featureContainer9.find(groupClass).removeClass("selectedFeature");
+					featureContainer10.find(groupClass).removeClass("selectedFeature");
 					
 					var features2Remove = selectedComputerFeatures.filter(function (f) {
 							return f.group === feature.group
@@ -1841,7 +2860,7 @@ var CusCom = {};
 				selectedComputerFeatures.push(feature);
 				UI._updateGameDefinitionCost()
 			} else {
-				if (feature.group === "Operating System" || feature.group === "CPU" || feature.group === "GPU" || feature.group === "Motherboard" || feature.group === "RAM" || feature.group === "Storage" || feature.group === "Power Supply")
+				if (feature.group === "Operating System" || feature.group === "CPU" || feature.group === "GPU" || feature.group === "Motherboard" || feature.group === "RAM" || feature.group === "Storage" || feature.group === "Power Supply" || feature.group === "Keyboard" || feature.group === "Mice" || feature.group === "Headset")
 					return;
 				element.removeClass("selectedFeature");
 				selectedComputerFeatures.remove(feature)
@@ -1866,7 +2885,13 @@ var CusCom = {};
 					featureContainer6.append($('<div class="featureSelectionCategoryHeading">{0}</div>'.format(feature.categoryDisplayName ? feature.categoryDisplayName : feature.category)));
 				if (feature.category == "Power Supply")
 					featureContainer7.append($('<div class="featureSelectionCategoryHeading">{0}</div>'.format(feature.categoryDisplayName ? feature.categoryDisplayName : feature.category)));
-				
+				if (feature.category == "Keyboard")
+					featureContainer8.append($('<div class="featureSelectionCategoryHeading">{0}</div>'.format(feature.categoryDisplayName ? feature.categoryDisplayName : feature.category)));
+				if (feature.category == "Mice")
+					featureContainer9.append($('<div class="featureSelectionCategoryHeading">{0}</div>'.format(feature.categoryDisplayName ? feature.categoryDisplayName : feature.category)));
+				if (feature.category == "Headset")
+					featureContainer10.append($('<div class="featureSelectionCategoryHeading">{0}</div>'.format(feature.categoryDisplayName ? feature.categoryDisplayName : feature.category)));
+					
 				categoryDisplayName = feature.categoryDisplayName
 			}
 			var element = UI.generateFeatureElement(feature);
@@ -1898,6 +2923,12 @@ var CusCom = {};
 				featureContainer6.append(element);
 			if (feature.category == "Power Supply")	
 				featureContainer7.append(element);
+			if (feature.category == "Keyboard")	
+				featureContainer8.append(element);
+			if (feature.category == "Mice")	
+				featureContainer9.append(element);
+			if (feature.category == "Headset")	
+				featureContainer10.append(element);
 			
 			if (GameManager.uiSettings.selectedComputerFeatures && GameManager.uiSettings.selectedComputerFeatures.indexOf(feature.id) != -1)
 				toggleSelectFeature(element,
@@ -2025,11 +3056,11 @@ var CusCom = {};
 					return r.id === id
 				})
 			}).filter(function (f) {
-				return f.category != "Operating System".localize() && f.category != "CPU".localize() && f.category != "Motherboard".localize() && f.category != "GPU".localize() && f.category != "RAM".localize() && f.category != "Storage".localize() && f.category != "Power Supply".localize()
+				return f.category != "Operating System".localize() && f.category != "CPU".localize() && f.category != "Motherboard".localize() && f.category != "GPU".localize() && f.category != "RAM".localize() && f.category != "Storage".localize() && f.category != "Power Supply".localize() && f.category != "Keyboard".localize() && f.category != "Mice".localize() && f.category != "Headset".localize()
 			}).sum(function (f) {
 				return f.v
 			});
-		var goodFeatureValue = 22;
+		var goodFeatureValue = 18;
 		var featureFactor = featureValues / goodFeatureValue;
 		factor = factor * 0.8 + 0.4 * featureFactor;
 		if (factor > 1) {
