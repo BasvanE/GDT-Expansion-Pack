@@ -1,4 +1,4 @@
-###Expansion Pack for Game Dev Tycoon (Current Version 1.1.5)
+###Expansion Pack for Game Dev Tycoon (Current Version 1.2.0)
 
 This is my overal expansion pack for Game Dev Tycoon.
 It is made with the intention of being the best content-adding mod in the GDT community and so far I think we're doing a great job at that because with plenty new topics, platforms, events, custom computers, custom prices and many more this mod will make a new gameplay a very entertaining one 
@@ -40,6 +40,9 @@ Want to be a part of the mod?? Send me a private message [here](http://forum.gre
 with your addition for the expansion pack and I will judge if it's good enough to be added to the pack!
 
 ###Change Log
+Version 1.2.0
+  - Added keyboards, mice and headsets to custom computers.
+  - Added 3 new textures to the custom computers.
 
 Version 1.1.5
   - Added custom difficulties.
