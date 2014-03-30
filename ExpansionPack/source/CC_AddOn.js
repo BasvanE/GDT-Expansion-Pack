@@ -1785,7 +1785,7 @@ var CusCom = {};
 	/*  */
 	
 	p.allComputerParts = function () {
-		return p.osParts.concat(p.CPUParts).concat(p.MBParts).concat(p.GPUParts).concat(p.RAMParts).concat(p.storageParts).concat(p.PowerSupplyParts).concat(p.KeyboardParts).concat(p.MiceParts).concat(p.headsetParts)
+		return p.osParts.concat(p.CPUParts).concat(p.MBParts).concat(p.GPUParts).concat(p.RAMParts).concat(p.storageParts).concat(p.PowerSupplyParts).concat(p.KeyboardParts).concat(p.MiceParts).concat(p.HeadsetParts)
 	};
 	
 	var menuItems = [];
