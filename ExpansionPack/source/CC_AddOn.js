@@ -257,6 +257,20 @@ var CusCom = {};
 			categoryDisplayName: "Outtel".localize(),
 			group: "CPU"
 		};
+	        p.OuttelXe = {
+			id: "Outtel Xeon Processor",
+			name: "Outtel Xeon Processor".localize(),
+			engineCost: 9E4,
+			v: 16,
+			techLevel : 9,
+			canResearch: function (company) {
+				return !company.flags.customHardwareResearched;
+				},
+			consolePart : true,
+			category: "CPU",
+			categoryDisplayName: "Outtel".localize(),
+			group: "CPU"
+		};
 		/*  */
 		
 		/* AMD */
