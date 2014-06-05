@@ -2956,10 +2956,10 @@ var CusCom = {};
 		qACost *= 1E6;
 		cost += qACost;
 		var costElement = modalContent.find(".windowCostLabel");
-		costElement.empty().append($("<span>{0}</span>".format("Cost: {0}".localize().format(UI.getShortNumberString(cost))))).textfill({
-			maxFontPixels : 20,
-			maxHeightPts : 37
-		});
+		costElement.empty().append($("<span>{0}</span>".format("Cost: {0}".localize().format(UI.getShortNumberString(cost)))));//.textfill({
+		//	maxFontPixels : 20,
+		//	maxHeightPts : 37
+		//});
 		return cost
 	};
 	function costSliderEase(t, b, c, d) {
