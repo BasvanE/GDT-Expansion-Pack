@@ -1,19 +1,19 @@
 ###Expansion Pack for Game Dev Tycoon (Current Version 1.2.0)
 
-This is my overal expansion pack for Game Dev Tycoon.
-It is made with the intention of being the best content-adding mod in the GDT community and so far I think we're doing a great job at that because with plenty new topics, platforms, events, custom computers, custom prices and many more this mod will make a new gameplay a very entertaining one 
+This is my overall expansion pack for Game Dev Tycoon.
+It has been made with the intention of being the best content-adding mod in the GDT community and so far I think we're doing a great job at that - there are plenty of new topics, platforms, events as well as custom computers and custom prices and much more. All this ensures that this mod will make each new playthrough a very entertaining one.
 
-Note: [This mod requires UltimateLib](http://gdt-ultimatesuite.abesco.de/)
+Note: This mod requires [UltimateLib](http://gdt-ultimatesuite.abesco.de/)
 
-This expansion pack will include:
-  - 80 New topics
-  - 11 New platforms
-  - 8 New events
-  - 22 custom Researches
+This expansion pack includes:
+  - 80 new topics
+  - 11 new platforms
+  - 8 new events
+  - 22 new research topics
   - Custom prices
   - Black Bull (energy drink for your staff)
   - Custom Computers
-  - Possibility to search for a certain topic when you start creating a game
+  - The ability to search through topics
   - Game difficulties (easy, normal, hard)
 
 ###Team
@@ -36,7 +36,7 @@ This is a list of people who help/helped with the mod. All the names are from [t
   - Alphabit (For helping me out a lot and being a great friend)
   - SirEverard (For helping me out a lot and being a great frind)
 
-Want to be a part of the mod?? Send me a private message [here](http://forum.greenheartgames.com/users/dzjengiskhan/activity)
+Want to be a part of the mod? Send me a private message [here](http://forum.greenheartgames.com/users/dzjengiskhan/activity)
 with your addition for the expansion pack and I will judge if it's good enough to be added to the pack!
 
 ###Change Log
@@ -49,7 +49,7 @@ Version 1.1.5
   - Requirement for UltimateLib.
 
 Version 1.1.0
-  - SirEverard optimized the search bar to look like the wat it's supposed to be.
+  - SirEverard optimized the search bar to look how it's supposed to.
 
 Version 1.0.0
   - Added search bar in the topic menu when creating a game for easy topic finding. (+ starting fresh with version number)
@@ -59,20 +59,18 @@ Version 0.5.0
 	- New license
 	
 Version 0.3.4
-  - Added "Black Bull". Black Bull is an energy drink that you can buy for you staff when they get tired. It will give them some energy. But won't make them as fresh as sending them on a vacation.
+  - Added "Black Bull". Black Bull is an energy drink that you can buy for your staff when they get tired. It will give them some energy, but not quite as much as sending them on a vacation.
 
 Version 0.3.3
   - Made some modifications to the custom prices
   - Beta R&D Lab research (you can research the option but can't use it in your engine. Maybe someone can help me fix that)
-  - 3 New platforms (Textures made by @Gamingthrou) So unfortunately you have to start a new save game. Note to      developers of GDT: Maybe you can fix it in the API so people don't have to start a new game when a new platform is added ^^
+  - 3 new platforms (Textures made by @Gamingthrou) Unfortunately you have to start a new save game for these to take effect. Note to the developers of GDT: maybe you can fix it in the API so that people don't have to start a new game when a new platform is added ^^
 
 Version 0.3.2
-  - Added custom prices. UI techniques based on @kristof1104 cheat mod (Go check it out it's a great mod)
-  - 2 New awesome events. Made by: @Nezaja
-  - 3 New researches + 1 new platform. Made by: @nathan00107
+  - Added custom prices. UI techniques based on @kristof1104's cheat mod (Go check it out, it's a great mod!)
+  - 2 new awesome events. Made by: @Nezaja
+  - 3 new research topics + 1 new platform. Made by: @nathan00107
 
 ###Wiki
 
-Check the [wiki](https://github.com/DzjengisKhan/GDT-Expansion-Pack/wiki "Wiki") on this page for further information about the expansion pack. Find out what topics there are added,
-the platforms which are added, the researches that are added, the events that are added and definitely check
-it out when you have problems with it.
+Check the [wiki](https://github.com/DzjengisKhan/GDT-Expansion-Pack/wiki "Wiki") on this page for further information about the expansion pack. Find out what new things are added, as well as help for any problems.

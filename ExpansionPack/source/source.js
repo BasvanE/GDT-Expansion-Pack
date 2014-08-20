@@ -413,7 +413,7 @@ var ExpPack = {};
 						getNotification: function (company) {
 							return new Notification({
 								header: "Industry News".localize(),
-								text: "Today, Grapple a new hardware manufacturer has announced a brand new computer called the Grapintosh. The Grapintosh comes with a new advanced operating system called Grap OS. Even though the new platform is a bit expensive, you get value for your money. Grapple said that the Grapintosh will become available {0}".localize().format(General.getETADescription('1/5/1', '1/7/4')),
+								text: "Today, Grapple, a new hardware manufacturer, has announced a brand new computer - the Grapintosh. The Grapintosh comes with a new advanced operating system called Grap OS. Even though the new platform is expensive, you get value for your money. Grapple said that the Grapintosh will become available {0}".localize().format(General.getETADescription('1/5/1', '1/7/4')),
 								image: icon
 							});
 						}
@@ -446,7 +446,7 @@ var ExpPack = {};
 						getNotification: function (company) {
 							return new Notification({
 								header: "Industry News".localize(),
-								text: "Grapple, developer of the very successful Grapintosh, has announced a new platform called the grMac. Grapple implemented all the hardware in the screen and named it a 'All-In-One' computer.{n} The fact that the hardware is very compact, doesn't effect any of the power we know from Grapple. The grMac will be released {0}".localize().format(General.getETADescription('16/5/4', '16/8/1')),
+								text: "Grapple, developer of the very successful Grapintosh, has announced a new platform called the grMac. Grapple has managed to implement all the hardware in the screen and named it a 'All-In-One' computer.{n} Despite the compact hardware, it still has all the power expected from Grapple. The grMac will be released {0}".localize().format(General.getETADescription('16/5/4', '16/8/1')),
 								image: icon
 							});
 						}
@@ -481,7 +481,7 @@ var ExpPack = {};
 						getNotification: function (company) {
 							return new Notification({
 								header: "Industry News".localize(),
-								text: "Today Itara, a company known for their consoles in the early consolemarket, have announced that they're gonna release a new console called the Itara Backflash.{n} This console will compete with consoles like the TES. Itara has announced that they are anticipating the console to be very successfull.{n} The Itara Backflash is getting released in {0}.".localize().format(General.getETADescription('12/7/3', '12/11/3')),
+								text: "Today Itara, a company known for their consoles in the early console market, has announced that they're going to release a new console - the Itara Backflash.{n} Despite inevitable competition with the TES 64, Itara has announced that they are anticipating the console to be very successful.{n} The Itara Backflash will be released on {0}.".localize().format(General.getETADescription('12/7/3', '12/11/3')),
 								image: icon
 							});
 						}
@@ -514,7 +514,7 @@ var ExpPack = {};
 						getNotification: function (company) {
 							return new Notification({
 								header: "Industry News".localize(),
-								text: "Today Itara announced their first platform. They called it: Itara 5200.{n} The console uses a analog joystick and has to compete with the popular TES from Ninvento.\nThe Itara 5200 will be released in {0}.".localize().format(General.getETADescription('2/9/1', '2/11/2')),
+								text: "Today, Itara announced their first platform, the Itara 5200.{n} The console uses an analogue joystick and has to compete with the popular TES from Ninvento.\nThe Itara 5200 will be released in {0}.".localize().format(General.getETADescription('2/9/1', '2/11/2')),
 								image: icon
 							});
 						}
@@ -549,7 +549,7 @@ var ExpPack = {};
 						getNotification: function (company) {
 							return new Notification({
 								header: "Industry News".localize(),
-								text: "Today Ninvento, known for the console GS, announced that they are going to release a new handheld console called the 3GS. This handheld console will have 3D animations and therefore will be the first in the handheld market.{n} Ninvento said the 3GS is will get released {0}.".localize().format(General.getETADescription('21/5/1', '21/9/3')),
+								text: "Today Ninvento, known for the GS, has announced that they are going to release its successor, the 3GS. This handheld console will have 3D animations - the first of its kind in the handheld market.{n} Ninvento stated that the 3GS is will get released {0}.".localize().format(General.getETADescription('21/5/1', '21/9/3')),
 								image: icon
 							});
 						}
@@ -582,7 +582,7 @@ var ExpPack = {};
 						getNotification: function (company) {
 							return new Notification({
 								header: "Industry News".localize(),
-								text: "Today is the day that Ninvento has announced to make another handheld console following up the 3GS, the 2GS. However the 2GS has the same mechanics as the 3GS, it's featuring better graphics and therefore better gameplay also. The 2GS is said to be released {0}.".localize().format(General.getETADescription('21/1/4', '21/4/2')),
+								text: "Today is the day that Ninvento announced to make another handheld console following up the 3GS, the 2GS. While the 2GS has the same mechanics as the 3GS, it features better graphics and, by extension, better gameplay. The 2GS will be released {0}.".localize().format(General.getETADescription('21/1/4', '21/4/2')),
 								image: icon
 							});
 						}
@@ -620,7 +620,7 @@ var ExpPack = {};
 						getNotification: function (company) {
 							return new Notification({
 								header: "Industry News".localize(),
-								text: "Ninvento just announced their next platform! The Gameling Color, as it is called, is another handheld console and features a 160x144 resolution with over 30k colors.{n} We are not sure if it will tip the suscess of the original Gameling but we can not wait!! Ninvento said the Gameling Color will be released {0}".localize().format(General.getETADescription('9/8/4', '9/11/2')),
+								text: "Ninvento just announced their next platform! The Gameling Color, as it is called, is another handheld console, featuring a 160x144 resolution with over 30k colors.{n} We are not sure if it will overtake the success of the original Gameling but we can not wait! Ninvento said the Gameling Color will be released {0}".localize().format(General.getETADescription('9/8/4', '9/11/2')),
 								image: icon
 							});
 						}
@@ -688,7 +688,7 @@ var ExpPack = {};
 						getNotification: function (company) {
 							return new Notification({
 								header: "Industry News".localize(),
-								text: "Vonny just released info on an improved version of their successfully Playsystem 2. Vonny called the new platform the 'Playsystem 2 Slim'.{n} Maybe not the most original name ever, but they claim that the the ps2 slim does have better hardware then the original ps2.\nVonny was not very clear about the release date but we expect it {0}".localize().format(General.getETADescription('11/11/4', '12/2/2')),
+								text: "Vonny just released info on an improved version of their successful Playsystem 2. Vonny called the new platform the 'Playsystem 2 Slim'.{n} Although not the most original name, they claim that the Playsystem 2 Slim has better hardware than the original Playsystem 2.\nVonny was not very clear about the release date but we expect it {0}".localize().format(General.getETADescription('11/11/4', '12/2/2')),
 								image: icon
 							});
 						}
@@ -721,9 +721,9 @@ var ExpPack = {};
 	                	id: '12111996-1111-0011-0001-DZJENGISKHAN',
 	                	date: '19/9/3',
 	                    getNotification: function (company) {
-	                    	return new Notification({
-	                        	header: "Industry News".localize(),
-	                        	text: "Today, Holo Corp, a new gaming company has just announced that they will be releasing their new console, the Holo Box. It will display games using holographic technology and eradicate the need for game disks.{n} The games will be loaded into a small flash drive which is then inserted into the console. This will reduce the cost of games. They are anticipating that the Holo Box will be a huge success. It will be released {0}".localize().format(General.getETADescription('19/9/3', '20/1/1')),
+							return new Notification({
+	                    	   	header: "Industry News".localize(),
+	                           	text: "Today Holo Corp, a new gaming company, has announced that they will be releasing their first console, the Holo Box. It displays games using holographic technology and eradicates the need for game disks by loading games into a flash drive which is plugged into the console, reducing the cost of games. They are anticipating that the Holo Box will be a huge success. It will be released {0}".localize().format(General.getETADescription('19/9/3', '20/1/1')),
 	                        	image: icon
 	                        });
 	                    }
@@ -758,7 +758,7 @@ var ExpPack = {};
 	                    getNotification: function (company) {
 	                    	return new Notification({
 	                        	header: "Industry News".localize(),
-	                        	text: "Mirconoft announced their improvement on their mBox 360, called: mBox 360 Slim.\nAccording to the critics, Mirconoft didn't make huge improvements and thus they are curious to see how the market will respond. {n} The mBox 360 Slim will be released {0}".localize().format(General.getETADescription('17/1/1', '17/4/4')),
+	                        	text: "Mirconoft announced their improvement on their mBox 360, called the mBox 360 Slim.\nAccording to the critics, Mirconoft didn't make huge improvements and thus they are curious to see how the market will respond. {n} The mBox 360 Slim will be released {0}".localize().format(General.getETADescription('17/1/1', '17/4/4')),
 	                        	image: icon
 	                        });
 	                    }
@@ -783,7 +783,7 @@ var ExpPack = {};
 			getNotification: function (company) {
 				var game = company.currentGame;
 
-				var msg = "You have almost finished {0}! Maybe you should give a party for the neighbourhood to celebrate it? But it will cost some money of course.".localize().format(game.title);
+				var msg = "You have almost finished {0}! You could throw a party for the neighbourhood to celebrate it, but of course it'll cost some money...".localize().format(game.title);
 				return new Notification({
 					sourceId: eventId,
 					header: "Celebration party?".localize(),
@@ -797,7 +797,7 @@ var ExpPack = {};
 				if (decision === 0) {
 					var n = new Notification({
 						header: "Party time!!".localize(),
-						text: "The party was a massive succes. Everybody was really impressed by your work."
+						text: "The party was a massive success. Everybody was really impressed with your work."
 					});
 					n.adjustCash(-500, "Party");
 					n.adjustHype(5 + 10 * company.getRandom());
@@ -808,7 +808,7 @@ var ExpPack = {};
 				if (decision === 1) {
 					var n = new Notification({
 						header: "No party".localize(),
-						text: "Looks like things will be quite tonight."
+						text: "Looks like things will be quiet tonight."
 					});
 					return;
 				}
@@ -831,12 +831,12 @@ var ExpPack = {};
 			getNotification: function (company) {
 				var game = company.currentGame;
 
-				var msg = "Boss, the fans have discovered that were're developing {0}, and wondering what it's about. We could tell them, and get much needed hype. But we could go all out in telling them the details, or vaguely give them out. We could just ignore them, hoping this doesn't hurt the fan base too much.".localize().format(game.title);
+				var msg = "Boss, our fans have discovered that we're developing {0} and they're wondering what it's about. We've got three options: we could tell them everything, tell them a little, or we could just ignore them, hoping this doesn't hurt them too much. There's some valuable hype available, but is it worth it?".localize().format(game.title);
 				return new Notification({
 					sourceId: eventId,
 					header: "Give information?".localize(),
 					text: msg,
-					options: ["Give them what they want!", "Vaguely tell them", "Don't tell them!"]
+					options: ["Give them what they want!", "Tell them a little", "Don't tell them!"]
 				});
 			},
 			complete: function (decision) {
@@ -845,7 +845,7 @@ var ExpPack = {};
 				if (decision === 0) {
 					var n = new Notification({
 						header: "Give them what they want!".localize(),
-						text: "The fans are excited about what you have told them and they are spreading your word across the world!"
+						text: "Your fans are excited about what you have told them and they are spreading your word across the world!"
 					});
 					n.adjustHype(5 + 6 * company.getRandom());
 					company.activeNotifications.addRange(n.split());
@@ -853,8 +853,8 @@ var ExpPack = {};
 				}
 				if (decision === 1) {
 					var n = new Notification({
-						header: "Vaguely tell them".localize(),
-						text: "The fans are excited about your information, but they also think you could have said a bit more."
+						header: "Tell them a little".localize(),
+						text: "Your fans are excited about your information, but they also think you could have said a bit more."
 					});
 					n.adjustHype(5 + 3 * company.getRandom());
 					return;
@@ -862,7 +862,7 @@ var ExpPack = {};
 				if (decision === 2) {
 					var n = new Notification({
 						header: "Don't tell them!".localize(),
-						text: "The fans are a bit dissapointed in you :("
+						text: "Your fans are a bit disappointed in you."
 					});
 					return;
 				}
@@ -885,7 +885,7 @@ var ExpPack = {};
 			getNotification: function (company) {
 				var game = company.currentGame;
 	
-				var msg = "While you were working on your game someone knocked on the door of the garage. It was a man who wanted to sell you a vacuum cleaner. Do you want to buy the vacuum cleaner for 4K?".localize().format(game.title);
+				var msg = "While you were working on your game, someone knocked on the door of the garage - a man who wants to sell you a vacuum cleaner. Do you want to buy the vacuum cleaner for 4K?".localize().format(game.title);
 				return new Notification({
 					sourceId: eventId,
 					header: "The Vacuum Cleaner".localize(),
@@ -899,10 +899,10 @@ var ExpPack = {};
 				if (decision === 0) {
 					var n = new Notification({
 						header: "The Vacuum Cleaner".localize(),
-						text: "You buy the vacuum cleaner. After doing a garage clenup you win the prize for most clean gaming industry garage! This will most likely increase the hype for your game!"
+						text: "You buy the vacuum cleaner. After doing a garage clean-up, you win the prize for the cleanest games industry garage! Now everyone knows about the game you're working on!"
 					});
 					n.adjustHype(5 + 10 * company.getRandom());
-					n.adjustCash(-4000, "Vacuum cleaner");
+					n.adjustCash(-4000, "Vacuum Cleaner");
 					
 					company.activeNotifications.addRange(n.split());
 					return;
@@ -910,7 +910,7 @@ var ExpPack = {};
 				if (decision === 1) {
 					var n = new Notification({
 						header: "It's me again!".localize(),
-						text: "'Hey! I'm back!' is what the guy said. This time he convinces you to buy a vacuum cleaner. Bye bye, 4000 dollars."
+						text: "He leaves... but soon after, he comes back. However, this time he convinces you to buy that vacuum cleaner. Bye bye, 4K."
 					});
 					n.adjustCash(-4000, "Vacuum Cleaner");
 					company.notifications.push(n);
@@ -919,7 +919,7 @@ var ExpPack = {};
 				if (decision === 2) {
 					var n = new Notification({
 						header: "The Vacuum Cleaner".localize(),
-						text: "'After you denounced me I thought it was a good idea to give you a bad reputation with the media! This didn't work out well for me, though... You even got more hype for it!' was the last thing he said before walking away in an angry mood."
+						text: "'After you denounced me I thought it was a good idea to give you a bad reputation with the media! But that didn't work out, you just got your game hyped!' was the last thing he said before walking away in an angry mood."
 					});
 					n.adjustHype(15 + 25 * company.getRandom());
 					company.activeNotifications.addRange(n.split());
@@ -938,12 +938,12 @@ var ExpPack = {};
 			isRandom: true,
 			maxTriggers: 1,
 			trigger: function (company) {
-				return company.currenLevel == 2 && company.isGameProgressBetween(0.2, 0.9);
+				return company.currentLevel == 2 && company.isGameProgressBetween(0.2, 0.9);
 			},
 			getNotification: function (company) {
 				var game = company.currentGame;
 
-				var msg = "It seems that kids in the neighbourhood have started chatting about your upcoming game {0}. Rumour has it, that Billy, your neighbours kid, snuck into the garage and spied on some of the design papers.{n}How he managed to do this is a mystery. You could swear you were sitting in the garage the entire time!\nHow do you want to react?\n\nYou could talk to the parents to get him punished, ignore the incident or maybe invite some of the neighbours over to show them more of the game."
+				var msg = "It seems that kids in the neighbourhood have started chatting about your upcoming game {0}. Rumour has it that Billy, your neighbour's kid, snuck into the garage and spied on some of the design papers.{n}How he managed to do this is a mystery. You could swear you were sitting in the garage the entire time!\nHow do you want to react?\n\nYou could talk to the parents to get him punished, ignore the incident or maybe invite some of the neighbours over to show them more of the game."
 					.localize().format(game.title);
 				
 				company.adjustHype(5 + 10 * company.getRandom());
@@ -961,7 +961,7 @@ var ExpPack = {};
 				if (decision === 0) {
 					var n = new Notification({
 						header: "Billy, the kid".localize(),
-						text: "You talk to the parents about Billy's actions and they promise it won't happen again."
+						text: "You talk to the parents about Billy's actions and they promise that it won't happen again."
 					});
 					n.adjustHype(5 + 10 * company.getRandom());
 
@@ -971,17 +971,17 @@ var ExpPack = {};
 				if (decision === 1) {
 					var n = new Notification({
 						header: "Vanished documents".localize(),
-						text: "You were working on some intricate design documents the other day but now you can't find them anymore. Small foot prints on the floor suggest that someone might have taken them.\nUnfortunately you have to recreate the documents (-500 cr.) - This might have been Billy's work",
+						text: "The other day, you were working on some intricate design documents - now, however, they're gone. Small foot prints on the floor suggest that someone might have taken them.\nUnfortunately you have to recreate the documents - this was probably Billy's work",
 						weeksUntilFired: 1 + 2 * company.getRandom()
 					});
-					n.adjustCash(-500, "restoring documents");
+					n.adjustCash(-500, "Document Restoration");
 					company.notifications.push(n);
 					return;
 				}
 				if (decision === 2) {
 					var n = new Notification({
 						header: "Billy, the kid".localize(),
-						text: "You invite Billy, his parents and a couple of other interested neighbours over and show them the game in-progress. The kids are super-excited and for weeks you hear them talk about it afterwards."
+						text: "You invite Billy, his parents and a few other interested neighbours over and show them the game in progress. The kids are very excited and you hear them talk about it for weeks afterwards."
 					});
 					n.adjustHype(15 + 25 * company.getRandom());
 					company.activeNotifications.addRange(n.split());
@@ -1001,12 +1001,12 @@ var ExpPack = {};
 			isRandom: true,
 			maxTriggers: 1,
 			trigger: function (company) {
-				return company.currenLevel == 3 && company.isGameProgressBetween(0.5, 0.9);
+				return company.currentLevel == 3 && company.isGameProgressBetween(0.5, 0.9);
 			},
 			getNotification: function (company) {
 				var game = company.currentGame;
 
-				var msg = "Boss, a movie director approached us with the option of making a movie from {0}. If we agree with this, it will generate a lot of hype for us. But it will cost some money to set everything up and make the final deals.".localize().format(game.title);
+				var msg = "Boss, a movie director has approached us with the option of making a movie from {0}! If we agree to this, we will get a lot of valuable hype, but it won't be free".localize().format(game.title);
 
 				return new Notification({
 					sourceId: eventId,
@@ -1021,7 +1021,7 @@ var ExpPack = {};
 				if (decision === 0) {
 					var n = new Notification({
 						header: "A movie there shall be!".localize(),
-						text: "The movie was met with great response and we even gained some more fans!"
+						text: "The movie received a great response - we even gained some more fans!"
 					});
 					n.adjustHype(10 + 15 * company.getRandom());
 					n.adjustFans(250);
@@ -1032,7 +1032,7 @@ var ExpPack = {};
 				if (decision === 1) {
 					var n = new Notification({
 						header: "No movie".localize(),
-						text: "You refused the offer and everything went back to normal."
+						text: "You refused the offer and everything went on as normal."
 					});
 					return;
 				}
@@ -1055,13 +1055,13 @@ var ExpPack = {};
 			getNotification: function (company) {
 				var game = company.currentGame;
 
-				var msg = "Oh my god! A fire just broke out we all need to leave now!{n} .... After the fire has been extinguished you take a look inside and sees that there is alot of damage.".localize().format(game.title);
+				var msg = "Oh my god! A fire broke out! We all need to leave! Now!{n} .... After the fire has been extinguished you take a look inside - as expected, there's a lot of damage.".localize().format(game.title);
 
 				return new Notification({
 					sourceId: eventId,
 					header: "Fire in the office!!".localize(),
 					text: msg,
-					options: ["Repair all....."]
+					options: ["Repair everything"]
 				});
 			},
 			complete: function (decision) {
@@ -1069,8 +1069,8 @@ var ExpPack = {};
 
 				if (decision === 0) {
 					var n = new Notification({
-						header: "Repairing".localize(),
-						text: "You were able to save your current project but the repair was expensive. This game better be worth it's money."
+						header: "Repairs".localize(),
+						text: "You were able to save your current project but the repair was expensive. This game had better be worth it."
 					});
 					n.adjustCash(-15000, "Fire damage");
 
@@ -1092,12 +1092,12 @@ var ExpPack = {};
 			date: '4/8/3',
 			ignoreGameLengthModifier: false,
 			getNotification: function (company) {
-            	var msg = "Gamer Pride magazine would like you to give an interview as a part of  'New Stars in the Game Industry' action to promote the game industry and upcoming game developers.{n}This is a big part of their project to promote gaming and help developers to get better attention.\n\n Do you accept this offer? If yes, decide what topic you would like to discuss.".localize();
+            	var msg = "Gamer Pride magazine would like you to give an interview as a part of their 'New Stars in the Game Industry' action to promote the games industry and upcoming game developers - this is a big part of their project.\n\n What would you like to discuss?.".localize();
 				return new Notification({
 					sourceId: eventId,
 					header: "Magazine Interview".localize(),
 					text: msg,
-					options: ["No, thank You.", "Current game industry", "My dreams"]
+					options: ["Nothing, thank you.", "The current games industry", "My dreams"]
 				});
 			},
                        
@@ -1108,7 +1108,7 @@ var ExpPack = {};
 				if (decision === 0) {
 					var n = new Notification({
 						header: "Magazine Interview".localize(),
-						text: "You resigned, Gamer Pride magazine is disappointed."
+						text: "You declined - Gamer Pride magazine is disappointed but nothing bad has come of it."
 					});    
 					company.activeNotifications.addRange(n.split());
 					return;                                                                                        
@@ -1116,7 +1116,7 @@ var ExpPack = {};
 				if (decision === 1) {
                 	var n = new Notification({
                     header: "Magazine Interview".localize(),
-                    text: "You tell the magazine that nowadays game industry is relatively small and it is a great opportunity for people like you to find their place and grow.{n} The interviewer asked if you can predict the future of game industry.\n\n You answered that a dynamic progress in electornic industry will probably catalyze the production of new platforms and that will give a great chance for game industry to progress in many ways."
+                    text: "You tell the magazine that nowadays the games industry is relatively small and a great opportunity for people like you to find their place and grow.{n} The interviewer asked what you predict the future of the games industry will be like.\n\n You answered that progress in the electronics industry will mean there will be more platforms around, as well as giving a great chance for new innovation in the games industry."
                	});
                    	n.adjustFans(200);
                     company.notifications.push(n);
@@ -1135,7 +1135,7 @@ var ExpPack = {};
                 if (decision === 2) {
                 	var n = new Notification({
                     	header: "Magazine Interview".localize(),
-                        text: "Your dream is to find a 'golden solution' that will push your company and maybe the whole gaming industry into next level. \nYou say that right now this is a great time to grow since the game business is relatively new. You hope that in 4, 5 years the company will grow and you will be able to work on more ambitious projects.{n} The interviewer asked if you can predict the future of game industry.\n\n You answered that only god knows what future might bring."
+                        text: "Your dream is to find a 'golden solution' that will push your company and the games industry as a whole to the next level. \nYou say that right now is a great time to grow since the games business is relatively new. You hope that in 4 or 5 years the company will grow and you will be able to work on more ambitious projects.{n} The interviewer asked if you can predict the future of the games industry.\n\n You answered that God only knows what the future may bring."
                     });
                 	n.adjustFans(100);
                 	if (company.isGameProgressBetween(0.2, 0.9)) {
@@ -1161,12 +1161,12 @@ var ExpPack = {};
 	        	return company.fans >= 1500000;
 	        },
 	        getNotification: function (company) {
-		    	var msg = "Gamer Pride magazine contacted you for an interview. Recently you reached 1.5 mln fans, they want to know what the secret is behind this success.".localize();
+		    	var msg = "Gamer Pride magazine contacted you for an interview. Recently you reached 1.5M fans and they want to know the secret behind this success.".localize();
 	            return new Notification({
 	            	sourceId: eventId,
 	                header: "Magazine Interview".localize(),
 	            	text: msg,
-	            	options: ["Providing the best games", "The fans", "We are pro"]
+	            	options: ["Providing the best games", "The fans", "Being 'pro'"]
 	             });
 	        },
 	        complete: function (decision) {            
@@ -1174,7 +1174,7 @@ var ExpPack = {};
 	            if (decision === 0) {
 	            	var n = new Notification({
 	                	header: "Magazine Interview".localize(),
-	                	text: "You said that only by providing the best games possible you were able to build such big fan base. You learned by this time that gamers only seek for great games and if some game developers are not able to produce some innovative and great games, it is unlikely that they will reach such fan base and most likely they will go bankrupt sooner or later."
+	                	text: "You said that only by providing the best games possible you were able to build such a big fanbase. Over time you've learned that gamers only seek great games and any developers that can't provide that won't get the fanbase they need and likely go bankrupt."
 	                });
 	                n.adjustFans(5000);
 	                if(company.isGameProgressBetween(0.2, 0.9)) {
@@ -1186,12 +1186,12 @@ var ExpPack = {};
 	            if (decision === 1) {
 	            	var n = new Notification({
 	                	header: "Magazine Interview".localize(),
-	                	text: "In your opinion, based on the years of experience your recipe for success is to build good relationship between a game developer and customer. It does mean that gamers need to see that it is a good idea to invest their money in your products. \n They can see it when a company provides good value for the money that gamers spent on the game.{n} You say that customers need to be treated properly. For instance, they can't be punished with DRM, because it is not fair. \nPirates have no problem with breaking DRM. It is broken the next day the game is released.\n That way pirates can experience games without any problems, when honest customers have to deal with DRM policy.{n}Instead of punishing customers, companies should reward them with additional content for free, great customer service and so on.\n Third and the most important thing is to treat gamers same as you would like to be treated, because at the end of the day, we are all gamers!"
+	                	text: "In your opinion, based on the years of experience your recipe for success is to build a good relationship between the developer and the customers. Gamers need to see that it is a good idea to invest their money in your products. \n They can see it when a company provides good value for the money that gamers spent on the game.{n} You say that customers need to be treated properly. For instance, they can't be punished with DRM, because it is not fair. \nPirates have no problem with breaking DRM, even the day after release.\n In this way, the pirates enjoy the game as is while only honest customers have to deal with the hassles of DRM.{n}Instead of punishing customers, companies should reward them with additional content for free, great customer service and so on.\n Most importantly, treat gamers as you would like to be treated yourself: at the end of the day, we are all gamers!"
 	                });
 	                company.notifications.push(n);
 	                var m = new Notification({
 	                	header: "Magazine Interview".localize(),
-	                	text: "Your words warmed people. The company's e-mail was swarmed by tons of supportive messages from your fans! Isn't that a great feeling?"
+	                	text: "Your words warmed people. The company's e-mail was swarmed with tons of supportive messages from your fans! Isn't that a great feeling?"
 	                });
 					m.adjustFans(20000);
 					if(company.isGameProgressBetween(0.2, 0.9)) {
