@@ -372,8 +372,8 @@ var ExpPack = {};
 		    genreWeightings: [0.7, 1, 0.9, 0.6, 0.9, 1],
 		    audienceWeightings: [1, 0.9, 0.7]
 		}, {
-		    id: "Wizzards",
-		    name: "Wizzards".localize("game topic"),
+		    id: "Wizards",
+		    name: "Wizards".localize("game topic"),
 		    genreWeightings: [1, 1, 0.9, 0.7, 0.8, 0.9],
 		    audienceWeightings: [0.7, 1, 0.9]
 		}, {
