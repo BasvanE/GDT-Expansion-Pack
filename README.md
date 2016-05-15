@@ -1,7 +1,7 @@
 ###Expansion Pack for Game Dev Tycoon (Current Version 1.2.0)
 
 This is my overall expansion pack for Game Dev Tycoon.
-It has been made with the intention of being the best content-adding mod in the GDT community and so far I think we're doing a great job at that - there are plenty of new topics, platforms, events as well as custom computers and custom prices and much more. All this ensures that this mod will make each new playthrough a very entertaining one.
+It has been made with the intention of being the best content-adding mod in the GDT community and so far I think we're doing a great job at that - there are plenty of new topics, platforms and events as well as custom computers, prices and much more. All this ensures that this mod will make each new playthrough a very entertaining one.
 
 Note: This mod requires [UltimateLib](http://gdt-ultimatesuite.abesco.de/)
 
@@ -29,7 +29,7 @@ This is a list of people who help/helped with the mod. All the names are from [t
   - Silverwolf (Made ALL the textures for the custom computers)
   
 /* Concepts */
-  - Drakiren (Came up with great event ideas of which some still have to be made)
+  - Drakiren (Came up with great event ideas, some of which still have to be made)
   
 /* Other */
   - Kristof1104 (UI Techniques and a friend that helps when/where he can)
