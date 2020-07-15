@@ -1,17 +1,17 @@
 ﻿(function () {
 	var ready = function () {
-	/* Epic Random Features				*/
+	/* Epic Random Features	*/			
 		ExpPack.initCompatibilityChecks();
 		ExpPack.addCustomPrice();
 		ExpPack.addBlackBull();
 		DifSet.runStartUp();
 	/*									*/
 			
-	/* Adds topics to the game 			*/
+	/* Adds topics to the game 	*/		
 		ExpPack.addTopic();
 	/*									*/
 	
-	/* Adds platforms to the game 		*/
+	/* Adds platforms to the game */		
 		ExpPack.addPlatformGrapintosh();
 		ExpPack.addPlatformGrMac();
 		ExpPack.addPlatform3GS();
@@ -25,7 +25,7 @@
 		ExpPack.addPlatformMBox360S();
 	/*									*/
 		
-	/* Adds events to the game 			*/
+	/* Adds events to the game 	*/		
 		ExpPack.addEventCelebration();
 		ExpPack.addEventCuriosity();
 		ExpPack.addEventVac();
@@ -44,17 +44,17 @@
 	var error = function () {
 	};
 
-	GDT.loadJs(['mods/gdt-modAPI/helpers/checks.js',
-	'mods/gdt-modAPI/api/persistence.js',
-	'mods/gdt-modAPI/api/events.js',
-	'mods/gdt-modAPI/api/platforms.js',
-	'mods/gdt-modAPI/api/topics.js',
-	'mods/gdt-modAPI/api/research.js',
-	'mods/gdt-modAPI/examples/examples.js',
-	'mods/ExpansionPack/source/source.js',
-	'mods/ExpansionPack/source/CC_AddOn.js',
-	'mods/ExpansionPack/source/Search_AddOn.js',
-	'mods/ExpansionPack/source/DifficultySettings_AddOn.js',
-	'mods/UltimateLib/UltimateLib.js'
+	GDT.loadJs(['../gdt-modAPI/helpers/checks.js',
+	'../gdt-modAPI/api/persistence.js',
+	'../gdt-modAPI/api/events.js',
+	'../gdt-modAPI/api/platforms.js',
+	'../gdt-modAPI/api/topics.js',
+	'../gdt-modAPI/api/research.js',
+	'../gdt-modAPI/examples/examples.js',
+	'../ExpansionPack/source/source.js',
+	'../ExpansionPack/source/CC_AddOn.js',
+	//'../ExpansionPack/source/Search_AddOn.js', Broken
+	'../ExpansionPack/source/DifficultySettings_AddOn.js',
+	'../UltimateLib/UltimateLib.js'
 	], ready, error);
 })();

@@ -1,4 +1,6 @@
+#### This mod has been inactive for 6 years, I've fixed the startup crashes. Feel free to contribute !! (I am not the original author, thanks to BasvanE)
 ###Expansion Pack for Game Dev Tycoon (Current Version 1.2.0)
+
 
 This is my overall expansion pack for Game Dev Tycoon.
 It has been made with the intention of being the best content-adding mod in the GDT community and so far I think we're doing a great job at that - there are plenty of new topics, platforms, events as well as custom computers and custom prices and much more. All this ensures that this mod will make each new playthrough a very entertaining one.
