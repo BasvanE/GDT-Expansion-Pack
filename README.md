@@ -1,4 +1,5 @@
 #### This mod has been inactive for 6 years, I've fixed the startup crashes. Feel free to contribute !! (I am not the original author, thanks to BasvanE)
+#### I saw many comments on the workshop asking for the author to separate the 'CustomPrices mechanic' from the expansion, that's what I did in the folder 'CustomPricesStandalone' (No libs are required for the CustomPrices)
 ###Expansion Pack for Game Dev Tycoon (Current Version 1.2.0)
 
 
@@ -41,7 +42,11 @@ This is a list of people who help/helped with the mod. All the names are from [t
 Want to be a part of the mod? Send me a private message [here](http://forum.greenheartgames.com/users/dzjengiskhan/activity)
 with your addition for the expansion pack and I will judge if it's good enough to be added to the pack!
 
-###Change Log
+### Change Log
+Version 1.2.1
+  - Search bar removed due bugs (Topic selection was not working)
+  - Relative paths fixed (Causing javascript errors on startup)
+
 Version 1.2.0
   - Added keyboards, mice and headsets to custom computers.
   - Added 3 new textures to the custom computers.

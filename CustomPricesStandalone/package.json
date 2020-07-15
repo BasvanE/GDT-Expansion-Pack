@@ -1,0 +1,10 @@
+﻿{
+	"id" : "CustomPricesMod",
+	"name" : "Custom Prices Standalone",
+	"version":"1.0.0",
+	"author":"DzjengisKhan (Founder & Leader) & LineLiar (Co-Leader)",
+	"url":"https://github.com/rafaelfaustini/GDT-Expansion-Pack",
+	"description" : "Custom Prices only from the Expansion Pack",
+	"main" : "./CustomPricesStandalone.js",
+	"dependencies" : {"UltimateLib":"1.x.x"}
+}
