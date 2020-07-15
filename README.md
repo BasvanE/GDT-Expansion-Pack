@@ -5,7 +5,7 @@
 This is my overall expansion pack for Game Dev Tycoon.
 It has been made with the intention of being the best content-adding mod in the GDT community and so far I think we're doing a great job at that - there are plenty of new topics, platforms, events as well as custom computers and custom prices and much more. All this ensures that this mod will make each new playthrough a very entertaining one.
 
-Note: This mod requires [UltimateLib](http://gdt-ultimatesuite.abesco.de/)
+Note: This mod requires [UltimateLib](http://gdt-ultimatesuite.abesco.de/) (Works with the [iSlay's uploaded version](https://forum.greenheartgames.com/t/rel-tools-ultimatesuite-ultimatelib-1-3-4/9855/521) ) 
 
 This expansion pack includes:
   - 80 new topics
