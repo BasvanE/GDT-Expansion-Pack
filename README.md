@@ -1,9 +1,12 @@
-###Expansion Pack for Game Dev Tycoon (Current Version 1.2.0)
+#### This mod has been inactive for 6 years, I've fixed the startup crashes. Feel free to contribute !! (I am not the original author, thanks to BasvanE)
+#### I saw many comments on the workshop asking for the author to separate the 'CustomPrices mechanic' from the expansion, that's what I did in the folder 'CustomPricesStandalone' (No libs are required for the CustomPrices)
+### Expansion Pack for Game Dev Tycoon (Current Version 1.2.1)
+
 
 This is my overall expansion pack for Game Dev Tycoon.
 It has been made with the intention of being the best content-adding mod in the GDT community and so far I think we're doing a great job at that - there are plenty of new topics, platforms, events as well as custom computers and custom prices and much more. All this ensures that this mod will make each new playthrough a very entertaining one.
 
-Note: This mod requires [UltimateLib](http://gdt-ultimatesuite.abesco.de/)
+Note: This mod requires [UltimateLib](http://gdt-ultimatesuite.abesco.de/) (Works with the [iSlay's uploaded version](https://forum.greenheartgames.com/t/rel-tools-ultimatesuite-ultimatelib-1-3-4/9855/521) ) 
 
 This expansion pack includes:
   - 80 new topics
@@ -16,7 +19,7 @@ This expansion pack includes:
   - The ability to search through topics
   - Game difficulties (easy, normal, hard)
 
-###Team
+### Team
 
 This is a list of people who help/helped with the mod. All the names are from [the Greenheart Games forum](http://forum.greenheartgames.com/)
 
@@ -39,7 +42,11 @@ This is a list of people who help/helped with the mod. All the names are from [t
 Want to be a part of the mod? Send me a private message [here](http://forum.greenheartgames.com/users/dzjengiskhan/activity)
 with your addition for the expansion pack and I will judge if it's good enough to be added to the pack!
 
-###Change Log
+### Change Log
+Version 1.2.1
+  - Search bar removed due bugs (Topic selection was not working)
+  - Relative paths fixed (Causing javascript errors on startup)
+
 Version 1.2.0
   - Added keyboards, mice and headsets to custom computers.
   - Added 3 new textures to the custom computers.
@@ -71,6 +78,6 @@ Version 0.3.2
   - 2 new awesome events. Made by: @Nezaja
   - 3 new research topics + 1 new platform. Made by: @nathan00107
 
-###Wiki
+### Wiki
 
 Check the [wiki](https://github.com/DzjengisKhan/GDT-Expansion-Pack/wiki "Wiki") on this page for further information about the expansion pack. Find out what new things are added, as well as help for any problems.
